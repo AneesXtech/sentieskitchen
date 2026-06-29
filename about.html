@@ -1,0 +1,2942 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Learn the story of Sentie's Kitchen - authentic Ugandan cuisine born from family tradition, community service, and the joy of bringing people together.">
+    <meta name="keywords"
+        content="Sentie's Kitchen, about us, our story, Sentie Kiondo, Ugandan cuisine, catering, family business, MetroWest">
+    <meta name="author" content="Sentie's Kitchen">
+
+    <title>About Us - Sentie's Kitchen | Our Story</title>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Main stylesheet (same as index) -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* =====================================================
+           ABOUT PAGE - PAGE-SPECIFIC STYLES ONLY
+           (Header, footer, .container, .btn etc. all come
+            from style.css exactly as on the home page)
+        ===================================================== */
+
+        /* -- Short Hero ------------------------------------ */
+        .about-hero {
+            position: relative;
+            min-height: 360px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background-color: #111;
+        }
+
+        /* The provided banner image */
+        .about-hero-bg {
+            position: absolute;
+            inset: 0;
+            background: url('assets/new-picture/sentieskitchen 4.webp') center center / cover no-repeat;
+        }
+
+        /* Left-heavy gradient so text stays legible */
+        .about-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right,
+                    rgba(0, 0, 0, 0.80) 0%,
+                    rgba(0, 0, 0, 0.55) 55%,
+                    rgba(0, 0, 0, 0.20) 100%);
+        }
+
+        .about-hero-content-wrap {
+            position: relative;
+            z-index: 2;
+            padding-top: 72px;
+            padding-bottom: 72px;
+        }
+
+        .about-hero-breadcrumb {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--font-heading);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.88);
+            margin-bottom: 16px;
+        }
+
+        .about-hero-breadcrumb a {
+            color: #fff;
+            transition: color var(--transition-fast);
+        }
+
+        .about-hero-breadcrumb a:hover {
+            color: var(--color-yellow);
+        }
+
+        .about-hero-breadcrumb span {
+            color: var(--color-yellow);
+        }
+
+        /* Small eyebrow tag */
+        .about-hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-heading);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--color-yellow);
+            margin-bottom: 18px;
+        }
+
+        .about-hero-eyebrow::before,
+        .about-hero-eyebrow::after {
+            content: '';
+            display: block;
+            width: 28px;
+            height: 2px;
+            background: var(--color-yellow);
+            flex-shrink: 0;
+        }
+
+        /* "ABOUT SENTIE'S KITCHEN" heading */
+        .about-hero-content-wrap h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 5.5vw, 3.8rem);
+            font-weight: 800;
+            text-transform: uppercase;
+            color: #fff;
+            line-height: 1.05;
+            margin: 0 0 22px;
+            letter-spacing: -0.5px;
+            max-width: 640px;
+        }
+
+        .about-hero-content-wrap h1 span {
+            color: var(--color-yellow);
+        }
+
+        /* Subtitle paragraph */
+        .about-hero-subtitle {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.82);
+            line-height: 1.75;
+            max-width: 520px;
+            margin: 0 0 34px;
+        }
+
+        /* Reuse existing .btn .btn-yellow from style.css */
+
+
+        /* -- BREADCRUMB bar below hero -------------------- */
+        .about-breadcrumb {
+            background: #fff;
+            border-bottom: 1px solid #eee;
+            padding: 12px 0;
+        }
+
+        .about-breadcrumb-inner {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--font-heading);
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--color-text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .about-breadcrumb-inner a {
+            color: var(--color-text-muted);
+            transition: color 0.2s;
+        }
+
+        .about-breadcrumb-inner a:hover {
+            color: var(--color-red);
+        }
+
+        .about-breadcrumb-inner i {
+            font-size: 0.6rem;
+            color: var(--color-yellow);
+        }
+
+        .about-breadcrumb-inner span {
+            color: var(--color-black);
+        }
+
+
+        /* -- Chef Story ----------------------------------- */
+        .ab-chef-story {
+            padding: 80px 0;
+            background: #faf7f2;
+            /* warm cream, matching ref image */
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* subtle dot-pattern bg (right side of section) */
+        .ab-chef-story::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 45%;
+            background-image: radial-gradient(circle, rgba(0, 0, 0, 0.07) 1.5px, transparent 1.5px);
+            background-size: 22px 22px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .ab-chef-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* - Left: photo card - */
+        .ab-chef-img-wrap {
+            position: relative;
+        }
+
+        /* red crown top-left */
+        .ab-chef-crown {
+            position: absolute;
+            top: -10px;
+            left: 14px;
+            z-index: 10;
+            width: 60px;
+            height: auto;
+        }
+
+        .ab-chef-img-main {
+            width: 100%;
+            object-fit: cover;
+            object-position: top center;
+            border-radius: 10px;
+            display: block;
+        }
+
+        /* brushstroke name badge at bottom of photo */
+        .ab-chef-name-badge {
+            position: absolute;
+            bottom: 24px;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+        }
+
+        .ab-chef-name-badge-inner {
+            position: relative;
+            display: inline-block;
+            padding: 10px 32px 12px;
+            color: #fff;
+            font-family: var(--font-accent);
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            text-align: center;
+            /* brushstroke via clip + bg */
+            background: #111;
+            border-radius: 4px 60px 4px 60px / 60px 4px 60px 4px;
+            box-shadow: 3px 4px 0 rgba(0, 0, 0, 0.3);
+            letter-spacing: 0.02em;
+        }
+
+        /* - Right: text block - */
+        .ab-chef-text-wrap {
+            position: relative;
+            z-index: 1;
+            text-align: left;
+            max-width: 620px;
+        }
+
+        /* "Our Story" in red italic Caveat + thick red underline */
+        .ab-our-story-label {
+            font-family: var(--font-accent);
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--color-red);
+            display: block;
+            margin-bottom: 2px;
+            font-style: italic;
+        }
+
+        .ab-our-story-underline {
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--color-red);
+            border-radius: 2px;
+            margin-bottom: 20px;
+        }
+
+        /* Giant bold heading */
+        .ab-chef-title {
+            font-family: var(--font-heading);
+            font-size: clamp(2.6rem, 5vw, 4.2rem);
+            font-weight: 900;
+            line-height: 1.0;
+            text-transform: uppercase;
+            margin: 0 0 22px;
+            color: var(--color-black);
+            letter-spacing: -1.5px;
+        }
+
+        .ab-chef-text {
+            font-size: 0.97rem;
+            color: var(--color-black);
+            line-height: 1.75;
+            margin-bottom: 14px;
+        }
+
+        .ab-chef-text strong {
+            color: var(--color-black);
+            font-size: inherit;
+            margin-top: 10px;
+            margin-bottom: 0;
+            display: block;
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        .ab-sig {
+            display: inline-block;
+            margin-top: 18px;
+            font-family: var(--font-accent);
+            font-size: 1.9rem;
+            color: var(--color-black);
+            line-height: 1;
+            position: relative;
+            padding-bottom: 8px;
+        }
+
+        .ab-sig::after {
+            content: '';
+            display: block;
+            width: 74px;
+            height: 2px;
+            margin-top: 4px;
+            background: currentColor;
+            border-radius: 999px;
+        }
+
+        /* -- Family Business ------------------------------- */
+        .ab-family-section {
+            padding: 60px 0;
+            background: transparent;
+        }
+
+        .ab-family {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            min-height: 460px;
+            background: #0b0b0b; /* deep charcoal black */
+            border-radius: 24px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+        }
+
+        /* LEFT dark panel */
+        .ab-family-left {
+            position: relative;
+            padding: 60px 50px 60px 70px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        /* SVG brush background */
+        .ab-family-bg-svg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .ab-family-heading {
+            font-family: var(--font-heading);
+            font-size: clamp(2.3rem, 4.5vw, 3.4rem);
+            font-weight: 800;
+            color: #fff;
+            text-transform: uppercase;
+            line-height: 0.95;
+            margin: 0 0 10px;
+            letter-spacing: -0.5px;
+            z-index: 2;
+        }
+
+        /* Wavy red brush underline */
+        .ab-brush-line {
+            width: 180px;
+            height: 12px;
+            margin-bottom: 24px;
+            display: block;
+            z-index: 2;
+        }
+
+        .ab-family-text {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.95rem;
+            line-height: 1.75;
+            margin-bottom: 32px;
+            max-width: 420px;
+            z-index: 2;
+        }
+
+        /* button row */
+        .ab-family-btn-row {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            z-index: 2;
+        }
+
+        .ab-family-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--color-red);
+            color: #fff;
+            padding: 13px 28px;
+            border-radius: 50px;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 0.88rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(200, 16, 46, 0.3);
+        }
+
+        .ab-family-btn:hover {
+            background: var(--color-red-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(200, 16, 46, 0.4);
+            color: #fff;
+        }
+
+        .ab-btn-arrow {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            border: 1.5px solid #fff;
+            border-radius: 50%;
+            font-size: 0.7rem;
+            transition: transform 0.3s;
+        }
+
+        .ab-family-btn:hover .ab-btn-arrow {
+            transform: translateX(2px);
+        }
+
+        /* chalk heart */
+        .ab-family-heart-svg {
+            width: 46px;
+            height: 46px;
+            animation: heartbeat 2.5s ease-in-out infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* RIGHT photo */
+        .ab-family-right {
+            position: relative;
+            overflow: hidden;
+            min-height: 100%;
+        }
+
+        .ab-family-right img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+
+        .ab-family:hover .ab-family-right img {
+            transform: scale(1.04);
+        }
+
+        /* wavy vertical brush transition */
+        .ab-family-divider-brush {
+            position: absolute;
+            top: 0;
+            left: -1px;
+            width: 60px;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='300' viewBox='0 0 60 300' preserveAspectRatio='none'%3E%3Cpath d='M60,0 C45,50 35,100 45,150 C35,200 45,250 35,300 L0,300 L0,0 Z' fill='%230b0b0b'/%3E%3C/svg%3E") repeat-y;
+            z-index: 3;
+            pointer-events: none;
+        }
+
+        /* -- Core Values -------------------------------- */
+        .ab-values-section {
+            padding: 60px 0 80px;
+            background: transparent;
+        }
+
+        .ab-values-card {
+            background: #fdfbf7; /* warm beige/cream card background */
+            border-radius: 24px;
+            padding: 64px 48px 72px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.02);
+            border: 1px solid #f2ebde;
+        }
+
+        /* Arrow-style heading with red brush arrows flanking */
+        .ab-values-heading-wrap {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .ab-values-heading-row {
+            display: inline-flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .ab-heading-brush-arrow {
+            width: 30px;
+            height: 20px;
+            display: block;
+        }
+
+        .ab-heading-brush-arrow.right-arrow {
+            transform: scaleX(-1);
+        }
+
+        .ab-values-heading-row h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            color: var(--color-black);
+        }
+
+        .ab-brush-line-values {
+            width: 220px;
+            height: 12px;
+            margin: 12px auto 0;
+            display: block;
+        }
+
+        /* 3-column grid with vertical separator lines */
+        .ab-values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: 54px;
+        }
+
+        .ab-value-card {
+            text-align: center;
+            padding: 10px 32px;
+            position: relative;
+            background: transparent;
+            border: none;
+            box-shadow: none;
+            border-radius: 0;
+        }
+
+        /* thin vertical line between cards */
+        .ab-value-card + .ab-value-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 15%;
+            bottom: 15%;
+            width: 1px;
+            background: #e6dfd5;
+        }
+
+        /* diamond dot on the divider line */
+        .ab-value-card + .ab-value-card::after {
+            content: '\\2726';
+            position: absolute;
+            left: -5px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #c4b6a2;
+            font-size: 0.72rem;
+            background: #fdfbf7;
+            padding: 4px 0;
+        }
+
+        /* Icon circular brush stroke wrapper */
+        .ab-value-icon-wrapper {
+            width: 96px;
+            height: 96px;
+            position: relative;
+            margin: 0 auto 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+
+        .ab-value-card:hover .ab-value-icon-wrapper {
+            transform: scale(1.08);
+        }
+
+        .ab-icon-brush-circle {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .ab-value-icon-inner {
+            position: relative;
+            z-index: 2;
+            font-size: 1.9rem;
+            color: var(--color-red);
+        }
+
+        .ab-value-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            margin: 0 0 6px;
+            color: var(--color-red);
+        }
+
+        /* small title underline */
+        .ab-title-underline {
+            width: 80px;
+            height: 8px;
+            margin: 0 auto 16px;
+            display: block;
+        }
+
+        .ab-value-card p {
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+            line-height: 1.65;
+            margin: 0;
+        }
+
+        /* -- Journey (Yellow) ----------------------------- */
+        .ab-journey {
+            background: var(--color-yellow);
+            padding: 90px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ab-journey-decor {
+            position: absolute;
+            font-size: 1.7rem;
+            opacity: 0.15;
+            pointer-events: none;
+            color: #000;
+        }
+
+        .ab-jd1 {
+            top: 10%;
+            left: 3%;
+            transform: rotate(-18deg);
+        }
+
+        .ab-jd2 {
+            top: 28%;
+            right: 4%;
+            transform: rotate(22deg);
+        }
+
+        .ab-jd3 {
+            bottom: 18%;
+            left: 6%;
+            transform: rotate(10deg);
+        }
+
+        .ab-jd4 {
+            bottom: 8%;
+            right: 7%;
+            transform: rotate(-22deg);
+        }
+
+        .ab-jd5 {
+            top: 5%;
+            right: 18%;
+            transform: rotate(8deg);
+        }
+
+        .ab-jd6 {
+            bottom: 32%;
+            left: 14%;
+            transform: rotate(-5deg);
+        }
+
+        .ab-journey-sub {
+            font-size: 0.88rem;
+            color: rgba(0, 0, 0, 0.6);
+            text-align: center;
+            margin-bottom: 52px;
+            font-style: italic;
+        }
+
+        /* Airplane path */
+        .ab-plane-row {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            margin-bottom: 52px;
+        }
+
+        .ab-plane-line {
+            flex: 1;
+            height: 0;
+            border-top: 3px dashed rgba(0, 0, 0, 0.22);
+        }
+
+        .ab-plane-icon {
+            font-size: 2.2rem;
+            color: var(--color-black);
+            transform: rotate(45deg);
+            margin: 0 12px;
+        }
+
+        /* Zigzag timeline */
+        .ab-timeline {
+            position: relative;
+        }
+
+        .ab-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            border-left: 3px dashed rgba(0, 0, 0, 0.22);
+            transform: translateX(-50%);
+        }
+
+        .ab-tl-item {
+            display: grid;
+            grid-template-columns: 1fr 64px 1fr;
+            align-items: center;
+            margin-bottom: 44px;
+            position: relative;
+        }
+
+        .ab-tl-dot {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+        }
+
+        .ab-tl-circle {
+            width: 54px;
+            height: 54px;
+            background: var(--color-red);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 18px rgba(200, 16, 46, 0.35);
+            text-align: center;
+            line-height: 1.1;
+        }
+
+        .ab-tl-left {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 30px;
+        }
+
+        .ab-tl-right {
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 30px;
+        }
+
+        .ab-tl-card {
+            background: #fff;
+            border-radius: var(--border-radius-md);
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+            max-width: 340px;
+            width: 100%;
+            transition: transform var(--transition-normal);
+        }
+
+        .ab-tl-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .ab-tl-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .ab-tl-card-body {
+            padding: 16px 18px 18px;
+        }
+
+        .ab-tl-year {
+            display: inline-block;
+            background: var(--color-red);
+            color: #fff;
+            font-family: var(--font-heading);
+            font-size: 0.68rem;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .ab-tl-card-body h4 {
+            font-family: var(--font-heading);
+            font-size: 0.92rem;
+            font-weight: 800;
+            margin: 0 0 6px;
+            text-transform: uppercase;
+            color: var(--color-black);
+        }
+
+        .ab-tl-card-body p {
+            font-size: 0.82rem;
+            color: var(--color-text-muted);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* -- Meet The Team -------------------------------- */
+        /* New Journey Section Layout */
+        .ab-journey-v2 {
+            background: linear-gradient(180deg, #f4be1a 0%, #f7c934 100%);
+            position: relative;
+            overflow: hidden;
+            padding: 84px 0 92px;
+        }
+
+        .ab-journey-v2::before,
+        .ab-journey-v2::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+        }
+
+        .ab-journey-v2::before {
+            background:
+                radial-gradient(circle at 8% 12%, rgba(255, 255, 255, 0.18) 0 1px, transparent 1.2px),
+                radial-gradient(circle at 92% 18%, rgba(255, 255, 255, 0.16) 0 1px, transparent 1.2px),
+                radial-gradient(circle at 12% 88%, rgba(255, 255, 255, 0.12) 0 1px, transparent 1.2px),
+                radial-gradient(circle at 88% 90%, rgba(255, 255, 255, 0.12) 0 1px, transparent 1.2px);
+            background-size: 160px 160px, 180px 180px, 220px 220px, 240px 240px;
+            opacity: 0.7;
+        }
+
+        .ab-journey-v2::after {
+            background:
+                radial-gradient(circle at 5% 8%, rgba(255, 255, 255, 0.14) 0 10%, transparent 11%),
+                radial-gradient(circle at 95% 92%, rgba(193, 119, 0, 0.18) 0 14%, transparent 15%);
+            opacity: 0.5;
+            mix-blend-mode: multiply;
+        }
+
+        .ab-journey-shell {
+            position: relative;
+            z-index: 1;
+        }
+
+        .ab-journey-top {
+            text-align: center;
+            max-width: 880px;
+            margin: 0 auto 28px;
+        }
+
+        .ab-journey-brand {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+            margin-bottom: 8px;
+        }
+
+        .ab-journey-brand img {
+            width: 92px;
+            height: auto;
+            display: block;
+            filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.08));
+        }
+
+        .ab-journey-brand span {
+            font-family: var(--font-accent);
+            font-size: 2rem;
+            line-height: 1;
+            color: #111;
+        }
+
+        .ab-journey-brand small {
+            font-family: var(--font-heading);
+            font-size: 0.68rem;
+            font-weight: 800;
+            letter-spacing: 0.32em;
+            color: var(--color-red);
+            margin-top: -4px;
+        }
+
+        .ab-journey-title {
+            font-family: var(--font-heading);
+            font-size: clamp(3rem, 8vw, 5rem);
+            font-weight: 900;
+            line-height: 0.92;
+            text-transform: uppercase;
+            letter-spacing: -2.8px;
+            color: #111;
+            margin: 0;
+        }
+
+        .ab-journey-script {
+            position: relative;
+            display: inline-block;
+            font-family: var(--font-accent);
+            font-size: clamp(1.9rem, 4vw, 2.8rem);
+            color: var(--color-red);
+            line-height: 1;
+            margin: 10px 0 0;
+            padding: 0 36px;
+        }
+
+        .ab-journey-script::before,
+        .ab-journey-script::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 26px;
+            height: 3px;
+            background: #111;
+            border-radius: 999px;
+            transform: translateY(-50%);
+        }
+
+        .ab-journey-script::before {
+            left: 0;
+        }
+
+        .ab-journey-script::after {
+            right: 0;
+        }
+
+        .ab-journey-track {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-top: 18px;
+            padding: 8px 0 8px;
+        }
+
+        .ab-journey-track::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            border-left: 4px dashed rgba(0, 0, 0, 0.55);
+            transform: translateX(-50%);
+        }
+
+        .ab-journey-row {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 84px minmax(0, 1fr);
+            align-items: center;
+            position: relative;
+        }
+
+        .ab-journey-node {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+        }
+
+        .ab-journey-node::before {
+            content: '';
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            border: 4px solid #111;
+            background: #f8edd0;
+            box-shadow: 0 0 0 5px rgba(248, 201, 53, 0.95);
+        }
+
+        .ab-journey-card {
+            justify-self: end;
+            width: min(100%, 560px);
+            display: grid;
+            grid-template-columns: 0.46fr 0.54fr;
+            min-height: 220px;
+            background: #f8f0dc;
+            border-radius: 28px;
+            overflow: hidden;
+            border: 3px solid rgba(255, 255, 255, 0.78);
+            box-shadow: 0 16px 28px rgba(0, 0, 0, 0.16);
+        }
+
+        .ab-journey-card.is-reverse {
+            justify-self: start;
+            grid-template-columns: 0.54fr 0.46fr;
+        }
+
+        .ab-journey-media {
+            min-height: 100%;
+        }
+
+        .ab-journey-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .ab-journey-copy {
+            padding: 24px 22px 22px 22px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: #111;
+        }
+
+        .ab-journey-card.is-reverse .ab-journey-copy {
+            padding: 24px 20px 22px 20px;
+        }
+
+        .ab-journey-year {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 84px;
+            align-self: flex-start;
+            margin-bottom: 14px;
+            padding: 6px 16px;
+            border-radius: 9px;
+            background: var(--color-red);
+            color: #fff;
+            font-family: var(--font-heading);
+            font-size: 1.02rem;
+            font-weight: 800;
+            box-shadow: 0 6px 14px rgba(200, 16, 46, 0.24);
+        }
+
+        .ab-journey-copy h3 {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #111;
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        .ab-journey-copy p {
+            font-size: 0.92rem;
+            line-height: 1.45;
+            color: #232323;
+            margin: 10px 0 0;
+        }
+
+        .ab-journey-copy p strong {
+            color: var(--color-red);
+            font-weight: 800;
+        }
+
+        .ab-journey-plane {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            margin: -2px 0 0;
+        }
+
+        .ab-journey-plane i {
+            font-size: 2rem;
+            color: #111;
+            transform: rotate(15deg);
+        }
+
+        .ab-journey-bottom {
+            margin-top: 34px;
+            text-align: center;
+            font-family: var(--font-accent);
+            font-size: clamp(1.8rem, 2.8vw, 2.6rem);
+            line-height: 1.1;
+            color: #111;
+        }
+
+        .ab-journey-bottom i {
+            color: var(--color-red);
+            font-size: 0.72em;
+            vertical-align: middle;
+            margin: 0 6px;
+        }
+
+        .ab-team {
+            padding: 90px 0;
+            background: #fff;
+        }
+
+        .ab-team-sub {
+            text-align: center;
+            font-size: 0.92rem;
+            color: var(--color-text-muted);
+            margin: 10px auto 48px;
+            max-width: 480px;
+        }
+
+        .ab-team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .ab-team-card {
+            background: var(--color-gray-light);
+            border-radius: var(--border-radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--color-gray-border);
+            text-align: center;
+            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+        }
+
+        .ab-team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .ab-team-card img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .ab-team-card-body {
+            padding: 16px;
+        }
+
+        .ab-team-card-body h4 {
+            font-family: var(--font-heading);
+            font-size: 0.95rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin: 0 0 4px;
+        }
+
+        .ab-team-card-body span {
+            font-size: 0.8rem;
+            color: var(--color-red);
+            font-weight: 600;
+        }
+
+        .ab-team-cta {
+            text-align: center;
+        }
+
+        /* -- Moments Gallery ------------------------------ */
+        .ab-moments {
+            padding: 90px 0;
+            background: var(--color-gray-light);
+        }
+
+        .ab-moments-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-auto-rows: 200px;
+            gap: 12px;
+            margin-top: 48px;
+        }
+
+        .ab-moment-item {
+            overflow: hidden;
+            border-radius: var(--border-radius-sm);
+            cursor: pointer;
+        }
+
+        .ab-moment-item:first-child {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .ab-moment-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform var(--transition-slow);
+        }
+
+        .ab-moment-item:hover img {
+            transform: scale(1.07);
+        }
+
+        /* -- Red CTA -------------------------------------- */
+        .ab-cta {
+            background: var(--color-red);
+            padding: 80px 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ab-cta::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .ab-cta-inner {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .ab-cta-icon {
+            width: 76px;
+            height: 76px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 22px;
+        }
+
+        .ab-cta-icon i {
+            font-size: 1.9rem;
+            color: #fff;
+        }
+
+        .ab-cta-inner h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(1.5rem, 3.5vw, 2.4rem);
+            font-weight: 800;
+            color: #fff;
+            text-transform: uppercase;
+            margin: 0 0 14px;
+            line-height: 1.1;
+        }
+
+        .ab-cta-inner p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.96rem;
+            line-height: 1.65;
+            margin: 0 0 30px;
+        }
+
+        .ab-cta-btns {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        /* White button for CTA */
+        .btn-cta-white {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: #fff;
+            color: var(--color-red);
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 14px 28px;
+            border-radius: 30px;
+            border: 2px solid #fff;
+            transition: var(--transition-normal);
+            cursor: pointer;
+        }
+
+        .btn-cta-white:hover {
+            background: transparent;
+            color: #fff;
+        }
+
+        /* -- Scroll fade-up animation --------------------- */
+        .ab-fade {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .ab-fade.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* -- Responsive ----------------------------------- */
+        @media (max-width: 1024px) {
+            .ab-team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            /* Hero */
+            .about-hero {
+                min-height: 320px;
+            }
+
+            .about-hero-content-wrap {
+                padding-top: 56px;
+                padding-bottom: 56px;
+            }
+
+            .about-hero-content-wrap h1 {
+                font-size: clamp(1.95rem, 8vw, 2.5rem);
+                max-width: 320px;
+            }
+
+            .about-hero-breadcrumb {
+                font-size: 0.64rem;
+                gap: 6px;
+                letter-spacing: 0.12em;
+                margin-bottom: 12px;
+            }
+
+            /* Chef */
+            .ab-chef-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .ab-chef-img-main {
+                height: 300px;
+            }
+
+            .ab-sig {
+                font-size: 1.6rem;
+            }
+
+            .ab-journey-v2 {
+                padding: 72px 0 78px;
+            }
+
+            .ab-journey-top {
+                margin-bottom: 28px;
+            }
+
+            .ab-journey-title {
+                font-size: clamp(2.2rem, 12vw, 3.6rem);
+                letter-spacing: -1.6px;
+            }
+
+            .ab-journey-script {
+                font-size: 1.8rem;
+                padding: 0 24px;
+            }
+
+            .ab-journey-script::before,
+            .ab-journey-script::after {
+                width: 18px;
+            }
+
+            .ab-journey-intro {
+                font-size: 0.95rem;
+            }
+
+            .ab-journey-track {
+                gap: 20px;
+            }
+
+            .ab-journey-track::before {
+                left: 18px;
+                transform: none;
+            }
+
+            .ab-journey-row {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+
+            .ab-journey-row > div:not(.ab-journey-node) {
+                display: none;
+            }
+
+            .ab-journey-node {
+                display: none;
+            }
+
+            .ab-journey-card,
+            .ab-journey-card.is-reverse {
+                justify-self: stretch;
+                width: 100%;
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+
+            .ab-journey-card.is-reverse .ab-journey-copy,
+            .ab-journey-copy {
+                padding: 18px 18px 16px;
+            }
+
+            .ab-journey-media {
+                height: 210px;
+            }
+
+            .ab-journey-plane {
+                margin: 2px 0 0;
+            }
+
+            .ab-journey-bottom {
+                margin-top: 24px;
+                font-size: 1.7rem;
+            }
+
+            /* Family Business & Values Responsive Adjustments */
+            .ab-family {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+
+            .ab-family-left {
+                padding: 40px 24px 48px;
+            }
+
+            .ab-family-divider-brush {
+                display: none;
+            }
+
+            .ab-family-right {
+                height: 280px;
+                min-height: auto;
+            }
+
+            .ab-values-card {
+                padding: 48px 24px;
+            }
+
+            .ab-values-grid {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+
+            .ab-value-card {
+                padding: 0;
+            }
+
+            .ab-value-card + .ab-value-card::before,
+            .ab-value-card + .ab-value-card::after {
+                display: none;
+            }
+
+            /* Timeline - stack vertically */
+            .ab-timeline::before {
+                left: 26px;
+            }
+
+            .ab-tl-item {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                gap: 16px;
+            }
+
+            .ab-tl-left,
+            .ab-tl-right {
+                padding: 0;
+                justify-content: flex-start;
+            }
+
+            .ab-tl-card {
+                max-width: 100%;
+            }
+
+            /* Team */
+            .ab-team-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+
+            /* Gallery */
+            .ab-moments-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: 160px;
+            }
+
+            .ab-moment-item:first-child {
+                grid-column: span 2;
+                grid-row: span 1;
+            }
+
+            /* Breadcrumb */
+            .about-breadcrumb-inner {
+                flex-wrap: wrap;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about-hero-content-wrap {
+                padding-top: 48px;
+                padding-bottom: 48px;
+            }
+
+            .about-hero-subtitle {
+                font-size: 0.92rem;
+                line-height: 1.6;
+                max-width: 100%;
+                margin-bottom: 26px;
+            }
+
+            .about-hero-content-wrap h1 {
+                max-width: 280px;
+            }
+
+            .ab-team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ab-moments-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .about-hero-breadcrumb {
+                flex-wrap: wrap;
+                row-gap: 4px;
+            }
+        }
+        .ab-moments-v2 {
+            background: #fbf9f5;
+            padding: 78px 0 84px;
+        }
+
+        .ab-moments-head {
+            text-align: center;
+            margin-bottom: 18px;
+        }
+
+        .ab-moments-kicker {
+            position: relative;
+            display: inline-block;
+            font-family: var(--font-accent);
+            font-size: 1.3rem;
+            color: var(--color-red);
+            margin-bottom: 4px;
+        }
+
+        .ab-moments-kicker::before,
+        .ab-moments-kicker::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 16px;
+            height: 3px;
+            background: var(--color-red);
+            transform: translateY(-50%);
+            border-radius: 999px;
+        }
+
+        .ab-moments-kicker::before { left: -26px; }
+        .ab-moments-kicker::after { right: -26px; }
+
+        .ab-moments-head h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(1.35rem, 2.4vw, 2rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -1.5px;
+            color: #111;
+            margin: 0;
+        }
+
+        .ab-moments-row {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .ab-moment-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 8px 14px rgba(0, 0, 0, 0.12);
+            aspect-ratio: 1 / 0.82;
+            background: #eee;
+            border: 2px solid rgba(255, 255, 255, 0.96);
+        }
+
+        .ab-moment-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .ab-moment-card:hover img {
+            transform: scale(1.06);
+        }
+
+        .ab-cta-v2 {
+            background:
+                radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.05) 0 1px, transparent 1.2px),
+                linear-gradient(180deg, #111 0%, #050505 100%);
+            padding: 26px 0 28px;
+            position: relative;
+            overflow: hidden;
+            text-align: left;
+        }
+
+        .ab-cta-v2::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 70% 20%, rgba(200, 16, 46, 0.32), transparent 28%),
+                radial-gradient(circle at 84% 58%, rgba(200, 16, 46, 0.45), transparent 22%);
+            opacity: 0.8;
+            pointer-events: none;
+        }
+
+        .ab-cta-panel {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 18px;
+            min-height: 270px;
+        }
+
+        .ab-cta-copy {
+            padding: 18px 0 18px 8px;
+            color: #fff;
+            max-width: 560px;
+        }
+
+        .ab-cta-kicker {
+            display: inline-block;
+            font-family: var(--font-accent);
+            font-size: 1.45rem;
+            color: #f6b13a;
+            margin-bottom: 2px;
+        }
+
+        .ab-cta-copy h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(2.65rem, 5vw, 4.45rem);
+            line-height: 0.95;
+            text-transform: uppercase;
+            font-weight: 900;
+            letter-spacing: -3px;
+            margin: 0 0 10px;
+            color: #fff;
+            max-width: 640px;
+        }
+
+        .ab-cta-copy p {
+            font-size: 1.02rem;
+            line-height: 1.5;
+            color: rgba(255, 255, 255, 0.92);
+            max-width: 420px;
+            margin: 0 0 24px;
+        }
+
+        .ab-cta-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(180deg, #d61b1b 0%, #b80f0f 100%);
+            color: #fff;
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: 0.92rem;
+            padding: 13px 22px;
+            border-radius: 8px;
+            box-shadow: 0 8px 18px rgba(214, 27, 27, 0.32);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .ab-cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(214, 27, 27, 0.42);
+            color: #fff;
+        }
+
+        .ab-cta-visual {
+            position: relative;
+            min-height: 270px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            isolation: isolate;
+        }
+
+        .ab-cta-visual::before {
+            content: '';
+            position: absolute;
+            right: 8%;
+            top: 14%;
+            width: 60%;
+            height: 46%;
+            background: radial-gradient(circle, rgba(200, 16, 46, 0.9) 0, rgba(200, 16, 46, 0.85) 58%, transparent 60%);
+            filter: blur(3px);
+            transform: rotate(-8deg);
+            z-index: 0;
+        }
+
+        .ab-cta-visual::after {
+            content: '';
+            position: absolute;
+            right: 6%;
+            bottom: 8%;
+            width: 54%;
+            height: 18%;
+            background: radial-gradient(circle, rgba(200, 16, 46, 0.5) 0, rgba(200, 16, 46, 0.18) 60%, transparent 65%);
+            filter: blur(7px);
+            z-index: 0;
+        }
+
+        .ab-cta-crown {
+            position: absolute;
+            top: 2%;
+            left: 8%;
+            color: #f6b13a;
+            font-size: 1.9rem;
+            transform: rotate(-10deg);
+            z-index: 2;
+        }
+
+        .ab-cta-brush {
+            position: absolute;
+            background: #c8102e;
+            border-radius: 55% 45% 58% 42% / 60% 40% 60% 40%;
+            z-index: 1;
+            filter: blur(0.2px);
+        }
+
+        .ab-cta-brush-top {
+            width: 140px;
+            height: 72px;
+            top: 14%;
+            right: 12%;
+            transform: rotate(-10deg);
+        }
+
+        .ab-cta-brush-bottom {
+            width: 175px;
+            height: 76px;
+            bottom: 10%;
+            right: 10%;
+            transform: rotate(6deg);
+        }
+
+        .ab-cta-visual img {
+            position: relative;
+            z-index: 3;
+            width: min(100%, 540px);
+            max-height: 305px;
+            object-fit: cover;
+            object-position: center center;
+            border-radius: 50% 50% 36% 36% / 52% 52% 42% 42%;
+            box-shadow: 0 20px 38px rgba(0, 0, 0, 0.42);
+        }
+
+        @media (max-width: 900px) {
+            .ab-cta-panel {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .ab-cta-copy {
+                max-width: 100%;
+                padding: 8px 0 0;
+                margin: 0 auto;
+            }
+
+            .ab-cta-copy p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .ab-cta-visual {
+                min-height: 260px;
+            }
+
+            .ab-cta-visual img {
+                width: min(90vw, 430px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .ab-moments-v2 {
+                padding: 66px 0 72px;
+            }
+
+            .ab-moments-row {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .ab-moments-head h2 {
+                font-size: clamp(1.35rem, 6vw, 2rem);
+            }
+
+            .ab-cta-v2 {
+                padding: 30px 0;
+            }
+
+            .ab-cta-copy h2 {
+                font-size: clamp(2rem, 10vw, 3rem);
+            }
+
+            .ab-cta-copy p {
+                font-size: 0.95rem;
+            }
+
+            .ab-journey-v2 {
+                padding: 64px 0 72px;
+            }
+
+            .ab-journey-top {
+                margin-bottom: 22px;
+            }
+
+            .ab-journey-title {
+                font-size: clamp(2rem, 10vw, 3rem);
+                letter-spacing: -1.2px;
+            }
+
+            .ab-journey-script {
+                font-size: 1.35rem;
+                padding: 0 18px;
+                margin-top: 8px;
+            }
+
+            .ab-journey-script::before,
+            .ab-journey-script::after {
+                width: 14px;
+            }
+
+            .ab-journey-track {
+                gap: 18px;
+            }
+
+            .ab-journey-track::before {
+                left: 14px;
+            }
+
+            .ab-journey-row {
+                grid-template-columns: 1fr;
+            }
+
+            .ab-journey-card,
+            .ab-journey-card.is-reverse {
+                grid-column: 1 / -1;
+                width: 100%;
+                justify-self: stretch;
+                grid-template-columns: 1fr;
+            }
+
+            .ab-journey-card.is-reverse .ab-journey-copy,
+            .ab-journey-copy {
+                padding: 16px 16px 18px;
+            }
+
+            .ab-journey-media {
+                height: 190px;
+            }
+
+            .ab-journey-year {
+                min-width: 72px;
+                font-size: 0.92rem;
+                margin-bottom: 12px;
+            }
+
+            .ab-journey-copy h3 {
+                font-size: 1.08rem;
+            }
+
+            .ab-journey-copy p {
+                font-size: 0.86rem;
+                line-height: 1.5;
+            }
+
+            .ab-journey-plane {
+                display: none;
+            }
+
+            .ab-journey-bottom {
+                margin-top: 22px;
+                font-size: 1.3rem;
+            }
+
+            .page-cta {
+                background-position: right center;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .ab-moments-row {
+                grid-template-columns: 1fr;
+            }
+
+            .ab-moment-card {
+                aspect-ratio: 1.2 / 1;
+            }
+
+            .ab-cta-copy h2 {
+                line-height: 1;
+            }
+
+            .ab-cta-primary {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .ab-cta-visual {
+                min-height: 240px;
+            }
+
+            .ab-journey-v2 {
+                padding: 56px 0 64px;
+            }
+
+            .ab-journey-top {
+                margin-bottom: 18px;
+            }
+
+            .ab-journey-brand img {
+                width: 74px;
+            }
+
+            .ab-journey-title {
+                font-size: clamp(1.8rem, 12vw, 2.45rem);
+            }
+
+            .ab-journey-script {
+                font-size: 1.1rem;
+            }
+
+            .ab-journey-track {
+                gap: 14px;
+            }
+
+            .ab-journey-media {
+                height: 170px;
+            }
+
+            .ab-journey-copy {
+                padding: 14px 14px 16px;
+            }
+
+            .ab-journey-year {
+                font-size: 0.86rem;
+                padding: 5px 13px;
+            }
+
+            .ab-journey-copy h3 {
+                font-size: 1rem;
+            }
+
+            .ab-journey-copy p {
+                font-size: 0.82rem;
+            }
+
+            .ab-journey-bottom {
+                font-size: 1.05rem;
+            }
+
+            .page-cta-inner {
+                min-height: 170px;
+            }
+        }
+
+        body.about-page {
+            font-family: var(--font-body);
+            --font-accent: 'Caveat', cursive;
+        }
+
+        body.about-page .about-hero-eyebrow,
+        body.about-page .ab-our-story-label,
+        body.about-page .ab-journey-brand span,
+        body.about-page .ab-journey-script,
+        body.about-page .ab-journey-bottom,
+        body.about-page .ab-moments-kicker,
+        body.about-page .page-cta-kicker {
+            font-family: var(--font-accent);
+            font-style: italic;
+        }
+
+    </style>
+</head>
+
+<body class="about-page">
+
+    <!-- ====================================================
+         HEADER (IDENTICAL to index.html)
+    ==================================================== -->
+
+    <!-- SECTION 1: Top Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="announcement-text">
+            <svg class="announcement-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                    d="M13.8 2.2c.5 2.1-.1 3.8-1.7 5.2-1.2 1-2.1 2.1-2.1 3.7 0 1.2.5 2.2 1.4 2.9-.1-1.7.8-3.1 2.2-4.2.2 2.2 2.4 3.3 2.4 6.1 0 2.8-2.1 5.1-5 5.1s-5-2.2-5-5.2c0-3.8 2.8-5.8 4.7-7.9 1.4-1.5 2.4-3.2 3.1-5.7Z" />
+            </svg>
+            <span>Authentic Afro-Caribbean Takeout &amp; Catering</span>
+            <svg class="announcement-icon announcement-icon-right" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                    d="M13.8 2.2c.5 2.1-.1 3.8-1.7 5.2-1.2 1-2.1 2.1-2.1 3.7 0 1.2.5 2.2 1.4 2.9-.1-1.7.8-3.1 2.2-4.2.2 2.2 2.4 3.3 2.4 6.1 0 2.8-2.1 5.1-5 5.1s-5-2.2-5-5.2c0-3.8 2.8-5.8 4.7-7.9 1.4-1.5 2.4-3.2 3.1-5.7Z" />
+            </svg>
+        </div>
+    </div>
+
+    <!-- SECTION 2: Header / Sticky Navbar -->
+        <header id="main-header">
+        <div class="container">
+            <!-- Brand Logo -->
+            <a href="index.html" class="logo-container">
+                <img src="assets/Logo catring.png" alt="Sentie's Kitchen Logo" class="logo-img">
+                <div class="logo-text-wrap">
+                    <span class="logo-main">Sentie's <span>Kitchen</span></span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html" >Home</a>
+                <a href="menu.html" >Menu</a>
+                <a href="events.html" >Catering</a>
+                <a href="gallery.html" >Gallery</a>
+                <a href="about.html" class="active">About</a>
+                <a href="contact.html" >Contact</a>
+            </nav>
+
+            <!-- Action Button -->
+            <div class="header-actions">
+                <a href="https://order.toasttab.com/online/senties-kitchen" target="_blank" class="btn-order-now">
+                    <i class="fa-solid fa-bag-shopping" style="margin-right: 6px;"></i>
+                    Order Now
+                </a>
+            </div>
+
+            <!-- Hamburger Button -->
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ====================================================
+         SHORT HERO - uses hero-banner.png
+    ==================================================== -->
+    <section class="about-hero">
+        <div class="about-hero-bg"></div>
+        <div class="about-hero-overlay"></div>
+
+        <div class="container about-hero-content-wrap">
+            <div class="about-hero-breadcrumb ab-fade">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>About Us</span>
+            </div>
+           
+
+            <h1 class="ab-fade">
+                About<br><span>Sentie's</span> Kitchen
+            </h1>
+
+            <p class="about-hero-subtitle ab-fade">
+                From our kitchen to your table, we serve Afro-Caribbean BBQ fusion &amp; homemade dishes inspired by African recipes.
+            </p>
+
+            <div class="ab-fade">
+                <a href="menu.html" class="btn btn-yellow">
+                    See Our Menu
+                    <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <!-- <div class="about-breadcrumb">
+        <div class="container about-breadcrumb-inner">
+            <a href="index.html">Home</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <span>About Us</span>
+        </div>
+    </div> -->
+
+    <!-- ====================================================
+         CHEF STORY SECTION
+    ==================================================== -->
+    <section class="ab-chef-story">
+        <div class="container">
+            <div class="ab-chef-grid">
+
+                <!-- -- LEFT: Chef Photo Card -- -->
+                <div class="ab-chef-img-wrap ab-fade">
+
+                    <!-- Red crown SVG top-left
+                    <svg class="ab-chef-crown" viewBox="0 0 80 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M8 50 L8 42 L28 20 L40 34 L52 10 L64 30 L72 42 L72 50 Z" fill="none" stroke="#C8102E" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+                        <circle cx="8" cy="18" r="5" fill="none" stroke="#C8102E" stroke-width="3"/>
+                        <circle cx="40" cy="8" r="5" fill="none" stroke="#C8102E" stroke-width="3"/>
+                        <circle cx="72" cy="18" r="5" fill="none" stroke="#C8102E" stroke-width="3"/>
+                    </svg> -->
+
+                    <!-- Chef photo -->
+                    <img src="assets/about/chef.png" alt="Chef Sentie Kiondo in the kitchen" class="ab-chef-img-main">
+
+                    <!-- Brushstroke name badge -->
+                    <div class="ab-chef-name-badge">
+                        <div class="ab-chef-name-badge-inner">Chef Sentie&nbsp;Kiondo</div>
+                    </div>
+                </div>
+
+                <!-- -- RIGHT: Text Content -- -->
+                <div class="ab-chef-text-wrap ab-fade">
+
+                    <!-- "Our Story" italic red label + underline -->
+                    <span class="ab-our-story-label">Our Story</span>
+                    <span class="ab-our-story-underline"></span>
+
+                    <!-- Giant bold heading -->
+                    <h2 class="ab-chef-title">Meet Sentie<br>Kiondo</h2>
+
+                    <!-- Body paragraphs -->
+                    <p class="ab-chef-text">
+                        Sentie &ldquo;Shen&rdquo; Kiondo is a proud, talented Ugandan chef whose journey began at the
+                        intersection of culture, community, and a deep love for food.
+                    </p>
+                    <p class="ab-chef-text">
+                        Inspired by his roots and the rich culinary traditions of Uganda, Sentie built Sentie&rsquo;s
+                        Kitchen to share authentic flavors while creating welcoming spaces where people come together.
+                    </p>
+                    <p class="ab-chef-text">
+                        <strong>With years of experience and a heart for service,</strong> Chef Sentie continues to
+                        honor his heritage while serving his community with passion, creativity, and unforgettable food.
+                    </p>
+
+                    <!-- Cursive signature -->
+                    <span class="ab-sig">Chef Sentie</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ====================================================
+         IT'S A FAMILY BUSINESS
+    ==================================================== -->
+    <section class="ab-family-section">
+        <div class="container">
+            <div class="ab-family">
+                <!-- LEFT: dark text panel -->
+                <div class="ab-family-left ab-fade">
+                    <!-- SVG Background for brushstrokes and chalk drawings of leaves/onion -->
+                    <svg class="ab-family-bg-svg" viewBox="0 0 400 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Top-left red brush splash -->
+                        <path d="M-20 -20 L180 -20 C140 30, 80 80, -20 120 Z" fill="#C8102E" opacity="0.85" />
+                        <!-- Bottom-left red brush splash -->
+                        <path d="M-20 380 C40 420, 80 460, 100 520 L-20 520 Z" fill="#C8102E" opacity="0.85" />
+                        
+                        <!-- White line-art drawings of leaves (top-left) -->
+                        <path d="M20 20 C25 10, 45 15, 40 30 C30 35, 15 25, 20 20 Z" stroke="rgba(255,255,255,0.22)" stroke-width="1.5" fill="none" />
+                        <path d="M10 40 Q25 30, 40 30" stroke="rgba(255,255,255,0.22)" stroke-width="1.5" fill="none" />
+                        <path d="M35 25 C45 20, 50 35, 35 30 Z" stroke="rgba(255,255,255,0.22)" stroke-width="1.5" fill="none" />
+                        
+                        <!-- White line-art drawing of onion (middle-left) -->
+                        <g transform="translate(15, 180) scale(0.8)">
+                            <path d="M 25 10 C 15 30, 5 40, 5 60 C 5 80, 25 95, 45 95 C 65 95, 85 80, 85 60 C 85 40, 75 30, 65 10 Z" stroke="rgba(255,255,255,0.22)" stroke-width="1.5" fill="none" />
+                            <path d="M 45 10 C 35 30, 25 50, 25 70 C 25 85, 35 95, 45 95" stroke="rgba(255,255,255,0.15)" stroke-width="1" fill="none" />
+                            <path d="M 45 10 C 55 30, 65 50, 65 70 C 65 85, 55 95, 45 95" stroke="rgba(255,255,255,0.15)" stroke-width="1" fill="none" />
+                            <path d="M 40 95 L 35 105 M 45 95 L 45 107 M 50 95 L 55 105" stroke="rgba(255,255,255,0.2)" stroke-width="1.2" fill="none" />
+                        </g>
+                        
+                        <!-- Mint leaf at bottom left -->
+                        <g transform="translate(10, 420) scale(0.7)">
+                            <path d="M 10 30 C 20 10, 50 20, 40 40 C 30 50, 10 40, 10 30 Z" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" fill="none" />
+                            <path d="M 10 30 Q 25 35, 40 40" stroke="rgba(255,255,255,0.2)" stroke-width="1" fill="none" />
+                        </g>
+                    </svg>
+
+                    <h2 class="ab-family-heading">It's A<br>Family Business</h2>
+                    <!-- Red wavy brush underline -->
+                    <svg class="ab-brush-line" viewBox="0 0 300 20" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 10 10 Q 75 5, 150 10 T 290 10 Q 220 15, 150 12 T 10 10 Z" fill="#C8102E" />
+                    </svg>
+
+                    <p class="ab-family-text">
+                        Sentie's Kitchen is built on love, tradition, and community. From our kitchen to your table, we create welcoming experiences and unforgettable flavors that bring people together &mdash; just like family.
+                    </p>
+                    <div class="ab-family-btn-row">
+                        <a href="index.html#catering" class="ab-family-btn">
+                            <span>All Our Services</span>
+                            <span class="ab-btn-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                        </a>
+                        
+                        <!-- Chalk heart SVG -->
+                        <svg class="ab-family-heart-svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M25,12 C28,5 42,5 42,18 C42,30 25,43 25,43 C25,43 8,30 8,18 C8,5 22,5 25,12 Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                            <path d="M25,14 C27,8 39,8 39,18 C39,27 25,38 25,38" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-linecap="round" fill="none" />
+                            <circle cx="5" cy="12" r="1" fill="white" opacity="0.7" />
+                            <circle cx="45" cy="22" r="1.2" fill="white" opacity="0.8" />
+                            <circle cx="12" cy="38" r="0.8" fill="white" opacity="0.6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- RIGHT: family photo -->
+                <div class="ab-family-right">
+                    <!-- Vertical brush stroke border overlapping left of photo -->
+                    <div class="ab-family-divider-brush"></div>
+                    <img src="assets/about/family image.png" alt="The Kiondo Family" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         OUR CORE VALUES
+    ==================================================== -->
+    <section class="ab-values-section">
+        <div class="container">
+            <div class="ab-values-card">
+
+                <!-- heading with brush-stroke arrows flanking -->
+                <div class="ab-values-heading-wrap ab-fade">
+                    <div class="ab-values-heading-row">
+                        <!-- Left Brush Arrow SVG -->
+                        <svg class="ab-heading-brush-arrow" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 25 3 C 20 5, 12 10, 5 12" stroke="#C8102E" stroke-width="3" stroke-linecap="round" fill="none" />
+                            <path d="M 22 8 C 17 10, 10 14, 2 16" stroke="#C8102E" stroke-width="3" stroke-linecap="round" fill="none" />
+                            <path d="M 28 13 C 23 15, 15 18, 8 20" stroke="#C8102E" stroke-width="3" stroke-linecap="round" fill="none" />
+                        </svg>
+                        
+                        <h2>Our Core Values</h2>
+                        
+                        <!-- Right Brush Arrow SVG (Mirrored via CSS) -->
+                        <svg class="ab-heading-brush-arrow right-arrow" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 25 3 C 20 5, 12 10, 5 12" stroke="#C8102E" stroke-width="3" stroke-linecap="round" fill="none" />
+                            <path d="M 22 8 C 17 10, 10 14, 2 16" stroke="#C8102E" stroke-width="3" stroke-linecap="round" fill="none" />
+                            <path d="M 28 13 C 23 15, 15 18, 8 20" stroke="#C8102E" stroke-width="3" stroke-linecap="round" fill="none" />
+                        </svg>
+                    </div>
+                    <!-- Red wavy brush underline -->
+                    <svg class="ab-brush-line-values" viewBox="0 0 300 20" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 10 10 Q 75 5, 150 10 T 290 10 Q 220 15, 150 12 T 10 10 Z" fill="#C8102E" />
+                    </svg>
+                </div>
+
+                <!-- 3-column values with hand-drawn brush outline circles and vertical dividers -->
+                <div class="ab-values-grid">
+
+                    <div class="ab-value-card ab-fade">
+                        <div class="ab-value-icon-wrapper">
+                            <!-- Hand-painted circle stroke -->
+                            <svg class="ab-icon-brush-circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M 50 6 A 44 44 0 1 1 49.9 6" stroke="#111111" stroke-width="4" stroke-linecap="round" fill="none" stroke-dasharray="280" stroke-dashoffset="8" />
+                                <path d="M 52 9 A 41 41 0 1 1 51.9 9" stroke="#111111" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.7" />
+                            </svg>
+                            <div class="ab-value-icon-inner">
+                                <i class="fa-solid fa-mortar-pestle"></i>
+                            </div>
+                        </div>
+                        <h3>Authentic Flavor</h3>
+                        <!-- Red small wavy title underline -->
+                        <svg class="ab-title-underline" viewBox="0 0 120 8" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 5 4 C 35 2, 75 6, 115 4" stroke="#C8102E" stroke-width="2.5" stroke-linecap="round" fill="none" />
+                        </svg>
+                        <p>We stay true to traditional Ugandan recipes and ingredients, bringing real, bold flavors to every dish.</p>
+                    </div>
+
+                    <div class="ab-value-card ab-fade">
+                        <div class="ab-value-icon-wrapper">
+                            <!-- Hand-painted circle stroke -->
+                            <svg class="ab-icon-brush-circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M 50 6 A 44 44 0 1 1 49.9 6" stroke="#111111" stroke-width="4" stroke-linecap="round" fill="none" stroke-dasharray="280" stroke-dashoffset="15" />
+                                <path d="M 52 9 A 41 41 0 1 1 51.9 9" stroke="#111111" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.7" />
+                            </svg>
+                            <div class="ab-value-icon-inner">
+                                <i class="fa-solid fa-people-group"></i>
+                            </div>
+                        </div>
+                        <h3>Family &amp; Community</h3>
+                        <!-- Red small wavy title underline -->
+                        <svg class="ab-title-underline" viewBox="0 0 120 8" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 5 4 C 35 2, 75 6, 115 4" stroke="#C8102E" stroke-width="2.5" stroke-linecap="round" fill="none" />
+                        </svg>
+                        <p>Food brings us together. We serve with love and build strong connections in our community.</p>
+                    </div>
+
+                    <div class="ab-value-card ab-fade">
+                        <div class="ab-value-icon-wrapper">
+                            <!-- Hand-painted circle stroke -->
+                            <svg class="ab-icon-brush-circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M 50 6 A 44 44 0 1 1 49.9 6" stroke="#111111" stroke-width="4" stroke-linecap="round" fill="none" stroke-dasharray="280" stroke-dashoffset="22" />
+                                <path d="M 52 9 A 41 41 0 1 1 51.9 9" stroke="#111111" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.7" />
+                            </svg>
+                            <div class="ab-value-icon-inner">
+                                <i class="fa-solid fa-concierge-bell"></i>
+                            </div>
+                        </div>
+                        <h3>Quality Catering</h3>
+                        <!-- Red small wavy title underline -->
+                        <svg class="ab-title-underline" viewBox="0 0 120 8" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 5 4 C 35 2, 75 6, 115 4" stroke="#C8102E" stroke-width="2.5" stroke-linecap="round" fill="none" />
+                        </svg>
+                        <p>From small gatherings to large events, we deliver fresh, delicious meals with exceptional service.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         OUR JOURNEY (Yellow background)
+    ==================================================== -->
+    <section class="ab-journey ab-journey-v2">
+        <div class="container">
+            <div class="ab-journey-shell ab-fade">
+                <div class="ab-journey-top">
+                    <div class="ab-journey-brand">
+                        <img src="assets/Logo catring.png" alt="Sentie's Kitchen logo">
+                        <span>Sentie's</span>
+                        <small>KITCHEN</small>
+                    </div>
+                    <h2 class="ab-journey-title">Our Journey</h2>
+                    <div class="ab-journey-script">Through the Years</div>
+                </div>
+
+                <div class="ab-journey-track">
+                    <div class="ab-journey-row is-left">
+                        <article class="ab-journey-card">
+                            <div class="ab-journey-media">
+                                <img src="Gallery/95441605_2697719100465711_8675034026030923776_n.jpg"
+                                    alt="2019 farmers market debut">
+                            </div>
+                            <div class="ab-journey-copy">
+                                <span class="ab-journey-year">2019</span>
+                                <h3>Our First Step</h3>
+                                <p>First time serving food in our local farmers market.</p>
+                            </div>
+                        </article>
+                        <div class="ab-journey-node"></div>
+                        <div></div>
+                    </div>
+
+                    <div class="ab-journey-row is-right">
+                        <div></div>
+                        <div class="ab-journey-node"></div>
+                        <article class="ab-journey-card is-reverse">
+                            <div class="ab-journey-media">
+                                <img src="assets/about/22.png" alt="Daily News recognition in 2022">
+                            </div>
+                            <div class="ab-journey-copy">
+                                <span class="ab-journey-year">2022</span>
+                                <h3>Community Recognition</h3>
+                                <p>Daily News recognition as one of the 25 Most Interesting People in MetroWest.</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="ab-journey-row is-left">
+                        <article class="ab-journey-card">
+                            <div class="ab-journey-media">
+                                <img src="assets/about/23.jpg" alt="Serving the community in 2023">
+                            </div>
+                            <div class="ab-journey-copy">
+                                <span class="ab-journey-year">2023</span>
+                                <h3>Serving Our Community</h3>
+                                <p>Our first time partnering with a family shelter serving 200+ meals daily.</p>
+                            </div>
+                        </article>
+                        <div class="ab-journey-node"></div>
+                        <div></div>
+                    </div>
+
+                    <div class="ab-journey-plane">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </div>
+
+                    <div class="ab-journey-row is-right">
+                        <div></div>
+                        <div class="ab-journey-node"></div>
+                        <article class="ab-journey-card is-reverse">
+                            <div class="ab-journey-media">
+                                <img src="assets/about/24.png" alt="Award recognition in 2024">
+                            </div>
+                            <div class="ab-journey-copy">
+                                <span class="ab-journey-year">2024</span>
+                                <h3>Best Entree Award</h3>
+                                <p>Sentie&apos;s Kitchen pulled it off. We won the 2024 Best Entree award and it felt magical.</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="ab-journey-row is-left">
+                        <article class="ab-journey-card">
+                            <div class="ab-journey-media">
+                                <img src="assets/about/CHEF CHNALEGE.png" alt="Embassy Chef Challenge">
+                            </div>
+                            <div class="ab-journey-copy">
+                                <span class="ab-journey-year">2024</span>
+                                <h3>Embassy Chef Challenge</h3>
+                                <p>Selected by the Ugandan Embassy to represent Uganda in Washington, D.C.</p>
+                            </div>
+                        </article>
+                        <div class="ab-journey-node"></div>
+                        <div></div>
+                    </div>
+
+                    <div class="ab-journey-row is-right">
+                        <div></div>
+                        <div class="ab-journey-node"></div>
+                        <article class="ab-journey-card is-reverse">
+                            <div class="ab-journey-media">
+                                <img src="assets/about/OPENING.jpg" alt="Grand opening celebration">
+                            </div>
+                            <div class="ab-journey-copy">
+                                <span class="ab-journey-year">2024</span>
+                                <h3>Grand Opening</h3>
+                                <p>Sunday, September 22, 2024 marked the long-awaited grand opening of Sentie's Kitchen.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="ab-journey-bottom">
+                    Rooted in Culture. <i class="fa-solid fa-heart"></i> Driven by Purpose. Made with Love.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ab-journey" hidden>
+        <!-- Scattered food decor icons -->
+        <i class="fa-solid fa-pepper-hot ab-journey-decor ab-jd1"></i>
+        <i class="fa-solid fa-leaf ab-journey-decor ab-jd2"></i>
+        <i class="fa-solid fa-bowl-rice ab-journey-decor ab-jd3"></i>
+        <i class="fa-solid fa-lemon ab-journey-decor ab-jd4"></i>
+        <i class="fa-solid fa-utensils ab-journey-decor ab-jd5"></i>
+        <i class="fa-solid fa-fire ab-journey-decor ab-jd6"></i>
+
+        <div class="container">
+            <div class="section-title-wrap ab-fade">
+                <h2 class="section-title-deco">Our Journey Through The Years</h2>
+            </div>
+            <p class="ab-journey-sub">From humble beginnings to where we are today - a journey flavored by passion,
+                community, and purpose.</p>
+
+            <!-- Airplane row -->
+            <div class="ab-plane-row ab-fade">
+                <div class="ab-plane-line"></div>
+                <i class="fa-solid fa-paper-plane ab-plane-icon"></i>
+                <div class="ab-plane-line"></div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="ab-timeline">
+
+                <!-- 2019 - LEFT: Farmers Market -->
+                <div class="ab-tl-item ab-fade">
+                    <div class="ab-tl-left">
+                        <div class="ab-tl-card">
+                            <img src="Gallery/95441605_2697719100465711_8675034026030923776_n.jpg"
+                                alt="2019 Farmers Market"
+                                onerror="this.src='https://images.unsplash.com/photo-1542838132-92c53300491e?w=400&q=80'">
+                            <div class="ab-tl-card-body">
+                                <span class="ab-tl-year">2019</span>
+                                <h4>First Local Farmers Market Sales</h4>
+                                <p>Sentie's Kitchen made its debut serving authentic Ugandan flavors at local farmers markets - the community loved it from day one.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ab-tl-dot">
+                        <div class="ab-tl-circle">2019</div>
+                    </div>
+                    <div class="ab-tl-right"></div>
+                </div>
+
+                <!-- 2022 - RIGHT: Daily News Recognition -->
+                <div class="ab-tl-item ab-fade">
+                    <div class="ab-tl-left"></div>
+                    <div class="ab-tl-dot">
+                        <div class="ab-tl-circle">2022</div>
+                    </div>
+                    <div class="ab-tl-right">
+                        <div class="ab-tl-card">
+                            <img src="assets/about/22.png" alt="Daily News 25 Most Interesting People MetroWest 2022">
+                            <div class="ab-tl-card-body">
+                                <span class="ab-tl-year">2022</span>
+                                <h4>Daily News Recognition</h4>
+                                <p>Sentie Kiondo was named one of the <strong>25 Most Interesting People in MetroWest</strong> by the Daily News - a proud milestone recognizing his dedication to food and community.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2023 - LEFT: Community Partnership & 200+ Meals -->
+                <div class="ab-tl-item ab-fade">
+                    <div class="ab-tl-left">
+                        <div class="ab-tl-card">
+                            <img src="assets/about/23.jpg" alt="Community Partnership 2023 - 200+ meals served">
+                            <div class="ab-tl-card-body">
+                                <span class="ab-tl-year">2023</span>
+                                <h4>Community Partnership</h4>
+                                <p>Partnered with a family shelter and served <strong>200+ meals daily</strong> - giving back to our community has always been our heart.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ab-tl-dot">
+                        <div class="ab-tl-circle">2023</div>
+                    </div>
+                    <div class="ab-tl-right"></div>
+                </div>
+
+                <!-- 2024 - RIGHT: Taste of Marlborough Best Entree Award -->
+                <div class="ab-tl-item ab-fade">
+                    <div class="ab-tl-left"></div>
+                    <div class="ab-tl-dot">
+                        <div class="ab-tl-circle">2024</div>
+                    </div>
+                    <div class="ab-tl-right">
+                        <div class="ab-tl-card">
+                            <img src="assets/about/24.png" alt="Taste of Marlborough People's Choice 2024 Best Entree Award">
+                            <div class="ab-tl-card-body">
+                                <span class="ab-tl-year">2024</span>
+                                <h4>People's Choice - Best Entree</h4>
+                                <p>Won the <strong>Taste of Marlborough People's Choice Award for Best Entree 2024</strong> - a proud recognition of the authentic flavors Sentie's Kitchen brings to every plate.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Embassy Chef Challenge - LEFT -->
+                <div class="ab-tl-item ab-fade">
+                    <div class="ab-tl-left">
+                        <div class="ab-tl-card">
+                            <img src="assets/about/CHEF CHNALEGE.png" alt="Embassy Chef Challenge - Uganda, Washington DC">
+                            <div class="ab-tl-card-body">
+                                <span class="ab-tl-year">Embassy</span>
+                                <h4>Embassy Chef Challenge</h4>
+                                <p>Invited by the Ugandan Ambassador to represent <strong>Uganda</strong> at the Embassy Chef Challenge in Washington, DC - an incredible international honor, showcasing authentic Ugandan cuisine to the world.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ab-tl-dot">
+                        <div class="ab-tl-circle" style="font-size:0.6rem;line-height:1.2;">Chef<br>Challenge</div>
+                    </div>
+                    <div class="ab-tl-right"></div>
+                </div>
+
+                <!-- Grand Opening - RIGHT -->
+                <div class="ab-tl-item ab-fade">
+                    <div class="ab-tl-left"></div>
+                    <div class="ab-tl-dot">
+                        <div class="ab-tl-circle" style="font-size:0.6rem;line-height:1.2;">Grand<br>Opening</div>
+                    </div>
+                    <div class="ab-tl-right">
+                        <div class="ab-tl-card">
+                            <img src="assets/about/OPENING.jpg" alt="Sentie's Kitchen Grand Opening Ribbon Cutting Ceremony">
+                            <div class="ab-tl-card-body">
+                                <span class="ab-tl-year">Grand Opening</span>
+                                <h4>Grand Opening Celebration</h4>
+                                <p>A landmark moment - Sentie's Kitchen officially opened its doors with a ribbon-cutting ceremony, surrounded by family, friends, community leaders, and hundreds of beloved guests.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /ab-timeline -->
+                <div class="ab-tl-item ab-fade">
+                    <div class="ab-tl-left">
+                        <div class="ab-tl-card">
+                            <img src="Gallery/95441605_2697719100465711_8675034026030923776_n.jpg"
+                                alt="2019 Farmers Market"
+                                onerror="this.src='https://images.unsplash.com/photo-1542838132-92c53300491e?w=400&q=80'">
+                            <div class="ab-tl-card-body">
+                                <span class="ab-tl-year">2019</span>
+                                <h4>First Local Farmers Market Sales</h4>
+                                <p>Sentie's Kitchen made its debut serving authentic Ugandan flavors at local farmers
+                                    markets - the community loved it from day one.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ab-tl-dot">
+                        <div class="ab-tl-circle">2019</div>
+                    </div>
+                    <div class="ab-tl-right"></div>
+                </div>
+
+                <!-- 2022 - RIGHT -->
+                <div class="ab-tl-item ab-fade">
+                    <div class="ab-tl-left"></div>
+                    <div class="ab-tl-dot">
+                        <div class="ab-tl-circle">2022</div>
+                    </div>
+                    <div class="ab-tl-right">
+                        <div class="ab-tl-card">
+                            <img src="Gallery/IMG_2462.jpeg" alt="Daily News 2022"
+                                onerror="this.src='https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80'">
+                            <div class="ab-tl-card-body">
+                                <span class="ab-tl-year">2022</span>
+                                <h4>Daily News Recognition</h4>
+                                <p>Daily News recognized Sentie Kiondo as one of the 25 Most Interesting People in
+                                    MetroWest for 2022 - a proud milestone.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2023 - LEFT -->
+                <div class="ab-tl-item ab-fade">
+                    <div class="ab-tl-left">
+                        <div class="ab-tl-card">
+                            <img src="Gallery/151920631_2939391436298475_2405511215944385837_n.jpg" alt="Community 2023"
+                                onerror="this.src='https://images.unsplash.com/photo-1617196034183-421b4040ed20?w=400&q=80'">
+                            <div class="ab-tl-card-body">
+                                <span class="ab-tl-year">2023</span>
+                                <h4>Community Partnership</h4>
+                                <p>Partnered with a family shelter and served 200+ meals daily - giving back to our
+                                    community has always been our heart.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ab-tl-dot">
+                        <div class="ab-tl-circle">2023</div>
+                    </div>
+                    <div class="ab-tl-right"></div>
+                </div>
+
+                <!-- 2024 - RIGHT -->
+                <div class="ab-tl-item ab-fade">
+                    <div class="ab-tl-left"></div>
+                    <div class="ab-tl-dot">
+                        <div class="ab-tl-circle">2024</div>
+                    </div>
+                    <div class="ab-tl-right">
+                        <div class="ab-tl-card">
+                            <img src="Gallery/IMG_2483.jpeg" alt="Award 2024"
+                                onerror="this.src='https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=400&q=80'">
+                            <div class="ab-tl-card-body">
+                                <span class="ab-tl-year">2024</span>
+                                <h4>Award Recognition</h4>
+                                <p>Proud award recognition, honoring years of dedication to authentic cuisine and
+                                    community service.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Embassy Chef Challenge - LEFT -->
+                <div class="ab-tl-item ab-fade">
+                    <div class="ab-tl-left">
+                        <div class="ab-tl-card">
+                            <img src="Gallery/IMG_2468.jpeg" alt="Embassy Chef Challenge"
+                                onerror="this.src='https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=400&q=80'">
+                            <div class="ab-tl-card-body">
+                                <span class="ab-tl-year">Embassy</span>
+                                <h4>Embassy Chef Challenge</h4>
+                                <p>Invited by the Ugandan Ambassador to represent Uganda at the Embassy Chef Challenge
+                                    in Washington, DC - an incredible honor.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ab-tl-dot">
+                        <div class="ab-tl-circle" style="font-size:0.6rem;line-height:1.2;">Chef<br>Challenge</div>
+                    </div>
+                    <div class="ab-tl-right"></div>
+                </div>
+
+                <!-- Grand Opening - RIGHT -->
+                <div class="ab-tl-item ab-fade">
+                    <div class="ab-tl-left"></div>
+                    <div class="ab-tl-dot">
+                        <div class="ab-tl-circle" style="font-size:0.6rem;line-height:1.2;">Grand<br>Opening</div>
+                    </div>
+                    <div class="ab-tl-right">
+                        <div class="ab-tl-card">
+                            <img src="Gallery/a7a30b7d-cd26-4f98-8176-c9b0dfebde5e.jpg" alt="Grand Opening"
+                                onerror="this.src='https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&q=80'">
+                            <div class="ab-tl-card-body">
+                                <span class="ab-tl-year">Grand Opening</span>
+                                <h4>Grand Opening</h4>
+                                <p>Sunday, September 22 - Sentie's Kitchen celebrated its grand opening with family,
+                                    friends, and hundreds of beloved guests.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /ab-timeline -->
+        </div>
+    </section>
+
+ 
+
+    <!-- ====================================================
+         MOMENTS GALLERY
+    ==================================================== -->
+    <section class="ab-moments ab-moments-v2">
+        <div class="container">
+            <div class="ab-moments-head ab-fade">
+                <span class="ab-moments-kicker">Moments</span>
+                <h2>Moments That Built Our Story</h2>
+            </div>
+            <div class="ab-moments-row ab-fade">
+                <article class="ab-moment-card">
+                    <img src="Gallery/151920631_2939391436298475_2405511215944385837_n.jpg" alt="Food trays prepared for service">
+                </article>
+                <article class="ab-moment-card">
+                    <img src="Gallery/95629536_2697719353799019_8930391448348524544_n.jpg" alt="Community food tray moment">
+                </article>
+                <article class="ab-moment-card">
+                    <img src="Gallery/79841763_2578698705701085_5118435873808973824_n.jpg" alt="Samosas display">
+                </article>
+                <article class="ab-moment-card">
+                    <img src="Gallery/IMG_2483.jpeg" alt="Award recognition moment">
+                </article>
+                <article class="ab-moment-card">
+                    <img src="Gallery/a7a30b7d-cd26-4f98-8176-c9b0dfebde5e.jpg" alt="Grand opening moment">
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         RED CTA BANNER
+    ==================================================== -->
+    <section class="page-cta">
+        <div class="container page-cta-inner">
+            <div class="page-cta-copy ab-fade">
+                <span class="page-cta-kicker">Let Us Cater Your Next Event</span>
+                <h2 class="page-cta-title">Good Food. Great Memories.</h2>
+                <p class="page-cta-desc">From intimate gatherings to grand celebrations,<br>we bring the flavor and the love.</p>
+                <a href="contact.html" class="page-cta-btn">
+                    <span>Let's Cater!</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         FOOTER (IDENTICAL to index.html)
+    ==================================================== -->
+    <footer class="footer-showcase">
+    <div class="footer-showcase-bg" aria-hidden="true">
+        <img src="assets/events/hero-bg.png" alt="Sentie's Kitchen dinner table">
+    </div>
+    <div class="footer-showcase-overlay" aria-hidden="true"></div>
+
+    <div class="container footer-showcase-inner">
+        <div class="footer-showcase-top">
+            <div class="footer-showcase-col">
+                <div class="footer-showcase-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                <h3>Contact Us</h3>
+                <p>+1 (508) 927-8011</p>
+                <p>info@sentieskitchen.com</p>
+                <a href="contact.html" class="footer-showcase-btn">Contact Us</a>
+            </div>
+
+            <div class="footer-showcase-col footer-showcase-col-center">
+                <div class="footer-showcase-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <h3>Address</h3>
+                <p>21 Turnpike Rd, Southborough, MA 01772</p>
+                <p>Massachusetts, United States</p>
+                <a href="https://maps.google.com/?q=21+Turnpike+Rd,+Southborough,+MA+01772" target="_blank" rel="noopener" class="footer-showcase-btn">Get Direction</a>
+            </div>
+
+            <div class="footer-showcase-col footer-showcase-col-right">
+                <div class="footer-showcase-icon"><i class="fa-regular fa-clock"></i></div>
+                <h3>Opening <span>Hours</span></h3>
+                <p>Wed - Sat: 11:00 AM - 7:00 PM</p>
+                <p>Sun: 12:00 PM - 5:00 PM</p>
+                
+            </div>
+        </div>
+
+        <div class="footer-showcase-divider"></div>
+
+        <div class="footer-showcase-bottom">
+            <p class="footer-showcase-copy">Copyright &copy; 2026 All Rights Reserved.</p>
+
+            <a href="index.html" class="footer-showcase-brand">
+                <span class="footer-showcase-brand-badge">
+                    <img src="assets/Logo catring.png" alt="Sentie's Kitchen Logo">
+                </span>
+                <span class="footer-showcase-brand-name">Sentie's Kitchen</span>
+            </a>
+
+            <div class="footer-showcase-socials">
+                <a href="https://www.instagram.com/sentieskitchen" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:info@sentieskitchen.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- ====================================================
+         JAVASCRIPT
+    ==================================================== -->
+    <script>
+        // -- Sticky header (same logic as script.js) -------
+        const header = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('sticky', window.scrollY > 80);
+        });
+
+        // -- Mobile hamburger toggle -----------------------
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileDrawer = document.getElementById('mobile-nav-drawer');
+
+        if (mobileBtn && mobileDrawer) {
+            mobileBtn.addEventListener('click', () => {
+                const isOpen = mobileDrawer.classList.toggle('open');
+                mobileBtn.classList.toggle('open', isOpen);
+                document.body.style.overflow = isOpen ? 'hidden' : '';
+            });
+        }
+
+        // Close drawer on link click
+        document.querySelectorAll('#mobile-nav-drawer a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileDrawer.classList.remove('open');
+                mobileBtn.classList.remove('open');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // -- Fade-up on scroll -----------------------------
+        const fadeEls = document.querySelectorAll('.ab-fade');
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    io.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.10 });
+        fadeEls.forEach(el => io.observe(el));
+    </script>
+
+    <!-- Mobile drawer styles -->
+    <style>
+        .mobile-nav-drawer {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            background: var(--color-black);
+            padding: 16px 0 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .mobile-nav-drawer a {
+            color: rgba(255, 255, 255, 0.85);
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 13px 24px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            transition: color 0.2s, background 0.2s;
+        }
+
+        .mobile-nav-drawer a:hover,
+        .mobile-nav-drawer a.active {
+            color: var(--color-yellow);
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: flex !important;
+            }
+
+            .nav-links {
+                display: none !important;
+            }
+
+            .header-actions {
+                display: none !important;
+            }
+
+            .mobile-nav-drawer.open {
+                display: flex;
+            }
+        }
+    </style>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top-btn" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1191 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Browse the Sentie's Kitchen gallery - unforgettable catering moments, signature dishes, behind-the-scenes photos, and happy clients.">
+    <meta name="keywords"
+        content="Sentie's Kitchen, gallery, food photos, catering events, happy clients, behind the scenes">
+    <meta name="author" content="Sentie's Kitchen">
+
+    <title>Gallery - Sentie's Kitchen | Moments Made With Love</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* =====================================================
+           GALLERY PAGE - PAGE-SPECIFIC STYLES ONLY
+           (Header, footer, .container, .btn etc. all come
+            from style.css exactly as on the home page)
+        ===================================================== */
+
+        /* -- Short Hero ------------------------------------ */
+        .gallery-hero {
+            position: relative;
+            min-height: 360px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            overflow: hidden;
+            background-color: #111;
+            text-align: left;
+        }
+
+        /* The banner image matching about us design */
+        .gallery-hero-bg {
+            position: absolute;
+            inset: 0;
+            background: url('assets/new-picture/Catering.jpeg') center center / cover no-repeat;
+        }
+
+        /* Left-heavy gradient so text stays legible */
+        .gallery-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right,
+                    rgba(0, 0, 0, 0.80) 0%,
+                    rgba(0, 0, 0, 0.55) 55%,
+                    rgba(0, 0, 0, 0.20) 100%);
+        }
+
+        .gallery-hero-content-wrap {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-top: 84px;
+            padding-bottom: 84px;
+        }
+
+        .gallery-hero-breadcrumb {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--font-heading);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.88);
+            margin-bottom: 16px;
+        }
+
+        .gallery-hero-breadcrumb a {
+            color: #fff;
+            transition: color var(--transition-fast);
+        }
+
+        .gallery-hero-breadcrumb a:hover {
+            color: var(--color-yellow);
+        }
+
+        .gallery-hero-breadcrumb span {
+            color: var(--color-yellow);
+        }
+
+        /* "Moments Made With Love" heading */
+        .gallery-hero-content-wrap h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(2.4rem, 5vw, 4rem);
+            font-weight: 800;
+            text-transform: uppercase;
+            color: #fff;
+            line-height: 1.02;
+            margin: 0 0 14px;
+            letter-spacing: -0.6px;
+            max-width: 700px;
+        }
+
+        .gallery-hero-content-wrap h1 span {
+            color: var(--color-yellow);
+        }
+
+        .gallery-hero-subtitle {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.82);
+            line-height: 1.75;
+            max-width: 640px;
+            margin: 0 0 26px;
+        }
+
+        .gallery-hero-btn {
+            min-width: 190px;
+        }
+
+        .mobile-nav-drawer {
+            display: none;
+        }
+
+        /* -- Tabs & Gallery Grid --------------------------- */
+        .gallery-tabs {
+            background: #fbf6ee;
+            border-top: 1px solid rgba(0, 0, 0, 0.04);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+            padding: 20px 0 18px;
+        }
+
+        .gallery-tabs-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .gallery-tab {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 13px 24px;
+            border-radius: 999px;
+            background: transparent;
+            color: #161616;
+            font-family: var(--font-heading);
+            font-size: 0.92rem;
+            font-weight: 700;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: transform var(--transition-fast), background var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast);
+        }
+
+        .gallery-tab i {
+            font-size: 1rem;
+            color: inherit;
+        }
+
+        .gallery-tab.active {
+            background: linear-gradient(180deg, #d61b1b 0%, #b90f0f 100%);
+            color: #fff;
+            box-shadow: 0 10px 22px rgba(214, 27, 27, 0.22);
+        }
+
+        .gallery-tab:hover {
+            transform: translateY(-2px);
+        }
+
+        .gallery-grid-section {
+            background:
+                radial-gradient(circle at top left, rgba(247, 198, 0, 0.12) 0%, transparent 24%),
+                #f8f2ea;
+            padding: 28px 0 72px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .gallery-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 18px;
+            background: #111;
+            box-shadow: 0 12px 26px rgba(0, 0, 0, 0.11);
+            aspect-ratio: 1 / 0.76;
+            cursor: pointer;
+            transition: transform 0.5s ease, opacity 0.4s ease;
+            opacity: 1;
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.55s ease;
+        }
+
+        .gallery-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 60%, rgba(0, 0, 0, 0.15) 100%);
+            pointer-events: none;
+        }
+
+        .gallery-page {
+            font-family: var(--font-body);
+            --font-accent: 'Caveat', cursive;
+        }
+
+        body.gallery-page .page-cta-kicker {
+            font-family: var(--font-accent);
+            font-style: italic;
+        }
+
+        /* -- Lightbox Modal ------------------------------ */
+        .lightbox-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 10000;
+            background: rgba(10, 10, 10, 0.96);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .lightbox-modal.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .lightbox-close-btn {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: #fff;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10005;
+        }
+
+        .lightbox-close-btn:hover {
+            background: var(--color-red);
+            border-color: var(--color-red);
+            transform: scale(1.08) rotate(90deg);
+            box-shadow: 0 4px 14px rgba(200, 16, 46, 0.4);
+        }
+
+        .lightbox-viewport {
+            position: relative;
+            width: min(90vw, 960px);
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .lightbox-img-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+            background: #000;
+        }
+
+        .lightbox-img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            opacity: 0;
+            transform: scale(0.96);
+            transition: opacity 0.35s ease, transform 0.35s ease;
+        }
+
+        .lightbox-img.loaded {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Nav Arrows */
+        .lightbox-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: #fff;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10002;
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+        }
+
+        .lightbox-arrow:hover {
+            background: var(--color-yellow);
+            color: #111;
+            border-color: var(--color-yellow);
+            transform: translateY(-50%) scale(1.08);
+            box-shadow: 0 4px 15px rgba(246, 177, 58, 0.4);
+        }
+
+        .lightbox-arrow-prev {
+            left: -80px;
+        }
+
+        .lightbox-arrow-next {
+            right: -80px;
+        }
+
+        /* Progress timer bar for slideshow */
+        .lightbox-progress-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 4px;
+            background: var(--color-yellow);
+            width: 0;
+            z-index: 10003;
+            transition: width 3s linear;
+        }
+
+        /* Bottom Controls Info */
+        .lightbox-bottom {
+            width: min(90vw, 800px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            text-align: center;
+            color: #fff;
+            z-index: 10002;
+        }
+
+        .lightbox-caption {
+            font-family: var(--font-heading);
+            font-size: clamp(1rem, 3.5vw, 1.35rem);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: -0.2px;
+            margin: 0;
+            color: #fff;
+            max-width: 90%;
+            line-height: 1.2;
+        }
+
+        .lightbox-meta-row {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            font-family: var(--font-heading);
+            font-size: 0.76rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            color: rgba(255, 255, 255, 0.5);
+            text-transform: uppercase;
+        }
+
+        .lightbox-counter {
+            background: rgba(255, 255, 255, 0.06);
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+
+        .lightbox-play-btn {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.92rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .lightbox-play-btn:hover,
+        .lightbox-play-btn.playing {
+            background: var(--color-yellow);
+            color: #111;
+            border-color: var(--color-yellow);
+            transform: scale(1.06);
+            box-shadow: 0 4px 12px rgba(246, 177, 58, 0.3);
+        }
+
+        /* -- Scroll fade-up animation --------------------- */
+        .ab-fade {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .ab-fade.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* -- Responsive ----------------------------------- */
+        @media (max-width: 1140px) {
+            .lightbox-viewport {
+                width: min(85vw, 760px);
+            }
+            .lightbox-arrow-prev {
+                left: -70px;
+            }
+            .lightbox-arrow-next {
+                right: -70px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 960px) {
+            .lightbox-viewport {
+                width: 80vw;
+                height: 50vh;
+            }
+            .lightbox-arrow {
+                width: 48px;
+                height: 48px;
+                font-size: 1rem;
+            }
+            .lightbox-arrow-prev {
+                left: 10px;
+            }
+            .lightbox-arrow-next {
+                right: 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gallery-hero {
+                min-height: 300px;
+            }
+
+            .gallery-hero-content-wrap {
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+
+            .gallery-hero-content-wrap h1 {
+                font-size: clamp(1.8rem, 8vw, 2.4rem);
+                max-width: 320px;
+            }
+
+            .gallery-hero-breadcrumb {
+                font-size: 0.64rem;
+                gap: 6px;
+                letter-spacing: 0.12em;
+                margin-bottom: 12px;
+            }
+
+            .mobile-nav-drawer {
+                display: flex;
+                position: fixed;
+                inset: 0;
+                z-index: 2500;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 18px;
+                padding: 110px 24px 36px;
+                background: rgba(10, 10, 10, 0.98);
+                transform: translateY(-100%);
+                transition: transform 0.45s ease;
+            }
+
+            .mobile-nav-drawer.open {
+                transform: translateY(0);
+            }
+
+            .mobile-nav-drawer a {
+                color: #fff;
+                font-family: var(--font-heading);
+                font-size: 1.05rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 0.12em;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .gallery-tabs {
+                padding: 16px 0;
+            }
+
+            .gallery-tabs-inner {
+                gap: 10px;
+            }
+
+            .gallery-tab {
+                padding: 11px 18px;
+                font-size: 0.8rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-card {
+                aspect-ratio: 1 / 0.82;
+            }
+
+            .lightbox-viewport {
+                width: 90vw;
+                height: 40vh;
+                margin-bottom: 12px;
+            }
+            .lightbox-close-btn {
+                top: 16px;
+                right: 16px;
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+            .lightbox-arrow {
+                width: 42px;
+                height: 42px;
+                font-size: 0.9rem;
+            }
+            .lightbox-arrow-prev {
+                left: 6px;
+            }
+            .lightbox-arrow-next {
+                right: 6px;
+            }
+            .lightbox-caption {
+                font-size: 0.95rem;
+            }
+            .lightbox-meta-row {
+                gap: 16px;
+                font-size: 0.7rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-hero-content-wrap {
+                padding-top: 48px;
+                padding-bottom: 48px;
+            }
+
+            .gallery-hero-subtitle {
+                font-size: 0.92rem;
+                line-height: 1.6;
+                max-width: 100%;
+            }
+
+            .gallery-hero-content-wrap h1 {
+                max-width: 280px;
+            }
+
+            .gallery-hero-breadcrumb {
+                flex-wrap: wrap;
+                row-gap: 4px;
+            }
+        }
+    </style>
+</head>
+
+<body class="gallery-page">
+    <div class="announcement-bar">
+        <div class="announcement-text">
+            <svg class="announcement-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                    d="M13.8 2.2c.5 2.1-.1 3.8-1.7 5.2-1.2 1-2.1 2.1-2.1 3.7 0 1.2.5 2.2 1.4 2.9-.1-1.7.8-3.1 2.2-4.2.2 2.2 2.4 3.3 2.4 6.1 0 2.8-2.1 5.1-5 5.1s-5-2.2-5-5.2c0-3.8 2.8-5.8 4.7-7.9 1.4-1.5 2.4-3.2 3.1-5.7Z" />
+            </svg>
+            <span>Authentic Afro-Caribbean Takeout &amp; Catering</span>
+            <svg class="announcement-icon announcement-icon-right" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                    d="M13.8 2.2c.5 2.1-.1 3.8-1.7 5.2-1.2 1-2.1 2.1-2.1 3.7 0 1.2.5 2.2 1.4 2.9-.1-1.7.8-3.1 2.2-4.2.2 2.2 2.4 3.3 2.4 6.1 0 2.8-2.1 5.1-5 5.1s-5-2.2-5-5.2c0-3.8 2.8-5.8 4.7-7.9 1.4-1.5 2.4-3.2 3.1-5.7Z" />
+            </svg>
+        </div>
+    </div>
+
+        <header id="main-header">
+        <div class="container">
+            <!-- Brand Logo -->
+            <a href="index.html" class="logo-container">
+                <img src="assets/Logo catring.png" alt="Sentie's Kitchen Logo" class="logo-img">
+                <div class="logo-text-wrap">
+                    <span class="logo-main">Sentie's <span>Kitchen</span></span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html" >Home</a>
+                <a href="menu.html" >Menu</a>
+                <a href="events.html" >Catering</a>
+                <a href="gallery.html" class="active">Gallery</a>
+                <a href="about.html" >About</a>
+                <a href="contact.html" >Contact</a>
+            </nav>
+
+            <!-- Action Button -->
+            <div class="header-actions">
+                <a href="https://order.toasttab.com/online/senties-kitchen" target="_blank" class="btn-order-now">
+                    <i class="fa-solid fa-bag-shopping" style="margin-right: 6px;"></i>
+                    Order Now
+                </a>
+            </div>
+
+            <!-- Hamburger Button -->
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="gallery-hero">
+        <div class="gallery-hero-bg"></div>
+        <div class="gallery-hero-overlay"></div>
+
+        <div class="container gallery-hero-content-wrap">
+            <div class="gallery-hero-breadcrumb ab-fade">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Gallery</span>
+            </div>
+
+            <h1 class="ab-fade">
+                Moments Made<br><span>With Love</span>
+            </h1>
+            <p class="gallery-hero-subtitle ab-fade">
+                A collection of flavors, celebrations, and unforgettable moments from our kitchen to your table.
+            </p>
+            <a href="#gallery-tabs-section" class="btn btn-yellow gallery-hero-btn ab-fade">
+                View Gallery
+                <span class="arrow-icon"><i class="fa-solid fa-arrow-down"></i></span>
+            </a>
+        </div>
+    </section>
+
+    <section class="gallery-tabs" id="gallery-tabs-section">
+        <div class="container">
+            <div class="gallery-tabs-inner">
+                <a href="#gallery-all" class="gallery-tab active" data-filter="all"><i class="fa-solid fa-grid-2"></i>All Gallery</a>
+                <a href="#gallery-food" class="gallery-tab" data-filter="food"><i class="fa-solid fa-bowl-food"></i>Food</a>
+                <a href="#gallery-catering" class="gallery-tab" data-filter="catering"><i class="fa-solid fa-bell-concierge"></i>Catering &amp; Events</a>
+                <a href="#gallery-bts" class="gallery-tab" data-filter="bts"><i class="fa-solid fa-video"></i>Behind The Scenes</a>
+                <a href="#gallery-clients" class="gallery-tab" data-filter="clients"><i class="fa-regular fa-heart"></i>Happy Clients</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-grid-section">
+        <div class="container">
+            <div class="gallery-grid">
+                <figure class="gallery-card ab-fade" data-category="food">
+                    <img src="Gallery/95441605_2697719100465711_8675034026030923776_n.jpg" alt="Signature dish served at the farmers market">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="food">
+                    <img src="Gallery/95629536_2697719353799019_8930391448348524544_n.jpg" alt="Catering tray and food service moment">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="catering">
+                    <img src="Gallery/151920631_2939391436298475_2405511215944385837_n.jpg" alt="Catering trays prepared for event service">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="bts">
+                    <img src="Gallery/IMG_5753.jpeg" alt="Behind the scenes kitchen moment">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="bts">
+                    <img src="Gallery/IMG_2483.jpeg" alt="Award recognition moment">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="clients">
+                    <img src="Gallery/a7a30b7d-cd26-4f98-8176-c9b0dfebde5e.jpg" alt="Happy clients at a Sentie's Kitchen celebration">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="catering">
+                    <img src="Gallery/152420118_2939391439631808_208464520934793527_n.jpg" alt="Event buffet table with trays of food">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="bts">
+                    <img src="Gallery/81291857_2578698785701077_6561890312304721920_n.jpg" alt="Chef plating food in the kitchen">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="catering">
+                    <img src="Gallery/79855924_2578698672367755_6206151842057945088_n.jpg" alt="Celebration and catering table setup">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="food">
+                    <img src="Gallery/79841763_2578698705701085_5118435873808973824_n.jpg" alt="Close-up food presentation at an event">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="food">
+                    <img src="Gallery/IMG_2478.jpeg" alt="Beautiful plated dish from Sentie's Kitchen">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="clients">
+                    <img src="Gallery/IMG_2462.jpeg" alt="Smiling team photo at Sentie's Kitchen">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="catering">
+                    <img src="assets/new-picture/sentieskitchen 4.webp" alt="Sentie's Kitchen Catering and Event Presentation">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="food">
+                    <img src="assets/new-picture/sentieskitchen1.webp" alt="Signature Jerk Chicken and BBQ Fusion Platter">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="food">
+                    <img src="assets/new-picture/sentieskitchen2.webp" alt="Authentic Afro-Caribbean Special Plated Dishes">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="food">
+                    <img src="assets/new-picture/sentieskitchen5 (1).webp" alt="Delicious Afro-Caribbean BBQ Feast Spread">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="food">
+                    <img src="assets/new-picture/sentieskitchen5.webp" alt="Freshly Prepared Traditional African Inspired Recipes">
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-cta">
+        <div class="container page-cta-inner">
+            <div class="page-cta-copy ab-fade">
+                <span class="page-cta-kicker">Let Us Cater Your Next Event</span>
+                <h2 class="page-cta-title">Good Food. Great Memories.</h2>
+                <p class="page-cta-desc">From intimate gatherings to grand celebrations,<br>we bring the flavor and the love.</p>
+                <a href="contact.html" class="page-cta-btn">
+                    <span>Let's Cater!</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-showcase">
+    <div class="footer-showcase-bg" aria-hidden="true">
+        <img src="assets/events/hero-bg.png" alt="Sentie's Kitchen dinner table">
+    </div>
+    <div class="footer-showcase-overlay" aria-hidden="true"></div>
+
+    <div class="container footer-showcase-inner">
+        <div class="footer-showcase-top">
+            <div class="footer-showcase-col">
+                <div class="footer-showcase-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                <h3>Contact Us</h3>
+                <p>+1 (508) 927-8011</p>
+                <p>info@sentieskitchen.com</p>
+                <a href="contact.html" class="footer-showcase-btn">Contact Us</a>
+            </div>
+
+            <div class="footer-showcase-col footer-showcase-col-center">
+                <div class="footer-showcase-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <h3>Address</h3>
+                <p>21 Turnpike Rd, Southborough, MA 01772</p>
+                <p>Massachusetts, United States</p>
+                <a href="https://maps.google.com/?q=21+Turnpike+Rd,+Southborough,+MA+01772" target="_blank" rel="noopener" class="footer-showcase-btn">Get Direction</a>
+            </div>
+
+            <div class="footer-showcase-col footer-showcase-col-right">
+                <div class="footer-showcase-icon"><i class="fa-regular fa-clock"></i></div>
+                <h3>Opening <span>Hours</span></h3>
+                <p>Wed - Sat: 11:00 AM - 7:00 PM</p>
+                <p>Sun: 12:00 PM - 5:00 PM</p>
+                
+            </div>
+        </div>
+
+        <div class="footer-showcase-divider"></div>
+
+        <div class="footer-showcase-bottom">
+            <p class="footer-showcase-copy">Copyright &copy; 2026 All Rights Reserved.</p>
+
+            <a href="index.html" class="footer-showcase-brand">
+                <span class="footer-showcase-brand-badge">
+                    <img src="assets/Logo catring.png" alt="Sentie's Kitchen Logo">
+                </span>
+                <span class="footer-showcase-brand-name">Sentie's Kitchen</span>
+            </a>
+
+            <div class="footer-showcase-socials">
+                <a href="https://www.instagram.com/sentieskitchen" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:info@sentieskitchen.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+    <!-- -- Lightbox Slideshow Modal -- -->
+    <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-modal="true">
+        <!-- Close button -->
+        <button class="lightbox-close-btn" id="lightbox-close" aria-label="Close Lightbox">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <!-- Viewport container -->
+        <div class="lightbox-viewport" id="lightbox-viewport">
+            <!-- Left Arrow -->
+            <button class="lightbox-arrow lightbox-arrow-prev" id="lightbox-prev" aria-label="Previous Image">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <!-- Image wrapper for loading and styling -->
+            <div class="lightbox-img-wrapper">
+                <img src="" alt="" class="lightbox-img" id="lightbox-img">
+                <div class="lightbox-progress-bar" id="lightbox-progress"></div>
+            </div>
+
+            <!-- Right Arrow -->
+            <button class="lightbox-arrow lightbox-arrow-next" id="lightbox-next" aria-label="Next Image">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- Details Info at the bottom -->
+        <div class="lightbox-bottom">
+            <h3 class="lightbox-caption" id="lightbox-caption">Image Alt Description</h3>
+            <div class="lightbox-meta-row">
+                <span class="lightbox-counter" id="lightbox-counter">1 / 12</span>
+                <button class="lightbox-play-btn" id="lightbox-play" aria-label="Start Slideshow">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- -- Page Interactivity & Lightbox Scripts -- -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // -- Header Sticky Effect --
+            const header = document.getElementById('main-header');
+            window.addEventListener('scroll', () => {
+                header.classList.toggle('sticky', window.scrollY > 80);
+            });
+
+            // -- Mobile Navigation Drawer Menu Toggle --
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileDrawer = document.getElementById('mobile-nav-drawer');
+
+            if (mobileBtn && mobileDrawer) {
+                mobileBtn.addEventListener('click', () => {
+                    const isOpen = mobileDrawer.classList.toggle('open');
+                    mobileBtn.classList.toggle('open', isOpen);
+                    document.body.style.overflow = isOpen ? 'hidden' : '';
+                });
+            }
+
+            // Close mobile menu drawer on link click
+            document.querySelectorAll('#mobile-nav-drawer a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileDrawer.classList.remove('open');
+                    mobileBtn.classList.remove('open');
+                    document.body.style.overflow = '';
+                });
+            });
+
+            // -- Fade-up Scroll Animation Observer --
+            const fadeEls = document.querySelectorAll('.ab-fade');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.08 });
+            fadeEls.forEach(el => observer.observe(el));
+
+            // -- Smooth Scroll to Gallery Grid --
+            const scrollBtn = document.getElementById('scroll-to-gallery');
+            if (scrollBtn) {
+                scrollBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetSection = document.getElementById('gallery-tabs-section');
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            }
+
+            // -- Category Tabs Filtering --
+            const tabs = document.querySelectorAll('.gallery-tab');
+            const cards = document.querySelectorAll('.gallery-card');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    
+                    // Toggle active classes
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+
+                    const filter = tab.getAttribute('data-filter');
+
+                    // Filter images with a smooth fade
+                    cards.forEach(card => {
+                        const category = card.getAttribute('data-category');
+                        
+                        if (filter === 'all' || category === filter) {
+                            // Fade-in
+                            card.style.display = 'block';
+                            // Wait for display change to reflow, then apply opacity and scale
+                            requestAnimationFrame(() => {
+                                setTimeout(() => {
+                                    card.style.opacity = '1';
+                                    card.style.transform = 'scale(1)';
+                                }, 10);
+                            });
+                        } else {
+                            // Fade-out
+                            card.style.opacity = '0';
+                            card.style.transform = 'scale(0.9)';
+                            setTimeout(() => {
+                                if (card.style.opacity === '0') {
+                                    card.style.display = 'none';
+                                }
+                            }, 400);
+                        }
+                    });
+                });
+            });
+
+            // -- Lightbox Gallery Functionality --
+            const lightbox = document.getElementById('lightbox-modal');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            const lightboxCounter = document.getElementById('lightbox-counter');
+            const closeBtn = document.getElementById('lightbox-close');
+            const prevBtn = document.getElementById('lightbox-prev');
+            const nextBtn = document.getElementById('lightbox-next');
+            const playBtn = document.getElementById('lightbox-play');
+            const progressBar = document.getElementById('lightbox-progress');
+
+            let activeCards = []; // Tracks currently visible cards in the active filter
+            let currentIndex = 0;
+            let isPlaying = false;
+            let slideshowInterval = null;
+
+            // Update active visible cards list based on current active tab
+            function updateActiveCards() {
+                activeCards = Array.from(cards).filter(card => card.style.display !== 'none');
+                // Fallback if none are set to display:none yet (e.g. at start)
+                if (activeCards.length === 0) {
+                    activeCards = Array.from(cards);
+                }
+            }
+
+            // Open Lightbox
+            function openLightbox(cardElement) {
+                updateActiveCards();
+                currentIndex = activeCards.indexOf(cardElement);
+                if (currentIndex === -1) currentIndex = 0;
+
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Lock background scrolling
+                loadImage(currentIndex);
+            }
+
+            // Load Image inside Lightbox
+            function loadImage(index) {
+                if (index < 0 || index >= activeCards.length) return;
+                
+                const card = activeCards[index];
+                const img = card.querySelector('img');
+                
+                lightboxImg.classList.remove('loaded');
+                resetProgressBar();
+
+                // Set content
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt || "Sentie's Kitchen Gallery";
+                lightboxCaption.innerText = img.alt || "Sentie's Kitchen";
+                lightboxCounter.innerText = `${index + 1} / ${activeCards.length}`;
+
+                // Smooth fade-in on load completion
+                lightboxImg.onload = () => {
+                    lightboxImg.classList.add('loaded');
+                    if (isPlaying) {
+                        startSlideshowTimer();
+                    }
+                };
+
+                currentIndex = index;
+            }
+
+            // Close Lightbox
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = ''; // Restore scrolling
+                stopSlideshow();
+                lightboxImg.classList.remove('loaded');
+            }
+
+            // Navigation functions
+            function showNext() {
+                let nextIndex = currentIndex + 1;
+                if (nextIndex >= activeCards.length) {
+                    nextIndex = 0; // Wrap around
+                }
+                loadImage(nextIndex);
+            }
+
+            // Prev image
+            function showPrev() {
+                let prevIndex = currentIndex - 1;
+                if (prevIndex < 0) {
+                    prevIndex = activeCards.length - 1; // Wrap around
+                }
+                loadImage(prevIndex);
+            }
+
+            // Slideshow Automatic Playback
+            function startSlideshowTimer() {
+                clearTimeout(slideshowInterval);
+                resetProgressBar();
+                
+                // Triggers progress fill animation
+                progressBar.classList.add('animate');
+                
+                slideshowInterval = setTimeout(() => {
+                    showNext();
+                }, 3000);
+            }
+
+            function resetProgressBar() {
+                progressBar.classList.remove('animate');
+                progressBar.style.width = '0';
+                void progressBar.offsetWidth; // Force Reflow
+            }
+
+            function toggleSlideshow() {
+                if (isPlaying) {
+                    stopSlideshow();
+                } else {
+                    isPlaying = true;
+                    playBtn.classList.add('playing');
+                    playBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                    playBtn.setAttribute('aria-label', 'Pause Slideshow');
+                    startSlideshowTimer();
+                }
+            }
+
+            function stopSlideshow() {
+                isPlaying = false;
+                clearTimeout(slideshowInterval);
+                resetProgressBar();
+                playBtn.classList.remove('playing');
+                playBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+                playBtn.setAttribute('aria-label', 'Start Slideshow');
+            }
+
+            // -- Event Bindings --
+
+            // Card clicks open lightbox
+            cards.forEach(card => {
+                card.addEventListener('click', () => {
+                    openLightbox(card);
+                });
+            });
+
+            // Close button click
+            closeBtn.addEventListener('click', closeLightbox);
+
+            // Click outside content area closes lightbox
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox || e.target === document.getElementById('lightbox-viewport')) {
+                    closeLightbox();
+                }
+            });
+
+            // Control buttons
+            prevBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                showPrev();
+            });
+
+            nextBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                showNext();
+            });
+
+            playBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                toggleSlideshow();
+            });
+
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (!lightbox.classList.contains('active')) return;
+
+                if (e.key === 'Escape') {
+                    closeLightbox();
+                } else if (e.key === 'ArrowRight') {
+                    showNext();
+                } else if (e.key === 'ArrowLeft') {
+                    showPrev();
+                }
+            });
+
+            // Mobile Swipe Gestures support
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            const swipeContainer = document.getElementById('lightbox-viewport');
+
+            swipeContainer.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            swipeContainer.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipeGesture();
+            }, { passive: true });
+
+            function handleSwipeGesture() {
+                const threshold = 50; // swipe offset threshold
+                if (touchStartX - touchEndX > threshold) {
+                    // Swiped Left -> Show Next
+                    showNext();
+                } else if (touchEndX - touchStartX > threshold) {
+                    // Swiped Right -> Show Previous
+                    showPrev();
+                }
+            }
+
+            // -- Back to Top Button --
+            const backToTop = document.getElementById('back-to-top');
+            if (backToTop) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 400) {
+                        backToTop.classList.add('show');
+                    } else {
+                        backToTop.classList.remove('show');
+                    }
+                });
+
+                backToTop.addEventListener('click', () => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+        });
+    </script>
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top-btn" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

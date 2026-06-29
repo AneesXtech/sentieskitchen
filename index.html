@@ -1,0 +1,779 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Sentie's Kitchen - Authentic Afro-Caribbean takeout, spices, and premium catering. Order online for delicious jerk chicken, plantains, and rich stews, or book professional event catering.">
+    <meta name="keywords"
+        content="Afro-Caribbean food, jerk chicken, takeout, catering services, Sentie's Kitchen, Jamaican food, spices, event catering, oxtail stew, plantains">
+    <meta name="author" content="Sentie's Kitchen">
+
+    <title>Sentie's Kitchen | Authentic Afro-Caribbean Takeout & Catering</title>
+
+    <!-- FontAwesome 6 Premium Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS stylesheet link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- SECTION 1: Top Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="announcement-text">
+            <svg class="announcement-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M13.8 2.2c.5 2.1-.1 3.8-1.7 5.2-1.2 1-2.1 2.1-2.1 3.7 0 1.2.5 2.2 1.4 2.9-.1-1.7.8-3.1 2.2-4.2.2 2.2 2.4 3.3 2.4 6.1 0 2.8-2.1 5.1-5 5.1s-5-2.2-5-5.2c0-3.8 2.8-5.8 4.7-7.9 1.4-1.5 2.4-3.2 3.1-5.7Z"/>
+            </svg>
+            <span>Authentic Afro-Caribbean Takeout & Catering</span>
+            <svg class="announcement-icon announcement-icon-right" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M13.8 2.2c.5 2.1-.1 3.8-1.7 5.2-1.2 1-2.1 2.1-2.1 3.7 0 1.2.5 2.2 1.4 2.9-.1-1.7.8-3.1 2.2-4.2.2 2.2 2.4 3.3 2.4 6.1 0 2.8-2.1 5.1-5 5.1s-5-2.2-5-5.2c0-3.8 2.8-5.8 4.7-7.9 1.4-1.5 2.4-3.2 3.1-5.7Z"/>
+            </svg>
+        </div>
+    </div>
+
+    <!-- SECTION 2: Header / Sticky Navbar -->
+        <header id="main-header">
+        <div class="container">
+            <!-- Brand Logo -->
+            <a href="index.html" class="logo-container">
+                <img src="assets/Logo catring.png" alt="Sentie's Kitchen Logo" class="logo-img">
+                <div class="logo-text-wrap">
+                    <span class="logo-main">Sentie's <span>Kitchen</span></span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="menu.html" >Menu</a>
+                <a href="events.html" >Catering</a>
+                <a href="gallery.html" >Gallery</a>
+                <a href="about.html" >About</a>
+                <a href="contact.html" >Contact</a>
+            </nav>
+
+            <!-- Action Button -->
+            <div class="header-actions">
+                <a href="https://order.toasttab.com/online/senties-kitchen" target="_blank" class="btn-order-now">
+                    <i class="fa-solid fa-bag-shopping" style="margin-right: 6px;"></i>
+                    Order Now
+                </a>
+            </div>
+
+            <!-- Hamburger Button -->
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- SECTION 3: Hero Section -->
+    <section id="home" class="hero">
+        <!-- Background Video -->
+        <video class="hero-video-bg" autoplay muted loop playsinline>
+            <source src="assets/Hero video.mp4" type="video/mp4">
+        </video>
+        <!-- Dark overlay gradient -->
+        <div class="hero-video-overlay"></div>
+
+        <div class="container hero-content-wrap">
+            <!-- Hero Text Details -->
+            <div class="hero-content">
+                <h2>Bold Afro-Caribbean Flavor, <span class="highlight-yellow">Fresh</span> for <span
+                        class="highlight-yellow">Every Occasion</span></h2>
+                <p class="hero-subtitle">Authentic recipes, quality ingredients, and unforgettable Afro-Caribbean flavor
+                    made for takeout and catering.</p>
+
+                <div class="hero-buttons">
+                    <a href="https://order.toasttab.com/online/senties-kitchen" target="_blank" class="btn btn-red">Order Takeout <i
+                            class="fa-solid fa-arrow-right arrow-icon"></i></a>
+                    <a href="events.html" class="btn btn-yellow">Catering Menu &amp; Services <i class="fa-solid fa-arrow-right arrow-icon"></i></a>
+                </div>
+
+                <div class="hero-features">
+                    <div class="hero-feature-item">
+                        <i class="fa-solid fa-leaf"></i>
+                        Fresh Ingredients
+                    </div>
+                    <div class="hero-feature-item">
+                        <i class="fa-solid fa-utensils"></i>
+                        Authentic Recipes
+                    </div>
+                    <div class="hero-feature-item">
+                        <i class="fa-solid fa-heart"></i>
+                        Made with Love
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: Our Services Section -->
+    <section id="catering" class="services-section">
+        <!-- Floating Background Spice Elements -->
+        <div class="decor-spice-wrap">
+            <i class="fa-solid fa-pepper-hot decor-spice decor-1"></i>
+            <i class="fa-solid fa-leaf decor-spice green-tint decor-2"></i>
+            <i class="fa-solid fa-lemon decor-spice yellow-tint decor-3"></i>
+            <i class="fa-solid fa-fire decor-spice decor-4"></i>
+        </div>
+        <div class="container">
+            <div class="section-title-wrap">
+                <h2 class="section-title-deco">Food Services</h2>
+            </div>
+
+            <div class="services-grid">
+                <!-- Card 1: Event Catering -->
+                <div class="service-card">
+                    <div class="service-img-wrap">
+                        <img src="assets/new-picture/Event Catering.jpg"
+                            alt="Sentie's Kitchen Event Catering Display">
+                    </div>
+                    <div class="service-info">
+                        <h3>Event Catering</h3>
+                        <p>Whether you're planning a wedding, corporate gathering, or backyard party, Sentie's Kitchen
+                            is here to elevate your event with our unique Afro BBQ fusion cuisine. We have extensive
+                            experience catering to all types of events, indoors or outdoors, and can provide delicious
+                            meals for any occasion.</p>
+                        <a href="events.html" class="service-link">View Catering Menu &amp; Packages &raquo;</a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Takeout -->
+                <div class="service-card">
+                    <div class="service-img-wrap">
+                        <img src="assets/new-picture/Takeout.jpg"
+                            alt="Sentie's Kitchen Takeout Platter">
+                    </div>
+                    <div class="service-info">
+                        <h3>Takeout</h3>
+                        <p>Enjoy our delicious Afro BBQ fusion dishes from the comfort of your own home! Sentie's
+                            Kitchen offers convenient takeout options, allowing you to savor our unique flavors anytime.
+                            Browse our menu and order online for a quick and satisfying meal.</p>
+                        <a href="https://order.toasttab.com/online/senties-kitchen" target="_blank" class="service-link">Click here to order &raquo;</a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Emergency Food Services -->
+                <div class="service-card">
+                    <div class="service-img-wrap">
+                        <img src="assets/new-picture/Emergency Food Services.png"
+                            alt="Sentie's Kitchen Emergency Food Services">
+                    </div>
+                    <div class="service-info">
+                        <h3>Emergency Food Services</h3>
+                        <p>We are committed to providing reliable and delicious emergency food services. We understand
+                            the importance of access to nutritious meals during challenging times, and we're here to
+                            support you. Contact us for more information on our emergency food offerings.</p>
+                        <a href="#contact" class="service-link">Read more &raquo;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: Popular Dishes Section -->
+    <section id="menu" class="popular-dishes">
+        <!-- Floating Background Spice Elements -->
+        <div class="decor-spice-wrap">
+            <i class="fa-solid fa-bowl-rice decor-spice yellow-tint decor-5"></i>
+            <i class="fa-solid fa-pepper-hot decor-spice decor-6"></i>
+            <i class="fa-solid fa-utensils decor-spice decor-7"></i>
+            <i class="fa-solid fa-leaf decor-spice green-tint decor-8"></i>
+        </div>
+        <div class="container">
+            <div class="section-title-wrap">
+                <h2 class="section-title-deco">Popular Dishes</h2>
+                <p class="section-subtitle">A rotating lineup of bold customer favorites from our kitchen.</p>
+            </div>
+
+            <div class="popular-carousel-shell">
+                <button class="popular-carousel-btn popular-carousel-prev" id="popular-carousel-prev" aria-label="Previous dishes">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <div class="popular-carousel" id="popular-carousel">
+                    <div class="dish-card dish-card-carousel">
+                        <div class="dish-img-wrap">
+                            <img src="assets/products/toast/jerk-chicken.jpg" alt="Jerk Chicken">
+                        </div>
+                        <div class="dish-info">
+                            <div>
+                                <h3>Jerk Chicken</h3>
+                                <p class="dish-desc">Flame-grilled chicken marinated overnight in bold island spices with juicy heat in every bite.</p>
+                            </div>
+                            <div class="dish-footer">
+                                <span class="dish-price">$4.99</span>
+                                <a href="https://order.toasttab.com/online/senties-kitchen/item-jerk-chicken_57dc8d8f-3a53-4558-8116-893356ee5b17" target="_blank" rel="noopener" class="dish-order-btn">
+                                    Order Now
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dish-card dish-card-carousel">
+                        <div class="dish-img-wrap">
+                            <img src="assets/products/toast/oxtail-bowl.png" alt="Oxtail Bowl">
+                        </div>
+                        <div class="dish-info">
+                            <div>
+                                <h3>Oxtail Bowl</h3>
+                                <p class="dish-desc">Slow-braised oxtail served over fluffy rice with plantain and deeply savory gravy.</p>
+                            </div>
+                            <div class="dish-footer">
+                                <span class="dish-price">$19.99</span>
+                                <a href="https://order.toasttab.com/online/senties-kitchen/item-oxtail-bowl_3dd03c18-d7f8-470b-a5bb-44f4a2d71409" target="_blank" rel="noopener" class="dish-order-btn">
+                                    Order Now
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dish-card dish-card-carousel">
+                        <div class="dish-img-wrap">
+                            <img src="assets/products/toast/jollof-rice.jpg" alt="Jollof Rice">
+                        </div>
+                        <div class="dish-info">
+                            <div>
+                                <h3>Jollof Rice</h3>
+                                <p class="dish-desc">West African-style rice simmered in a rich tomato pepper base with smoky depth.</p>
+                            </div>
+                            <div class="dish-footer">
+                                <span class="dish-price">$5.99</span>
+                                <a href="https://order.toasttab.com/online/senties-kitchen/item-jollof-rice_176e4076-5bed-4a1a-8028-00b03d514667" target="_blank" rel="noopener" class="dish-order-btn">
+                                    Order Now
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dish-card dish-card-carousel">
+                        <div class="dish-img-wrap">
+                            <img src="assets/products/toast/mac-n-cheese.png" alt="Mac n Cheese">
+                        </div>
+                        <div class="dish-info">
+                            <div>
+                                <h3>Mac n Cheese</h3>
+                                <p class="dish-desc">Creamy baked macaroni layered with velvety cheese sauce and a golden finish.</p>
+                            </div>
+                            <div class="dish-footer">
+                                <span class="dish-price">$5.99</span>
+                                <a href="https://order.toasttab.com/online/senties-kitchen/item-mac-n-cheese_bfd96795-1a23-4304-ba53-a419c0ec23ad" target="_blank" rel="noopener" class="dish-order-btn">
+                                    Order Now
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dish-card dish-card-carousel">
+                        <div class="dish-img-wrap">
+                            <img src="assets/Fried Plantains.webp" alt="Fried Plantains">
+                        </div>
+                        <div class="dish-info">
+                            <div>
+                                <h3>Fried Plantains</h3>
+                                <p class="dish-desc">Sweet caramelized plantains fried until golden with softly crisp edges.</p>
+                            </div>
+                            <div class="dish-footer">
+                                <span class="dish-price">$4.99</span>
+                                <a href="https://order.toasttab.com/online/senties-kitchen/item-fried-plantain_22242319-88f6-4210-a019-9b09753a86de" target="_blank" rel="noopener" class="dish-order-btn">
+                                    Order Now
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dish-card dish-card-carousel">
+                        <div class="dish-img-wrap">
+                            <img src="assets/products/toast/rasta-pasta.jpg" alt="Rasta Pasta">
+                        </div>
+                        <div class="dish-info">
+                            <div>
+                                <h3>Rasta Pasta</h3>
+                                <p class="dish-desc">Creamy jerk pasta tossed with peppers and vibrant Caribbean heat.</p>
+                            </div>
+                            <div class="dish-footer">
+                                <span class="dish-price">$18.99</span>
+                                <a href="https://order.toasttab.com/online/senties-kitchen/item-rasta-pasta_94e3e9bb-e85b-4a1b-9c94-5dba101d1a90" target="_blank" rel="noopener" class="dish-order-btn">
+                                    Order Now
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="popular-carousel-btn popular-carousel-next" id="popular-carousel-next" aria-label="Next dishes">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="dishes-action-wrap">
+                <a href="menu.html" class="btn btn-red">View Full Menu <i
+                        class="fa-solid fa-arrow-right arrow-icon"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: About Sentie's Kitchen Section -->
+    <section id="about" class="about-section">
+        <!-- Floating Background Spice Elements -->
+        <div class="decor-spice-wrap">
+            <i class="fa-solid fa-pepper-hot decor-spice decor-1"></i>
+            <i class="fa-solid fa-lemon decor-spice yellow-tint decor-2"></i>
+            <i class="fa-solid fa-leaf decor-spice green-tint decor-3"></i>
+            <i class="fa-solid fa-fire decor-spice decor-4"></i>
+        </div>
+        <div class="container about-grid">
+            <!-- Left Info Column -->
+            <div class="about-content">
+                <div class="about-label">About Us</div>
+                <h2>About Sentie's Kitchen</h2>
+                <p>Sentie's Kitchen was born from a passion for authentic Afro-Caribbean cuisine and a love for bringing
+                    people together through food. Our dishes are inspired by rich traditions, bold flavors, and fresh
+                    ingredients. Whether you're ordering takeout or celebrating a special event, we're here to make
+                    every bite unforgettable.</p>
+
+                <div class="about-features">
+                    <div class="about-feature-box">
+                        <i class="fa-solid fa-certificate"></i>
+                        <h4>100%</h4>
+                        <p>Authentic Recipes</p>
+                    </div>
+                    <div class="about-feature-box">
+                        <i class="fa-solid fa-carrot"></i>
+                        <h4>Fresh</h4>
+                        <p>Quality Ingredients</p>
+                    </div>
+                    <div class="about-feature-box">
+                        <i class="fa-solid fa-heart"></i>
+                        <h4>Made</h4>
+                        <p>With Passion</p>
+                    </div>
+                </div>
+
+                <a href="#contact" class="btn btn-yellow">Learn More About Us <i
+                        class="fa-solid fa-arrow-right arrow-icon"></i></a>
+            </div>
+
+            <!-- Right Image Column -->
+            <div class="about-image-wrap">
+                <div class="about-image-shadow"></div>
+                <img src="assets/new-picture/sentieskitchen5.webp"
+                    alt="Beautiful fresh cooked Caribbean dishes spread" class="about-main-img">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECTION 8: Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-title-wrap">
+                <h2 class="section-title-deco">Our Gallery</h2>
+            </div>
+        </div>
+        <div class="gallery-marquee">
+            <div class="gallery-track">
+                <!-- Set 1 -->
+                <div class="gallery-item"><img src="Gallery/151920631_2939391436298475_2405511215944385837_n.jpg"
+                        alt="Sentie's Kitchen Gallery 1"></div>
+                <div class="gallery-item"><img src="Gallery/152420118_2939391439631808_208464520934793527_n.jpg"
+                        alt="Sentie's Kitchen Gallery 2"></div>
+                <div class="gallery-item"><img src="Gallery/79841763_2578698705701085_5118435873808973824_n.jpg"
+                        alt="Sentie's Kitchen Gallery 3"></div>
+                <div class="gallery-item"><img src="Gallery/79855924_2578698672367755_6206151842057945088_n.jpg"
+                        alt="Sentie's Kitchen Gallery 4"></div>
+                <div class="gallery-item"><img src="Gallery/81291857_2578698785701077_6561890312304721920_n.jpg"
+                        alt="Sentie's Kitchen Gallery 5"></div>
+                <div class="gallery-item"><img src="Gallery/95441605_2697719100465711_8675034026030923776_n.jpg"
+                        alt="Sentie's Kitchen Gallery 6"></div>
+                <div class="gallery-item"><img src="Gallery/95629536_2697719353799019_8930391448348524544_n.jpg"
+                        alt="Sentie's Kitchen Gallery 7"></div>
+                <div class="gallery-item"><img src="Gallery/95882491_2697719270465694_499724813598720000_n.jpg"
+                        alt="Sentie's Kitchen Gallery 8"></div>
+                <div class="gallery-item"><img src="Gallery/IMG_2462.jpeg" alt="Sentie's Kitchen Gallery 9"></div>
+                <div class="gallery-item"><img src="Gallery/IMG_2468.jpeg" alt="Sentie's Kitchen Gallery 10"></div>
+                <div class="gallery-item"><img src="Gallery/IMG_2478.jpeg" alt="Sentie's Kitchen Gallery 11"></div>
+                <div class="gallery-item"><img src="Gallery/IMG_2483.jpeg" alt="Sentie's Kitchen Gallery 12"></div>
+                <div class="gallery-item"><img src="Gallery/IMG_5753.jpeg" alt="Sentie's Kitchen Gallery 13"></div>
+                <div class="gallery-item"><img src="Gallery/a7a30b7d-cd26-4f98-8176-c9b0dfebde5e.jpg"
+                        alt="Sentie's Kitchen Gallery 14"></div>
+                <div class="gallery-item"><img
+                        src="Gallery/opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2018__06__Grilled-Steak-LEAD-HORIZONTAL-33b562e0f6ce4a30b42a0ec603005569.jpg"
+                        alt="Sentie's Kitchen Gallery 15"></div>
+
+                <!-- Set 2 (Duplicate for infinite seamless loop) -->
+                <div class="gallery-item"><img src="Gallery/151920631_2939391436298475_2405511215944385837_n.jpg"
+                        alt="Sentie's Kitchen Gallery 1"></div>
+                <div class="gallery-item"><img src="Gallery/152420118_2939391439631808_208464520934793527_n.jpg"
+                        alt="Sentie's Kitchen Gallery 2"></div>
+                <div class="gallery-item"><img src="Gallery/79841763_2578698705701085_5118435873808973824_n.jpg"
+                        alt="Sentie's Kitchen Gallery 3"></div>
+                <div class="gallery-item"><img src="Gallery/79855924_2578698672367755_6206151842057945088_n.jpg"
+                        alt="Sentie's Kitchen Gallery 4"></div>
+                <div class="gallery-item"><img src="Gallery/81291857_2578698785701077_6561890312304721920_n.jpg"
+                        alt="Sentie's Kitchen Gallery 5"></div>
+                <div class="gallery-item"><img src="Gallery/95441605_2697719100465711_8675034026030923776_n.jpg"
+                        alt="Sentie's Kitchen Gallery 6"></div>
+                <div class="gallery-item"><img src="Gallery/95629536_2697719353799019_8930391448348524544_n.jpg"
+                        alt="Sentie's Kitchen Gallery 7"></div>
+                <div class="gallery-item"><img src="Gallery/95882491_2697719270465694_499724813598720000_n.jpg"
+                        alt="Sentie's Kitchen Gallery 8"></div>
+                <div class="gallery-item"><img src="Gallery/IMG_2462.jpeg" alt="Sentie's Kitchen Gallery 9"></div>
+                <div class="gallery-item"><img src="Gallery/IMG_2468.jpeg" alt="Sentie's Kitchen Gallery 10"></div>
+                <div class="gallery-item"><img src="Gallery/IMG_2478.jpeg" alt="Sentie's Kitchen Gallery 11"></div>
+                <div class="gallery-item"><img src="Gallery/IMG_2483.jpeg" alt="Sentie's Kitchen Gallery 12"></div>
+                <div class="gallery-item"><img src="Gallery/IMG_5753.jpeg" alt="Sentie's Kitchen Gallery 13"></div>
+                <div class="gallery-item"><img src="Gallery/a7a30b7d-cd26-4f98-8176-c9b0dfebde5e.jpg"
+                        alt="Sentie's Kitchen Gallery 14"></div>
+                <div class="gallery-item"><img
+                        src="Gallery/opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2018__06__Grilled-Steak-LEAD-HORIZONTAL-33b562e0f6ce4a30b42a0ec603005569.jpg"
+                        alt="Sentie's Kitchen Gallery 15"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: Why Choose Us Section -->
+    <section class="why-choose-us">
+        <!-- Floating Background Spice Elements -->
+        <div class="decor-spice-wrap">
+            <i class="fa-solid fa-pepper-hot decor-spice decor-1"></i>
+            <i class="fa-solid fa-leaf decor-spice green-tint decor-2"></i>
+            <i class="fa-solid fa-lemon decor-spice yellow-tint decor-3"></i>
+            <i class="fa-solid fa-fire decor-spice decor-4"></i>
+        </div>
+        <div class="container">
+            <div class="section-title-wrap">
+                <h2 class="section-title-deco">Why Choose Sentie's Kitchen?</h2>
+                <p class="section-subtitle">The finest Afro-Caribbean cuisine and customer experience.</p>
+            </div>
+
+            <div class="why-grid">
+                <!-- Box 1 -->
+                <div class="why-card">
+                    <div class="why-icon-wrap">
+                        <i class="fa-solid fa-pepper-hot"></i>
+                    </div>
+                    <h3>Authentic Flavor</h3>
+                    <p>True Afro-Caribbean recipe flavors you love.</p>
+                </div>
+
+                <!-- Box 2 -->
+                <div class="why-card">
+                    <div class="why-icon-wrap">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3>Fresh Ingredients</h3>
+                    <p>We use only the best quality fresh meats & herbs.</p>
+                </div>
+
+                <!-- Box 3 -->
+                <div class="why-card">
+                    <div class="why-icon-wrap">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
+                    <h3>Fast Takeout</h3>
+                    <p>Quick, convenient & warm pickup/delivery.</p>
+                </div>
+
+                <!-- Box 4 -->
+                <div class="why-card">
+                    <div class="why-icon-wrap">
+                        <i class="fa-solid fa-bell-concierge"></i>
+                    </div>
+                    <h3>Event Catering</h3>
+                    <p>We cater to events of any size & theme.</p>
+                </div>
+
+                <!-- Box 5 -->
+                <div class="why-card">
+                    <div class="why-icon-wrap">
+                        <i class="fa-solid fa-fire-burner"></i>
+                    </div>
+                    <h3>Made With Tradition</h3>
+                    <p>Rooted in culture, made with love and spices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 10: Testimonials Section -->
+    <section class="testimonials-section">
+        <!-- Floating Background Spice Elements -->
+        <div class="decor-spice-wrap">
+            <i class="fa-solid fa-pepper-hot decor-spice decor-5"></i>
+            <i class="fa-solid fa-lemon decor-spice yellow-tint decor-6"></i>
+            <i class="fa-solid fa-leaf decor-spice green-tint decor-7"></i>
+            <i class="fa-solid fa-bowl-rice decor-spice yellow-tint decor-8"></i>
+        </div>
+        <div class="container">
+            <div class="section-title-wrap reviews-title-wrap">
+                <span class="review-source-pill"><i class="fa-brands fa-google"></i> Google-style reviews</span>
+                <div class="reviews-head">
+                    <div>
+                        <h2 class="section-title-deco">What Our Customers Say</h2>
+                        <p class="section-subtitle">Fresh flavor, warm hospitality, and event-ready service that guests remember.</p>
+                    </div>
+                    <div class="reviews-controls">
+                        <button class="reviews-nav" id="reviews-prev" type="button" aria-label="Previous reviews">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                        <button class="reviews-nav" id="reviews-next" type="button" aria-label="Next reviews">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reviews-overview">
+                <div class="reviews-score-card">
+                    <div class="reviews-score-mark">
+                        <i class="fa-brands fa-google"></i>
+                    </div>
+                    <div class="reviews-score-copy">
+                        <span class="reviews-score-label">Review Highlights</span>
+                        <strong>Big flavor, reliable catering, and service that feels like family.</strong>
+                    </div>
+                    <a href="contact.html" class="reviews-score-link">
+                        Plan Your Event
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="testimonials-slider" id="reviews-carousel">
+                <div class="reviews-viewport">
+                    <div class="reviews-track" id="reviews-track">
+                        <!-- Testimonial 1 -->
+                        <article class="testimonial-card review-card active">
+                            <div class="testimonial-stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="testimonial-quote">"The food is always fresh and full of flavor. The jerk chicken is my absolute favorite."</p>
+                            <div class="testimonial-meta">
+                                <div class="testimonial-user">
+                                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Customer Tasha M.">
+                                    <div class="testimonial-user-info">
+                                        <h4>Tasha M.</h4>
+                                        <span>Loyal Customer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Testimonial 2 -->
+                        <article class="testimonial-card review-card">
+                            <div class="testimonial-stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="testimonial-quote">"Sentie's Kitchen catered our event and everyone couldn't stop raving about it."</p>
+                            <div class="testimonial-meta">
+                                <div class="testimonial-user">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Customer Jason R.">
+                                    <div class="testimonial-user-info">
+                                        <h4>Jason R.</h4>
+                                        <span>Event Host</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Testimonial 3 -->
+                        <article class="testimonial-card review-card">
+                            <div class="testimonial-stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="testimonial-quote">"The spices take my cooking to the next level. Highly recommend their All-Purpose blend!"</p>
+                            <div class="testimonial-meta">
+                                <div class="testimonial-user">
+                                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Customer Keisha L.">
+                                    <div class="testimonial-user-info">
+                                        <h4>Keisha L.</h4>
+                                        <span>Home Cook</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Testimonial 4 -->
+                        <article class="testimonial-card review-card">
+                            <div class="testimonial-stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="testimonial-quote">"Sentie's Kitchen did a phenomenal job for our wedding client. The beef luwombo was spectacular and the service was top-notch!"</p>
+                            <div class="testimonial-meta">
+                                <div class="testimonial-user">
+                                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80" alt="Customer Sarah K.">
+                                    <div class="testimonial-user-info">
+                                        <h4>Sarah K.</h4>
+                                        <span>Wedding Planner</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Testimonial 5 -->
+                        <article class="testimonial-card review-card">
+                            <div class="testimonial-stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="testimonial-quote">"The BBQ fusion style is incredible. The jerk ribs and spicy sides were a huge hit with our staff. Will definitely order again!"</p>
+                            <div class="testimonial-meta">
+                                <div class="testimonial-user">
+                                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&q=80" alt="Customer David O.">
+                                    <div class="testimonial-user-info">
+                                        <h4>David O.</h4>
+                                        <span>Corporate Director</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Testimonial 6 -->
+                        <article class="testimonial-card review-card">
+                            <div class="testimonial-stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="testimonial-quote">"I've been ordering takeout from Sentie's Kitchen for a year. The jollof rice is always perfectly seasoned, and the plantains are sweet and soft."</p>
+                            <div class="testimonial-meta">
+                                <div class="testimonial-user">
+                                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&q=80" alt="Customer Brenda A.">
+                                    <div class="testimonial-user-info">
+                                        <h4>Brenda A.</h4>
+                                        <span>Local Foodie</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="slider-dots review-dots" id="review-dots" aria-label="Review carousel pagination"></div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- SECTION 12: Footer Section -->
+    <section class="page-cta">
+        <div class="container page-cta-inner">
+            <div class="page-cta-copy ab-fade">
+                <span class="page-cta-kicker">Let Us Cater Your Next Event</span>
+                <h2 class="page-cta-title">Good Food. Great Memories.</h2>
+                <p class="page-cta-desc">From intimate gatherings to grand celebrations,<br>we bring the flavor and the love.</p>
+                <a href="contact.html" class="page-cta-btn">
+                    <span>Let's Cater!</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-showcase">
+    <div class="footer-showcase-bg" aria-hidden="true">
+        <img src="assets/events/hero-bg.png" alt="Sentie's Kitchen dinner table">
+    </div>
+    <div class="footer-showcase-overlay" aria-hidden="true"></div>
+
+    <div class="container footer-showcase-inner">
+        <div class="footer-showcase-top">
+            <div class="footer-showcase-col">
+                <div class="footer-showcase-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                <h3>Contact Us</h3>
+                <p>+1 (508) 927-8011</p>
+                <p>info@sentieskitchen.com</p>
+                <a href="contact.html" class="footer-showcase-btn">Contact Us</a>
+            </div>
+
+            <div class="footer-showcase-col footer-showcase-col-center">
+                <div class="footer-showcase-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <h3>Address</h3>
+                <p>21 Turnpike Rd, Southborough, MA 01772</p>
+                <p>Massachusetts, United States</p>
+                <a href="https://maps.google.com/?q=21+Turnpike+Rd,+Southborough,+MA+01772" target="_blank" rel="noopener" class="footer-showcase-btn">Get Direction</a>
+            </div>
+
+            <div class="footer-showcase-col footer-showcase-col-right">
+                <div class="footer-showcase-icon"><i class="fa-regular fa-clock"></i></div>
+                <h3>Opening <span>Hours</span></h3>
+                <p>Wed - Sat: 11:00 AM - 7:00 PM</p>
+                <p>Sun: 12:00 PM - 5:00 PM</p>
+                
+            </div>
+        </div>
+
+        <div class="footer-showcase-divider"></div>
+
+        <div class="footer-showcase-bottom">
+            <p class="footer-showcase-copy">Copyright &copy; 2026 All Rights Reserved.</p>
+
+            <a href="index.html" class="footer-showcase-brand">
+                <span class="footer-showcase-brand-badge">
+                    <img src="assets/Logo catring.png" alt="Sentie's Kitchen Logo">
+                </span>
+                <span class="footer-showcase-brand-name">Sentie's Kitchen</span>
+            </a>
+
+            <div class="footer-showcase-socials">
+                <a href="https://www.instagram.com/sentieskitchen" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:info@sentieskitchen.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- JS script link -->
+    <script src="script.js"></script>
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top-btn" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+

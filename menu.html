@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Sentie's Kitchen's authentic Afro-Caribbean menu. Browse our delicious Jerk Chicken, Oxtail Stew, Curry Goat, and sides, and order directly on ToastTab.">
+    <meta name="keywords" content="Sentie's Kitchen Menu, Afro-Caribbean food menu, Jerk Chicken Southborough, Oxtail takeout, order Jamaican food">
+    <meta name="author" content="Sentie's Kitchen">
+
+    <title>Our Menu | Sentie's Kitchen</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="menu-page" id="top">
+    <div class="announcement-bar">
+        <div class="announcement-text">
+            <svg class="announcement-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M13.8 2.2c.5 2.1-.1 3.8-1.7 5.2-1.2 1-2.1 2.1-2.1 3.7 0 1.2.5 2.2 1.4 2.9-.1-1.7.8-3.1 2.2-4.2.2 2.2 2.4 3.3 2.4 6.1 0 2.8-2.1 5.1-5 5.1s-5-2.2-5-5.2c0-3.8 2.8-5.8 4.7-7.9 1.4-1.5 2.4-3.2 3.1-5.7Z" />
+            </svg>
+            <span>Authentic Afro-Caribbean Takeout & Catering</span>
+            <svg class="announcement-icon announcement-icon-right" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M13.8 2.2c.5 2.1-.1 3.8-1.7 5.2-1.2 1-2.1 2.1-2.1 3.7 0 1.2.5 2.2 1.4 2.9-.1-1.7.8-3.1 2.2-4.2.2 2.2 2.4 3.3 2.4 6.1 0 2.8-2.1 5.1-5 5.1s-5-2.2-5-5.2c0-3.8 2.8-5.8 4.7-7.9 1.4-1.5 2.4-3.2 3.1-5.7Z" />
+            </svg>
+        </div>
+    </div>
+
+        <header id="main-header">
+        <div class="container">
+            <!-- Brand Logo -->
+            <a href="index.html" class="logo-container">
+                <img src="assets/Logo catring.png" alt="Sentie's Kitchen Logo" class="logo-img">
+                <div class="logo-text-wrap">
+                    <span class="logo-main">Sentie's <span>Kitchen</span></span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html" >Home</a>
+                <a href="menu.html" class="active">Menu</a>
+                <a href="events.html" >Catering</a>
+                <a href="gallery.html" >Gallery</a>
+                <a href="about.html" >About</a>
+                <a href="contact.html" >Contact</a>
+            </nav>
+
+            <!-- Action Button -->
+            <div class="header-actions">
+                <a href="https://order.toasttab.com/online/senties-kitchen" target="_blank" class="btn-order-now">
+                    <i class="fa-solid fa-bag-shopping" style="margin-right: 6px;"></i>
+                    Order Now
+                </a>
+            </div>
+
+            <!-- Hamburger Button -->
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="menu-hero">
+        <div class="menu-hero-overlay"></div>
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> / <span>Menu</span>
+            </div>
+            <h1>Our Menu</h1>
+            <p class="menu-hero-desc">Explore our Afro-Caribbean BBQ fusion &amp; homemade dishes inspired by African recipes, made fresh for every order.</p>
+            <a href="#menu-sections-container" class="btn btn-yellow menu-hero-btn">
+                Browse Dishes
+                <span class="arrow-icon"><i class="fa-solid fa-arrow-down"></i></span>
+            </a>
+        </div>
+    </section>
+
+    <nav class="category-tabs-nav" id="category-tabs-container">
+        <div class="category-tabs-controls">
+            <button class="category-scroll-btn category-scroll-prev" type="button" aria-label="Previous categories">
+                <span aria-hidden="true">&lsaquo;</span>
+            </button>
+            <div class="category-tabs-scroll" id="category-tabs-scroll"></div>
+            <button class="category-scroll-btn category-scroll-next" type="button" aria-label="Next categories">
+                <span aria-hidden="true">&rsaquo;</span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="menu-search-section">
+        <div class="container">
+            <div class="search-bar-wrapper">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="menu-search-input" placeholder="Search for dishes, categories, or descriptions...">
+                <button id="menu-search-submit" class="search-submit-btn" aria-label="Search">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu-sections-wrapper">
+        <div class="container">
+            <div id="no-results-message" class="no-results-card" style="display: none;">
+                <i class="fa-solid fa-utensils"></i>
+                <h3>No items found</h3>
+                <p>Try another search or select a different category.</p>
+            </div>
+
+            <div id="menu-sections-container"></div>
+        </div>
+    </section>
+
+    <section class="page-cta" id="page-cta">
+        <div class="container page-cta-inner">
+            <div class="page-cta-copy ab-fade">
+                <span class="page-cta-kicker">Let Us Cater Your Next Event</span>
+                <h2 class="page-cta-title">Good Food. Great Memories.</h2>
+                <p class="page-cta-desc">From intimate gatherings to grand celebrations,<br>we bring the flavor and the love.</p>
+                <a href="mailto:info@sentieskitchen.com" class="page-cta-btn">
+                    <span>Let's Cater!</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-showcase" id="footer">
+        <div class="footer-showcase-bg" aria-hidden="true">
+            <img src="assets/events/hero-bg.png" alt="Sentie's Kitchen dinner table">
+        </div>
+        <div class="footer-showcase-overlay" aria-hidden="true"></div>
+
+        <div class="container footer-showcase-inner">
+            <div class="footer-showcase-top">
+                <div class="footer-showcase-col">
+                    <div class="footer-showcase-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                    <h3>Contact Us</h3>
+                    <p>+1 (508) 927-8011</p>
+                    <p>info@sentieskitchen.com</p>
+                    <a href="mailto:info@sentieskitchen.com" class="footer-showcase-btn">Contact Us</a>
+                </div>
+
+                <div class="footer-showcase-col footer-showcase-col-center">
+                    <div class="footer-showcase-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <h3>Address</h3>
+                    <p>21 Turnpike Rd, Southborough, MA 01772</p>
+                    <p>Massachusetts, United States</p>
+                    <a href="https://maps.google.com/?q=21+Turnpike+Rd,+Southborough,+MA+01772" target="_blank" rel="noopener" class="footer-showcase-btn">Get Direction</a>
+                </div>
+
+                <div class="footer-showcase-col footer-showcase-col-right">
+                    <div class="footer-showcase-icon"><i class="fa-regular fa-clock"></i></div>
+                    <h3>Opening <span>Hours</span></h3>
+                    <p>Wed - Sat: 11:00 AM - 7:00 PM</p>
+                    <p>Sun: 12:00 PM - 5:00 PM</p>
+                    <a href="https://order.toasttab.com/online/senties-kitchen" target="_blank" rel="noopener" class="footer-showcase-btn">Order Online</a>
+                </div>
+            </div>
+
+            <div class="footer-showcase-divider"></div>
+
+            <div class="footer-showcase-bottom">
+                <p class="footer-showcase-copy">Copyright &copy; 2026 All Rights Reserved.</p>
+
+                <a href="index.html" class="footer-showcase-brand">
+                    <span class="footer-showcase-brand-badge">
+                        <img src="assets/Logo catring.png" alt="Sentie's Kitchen Logo">
+                    </span>
+                    <span class="footer-showcase-brand-name">Sentie's Kitchen</span>
+                </a>
+
+                <div class="footer-showcase-socials">
+                    <a href="https://www.instagram.com/sentieskitchen" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="mailto:info@sentieskitchen.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="products-data.js"></script>
+    <script src="script.js"></script>
+    <script src="menu.js"></script>
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top-btn" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+</body>
+
+</html>
+
+
+
+
+
+
+
