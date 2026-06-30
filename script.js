@@ -229,8 +229,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (heroVimeoContainer) {
         setTimeout(() => {
             const iframe = document.createElement('iframe');
-            // Using Vimeo background parameters: autoplay, loop, muted, background mode (hides controls)
-            iframe.src = 'https://player.vimeo.com/video/1205905511?autoplay=1&muted=1&loop=1&background=1&autopause=0';
+            // Using Vimeo background parameters: autoplay, loop, muted, background mode (hides controls), starting at 6s
+            iframe.src = 'https://player.vimeo.com/video/1205905511?autoplay=1&muted=1&loop=1&background=1&autopause=0#t=6s';
             iframe.setAttribute('allow', 'autoplay; fullscreen');
             iframe.setAttribute('frameborder', '0');
             
