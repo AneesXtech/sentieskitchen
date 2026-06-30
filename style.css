@@ -5976,6 +5976,75 @@ a.contact-info-item:hover .contact-info-icon i {
     }
 }
 
+/* Custom responsive overrides for Hero section & looping features */
+@media (max-width: 768px) {
+    .hero-content-wrap {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .hero {
+        height: 100vh;
+    }
+        
+    .hero-content h2 {
+        font-size: 2rem !important;
+        text-align: left;
+    }
+    
+    .hero-content .hero-subtitle {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+    }
+    
+    a.btn.btn-red {
+        width: fit-content;
+    }
+    
+    a.btn.btn-yellow {
+        width: fit-content;
+    }
+
+    /* Hero features list looping animation */
+    .hero-features {
+        position: relative;
+        height: 40px;
+        display: block;
+        border-top: 1px solid rgba(255, 255, 255, 0.18);
+        padding-top: 15px;
+        margin-top: 25px;
+    }
+    
+    .hero-feature-item {
+        position: absolute;
+        left: 0;
+        top: 15px;
+        opacity: 0;
+        animation: heroFeatureLoop 9s infinite ease-in-out;
+    }
+    
+    .hero-feature-item:nth-child(1) {
+        animation-delay: 0s;
+    }
+    
+    .hero-feature-item:nth-child(2) {
+        animation-delay: 3s;
+    }
+    
+    .hero-feature-item:nth-child(3) {
+        animation-delay: 6s;
+    }
+}
+
+@keyframes heroFeatureLoop {
+    0% { opacity: 0; transform: translateY(5px); }
+    5% { opacity: 1; transform: translateY(0); }
+    30% { opacity: 1; transform: translateY(0); }
+    35% { opacity: 0; transform: translateY(-5px); }
+    100% { opacity: 0; }
+}
+
 
 
 
