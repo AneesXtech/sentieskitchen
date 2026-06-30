@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -74,10 +74,13 @@
 
     <!-- SECTION 3: Hero Section -->
     <section id="home" class="hero">
-        <!-- Background Video -->
-        <video class="hero-video-bg" autoplay muted loop playsinline>
-            <source src="assets/Hero video.mp4" type="video/mp4">
-        </video>
+        <!-- Background Media Container -->
+        <div class="hero-media-container">
+            <!-- Fallback/Preloader Background Image -->
+            <div class="hero-bg-image"></div>
+            <!-- Vimeo Video Container -->
+            <div id="hero-vimeo-container" class="hero-vimeo-container"></div>
+        </div>
         <!-- Dark overlay gradient -->
         <div class="hero-video-overlay"></div>
 

@@ -442,15 +442,56 @@ header .container {
     align-items: center;
 }
 
-/* Background Video */
-.hero-video-bg {
+/* Hero Media Container */
+.hero-media-container {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
     z-index: 0;
+    overflow: hidden;
+}
+
+/* Fallback/Preloader Background Image */
+.hero-bg-image {
+    position: absolute;
+    inset: 0;
+    background-image: url('bg%20image/Hero-short-home.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: opacity 1.5s ease-in-out;
+}
+
+/* Vimeo Iframe Container */
+.hero-vimeo-container {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
     pointer-events: none;
+}
+
+.hero-vimeo-container.loaded {
+    opacity: 1;
+}
+
+.hero-vimeo-container iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 56.25vw; /* 16:9 aspect ratio */
+    min-height: 100vh;
+    min-width: 177.77vh; /* 16:9 aspect ratio */
+    transform: translate(-50%, -50%);
+    border: none;
 }
 
 /* Dark gradient overlay on top of video */

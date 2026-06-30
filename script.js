@@ -219,4 +219,30 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // ==========================================================================
+    // 6. Hero Vimeo Background Video Lazy Loader (5s delay)
+    // ==========================================================================
+    const heroVimeoContainer = document.getElementById('hero-vimeo-container');
+    const heroBgImage = document.querySelector('.hero-bg-image');
+    
+    if (heroVimeoContainer) {
+        setTimeout(() => {
+            const iframe = document.createElement('iframe');
+            // Using Vimeo background parameters: autoplay, loop, muted, background mode (hides controls)
+            iframe.src = 'https://player.vimeo.com/video/1205905511?autoplay=1&muted=1&loop=1&background=1&autopause=0';
+            iframe.setAttribute('allow', 'autoplay; fullscreen');
+            iframe.setAttribute('frameborder', '0');
+            
+            // Fade in the video and fade out the background image once Vimeo starts/loads
+            iframe.addEventListener('load', () => {
+                heroVimeoContainer.classList.add('loaded');
+                if (heroBgImage) {
+                    heroBgImage.style.opacity = '0';
+                }
+            });
+            
+            heroVimeoContainer.appendChild(iframe);
+        }, 5000); // 5 seconds delay
+    }
 });
