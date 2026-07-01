@@ -3126,7 +3126,11 @@ a.contact-item:hover .contact-item-icon i {
 
     /* Hero layout stack */
     .hero {
-        min-height: 80vh;
+        height: 85vh;
+    }
+
+    .hero-buttons {
+        margin-bottom: 0px;
     }
 
     .hero-content-wrap {
