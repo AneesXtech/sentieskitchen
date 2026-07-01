@@ -2841,24 +2841,24 @@
 
         // -- Mobile hamburger toggle -----------------------
         const mobileBtn = document.getElementById('mobile-menu-btn');
-        const mobileDrawer = document.getElementById('mobile-nav-drawer');
+        const navLinks = document.getElementById('nav-links');
 
-        if (mobileBtn && mobileDrawer) {
+        if (mobileBtn && navLinks) {
             mobileBtn.addEventListener('click', () => {
-                const isOpen = mobileDrawer.classList.toggle('open');
-                mobileBtn.classList.toggle('open', isOpen);
-                document.body.style.overflow = isOpen ? 'hidden' : '';
+                mobileBtn.classList.toggle('active');
+                navLinks.classList.toggle('active');
+                document.body.classList.toggle('menu-open');
+            });
+
+            // Close drawer on link click
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileBtn.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    document.body.classList.remove('menu-open');
+                });
             });
         }
-
-        // Close drawer on link click
-        document.querySelectorAll('#mobile-nav-drawer a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileDrawer.classList.remove('open');
-                mobileBtn.classList.remove('open');
-                document.body.style.overflow = '';
-            });
-        });
 
         // -- Fade-up on scroll -----------------------------
         const fadeEls = document.querySelectorAll('.ab-fade');

@@ -3126,7 +3126,7 @@ a.contact-item:hover .contact-item-icon i {
 
     /* Hero layout stack */
     .hero {
-        height: 85vh;
+        height: 80vh !important;
     }
 
     .hero-buttons {
