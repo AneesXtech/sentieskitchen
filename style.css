@@ -6295,8 +6295,8 @@ a.contact-info-item:hover .contact-info-icon i {
     .gallery-hero,
     .contact-hero,
     .menu-hero {
-        min-height: 50vh !important;
-        height: 50vh !important;
+        min-height: 70vh !important;
+        height: 70vh !important;
     }
 }
 
