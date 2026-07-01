@@ -193,6 +193,30 @@ document.addEventListener('DOMContentLoaded', () => {
             updateSlider(currentIndex);
         });
 
+        // Read More / Read Less Toggle logic
+        const readMoreBtns = reviewsTrack.querySelectorAll('.read-more-toggle');
+        readMoreBtns.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const card = this.closest('.google-review-card');
+                if (!card) return;
+                const moreText = card.querySelector('.review-text-more');
+                if (!moreText) return;
+                
+                const isExpanded = moreText.style.display !== 'none';
+                if (isExpanded) {
+                    moreText.style.display = 'none';
+                    this.textContent = 'Read more';
+                } else {
+                    moreText.style.display = 'inline';
+                    this.textContent = 'Read less';
+                }
+                
+                // Recalculate slider dimensions
+                updateSlider(currentIndex);
+            });
+        });
+
         // Initialize reviews slider
         setTimeout(() => {
             updateSlider(0);
