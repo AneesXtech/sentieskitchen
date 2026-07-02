@@ -135,10 +135,6 @@
             min-width: 190px;
         }
 
-        .mobile-nav-drawer {
-            display: none;
-        }
-
         /* -- Tabs & Gallery Grid --------------------------- */
         .gallery-tabs {
             background: #fbf6ee;
@@ -513,33 +509,6 @@
                 margin-bottom: 12px;
             }
 
-            .mobile-nav-drawer {
-                display: flex;
-                position: fixed;
-                inset: 0;
-                z-index: 2500;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                gap: 18px;
-                padding: 110px 24px 36px;
-                background: rgba(10, 10, 10, 0.98);
-                transform: translateY(-100%);
-                transition: transform 0.45s ease;
-            }
-
-            .mobile-nav-drawer.open {
-                transform: translateY(0);
-            }
-
-            .mobile-nav-drawer a {
-                color: #fff;
-                font-family: var(--font-heading);
-                font-size: 1.05rem;
-                font-weight: 700;
-                text-transform: uppercase;
-                letter-spacing: 0.12em;
-            }
         }
 
         @media (max-width: 768px) {
@@ -1185,35 +1154,10 @@
         </div>
     </div>
 
+    <script src="script.js"></script>
     <!-- -- Page Interactivity & Lightbox Scripts -- -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // -- Header Sticky Effect --
-            const header = document.getElementById('main-header');
-            window.addEventListener('scroll', () => {
-                header.classList.toggle('sticky', window.scrollY > 80);
-            });
-
-            // -- Mobile Navigation Menu Toggle --
-            const mobileBtn = document.getElementById('mobile-menu-btn');
-            const navLinks = document.getElementById('nav-links');
-
-            if (mobileBtn && navLinks) {
-                mobileBtn.addEventListener('click', () => {
-                    mobileBtn.classList.toggle('active');
-                    navLinks.classList.toggle('active');
-                    document.body.classList.toggle('menu-open');
-                });
-
-                // Close mobile menu on link click
-                navLinks.querySelectorAll('a').forEach(link => {
-                    link.addEventListener('click', () => {
-                        mobileBtn.classList.remove('active');
-                        navLinks.classList.remove('active');
-                        document.body.classList.remove('menu-open');
-                    });
-                });
-            }
 
             // -- Fade-up Scroll Animation Observer --
             const fadeEls = document.querySelectorAll('.ab-fade');

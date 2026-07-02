@@ -1065,33 +1065,8 @@
     <!-- ====================================================
          JAVASCRIPT
     ==================================================== -->
+    <script src="script.js"></script>
     <script>
-        // -- Sticky header ----------------------------------
-        const header = document.getElementById('main-header');
-        window.addEventListener('scroll', () => {
-            header.classList.toggle('sticky', window.scrollY > 80);
-        });
-
-        // -- Mobile hamburger toggle ------------------------
-        const mobileBtn = document.getElementById('mobile-menu-btn');
-        const navLinks = document.getElementById('nav-links');
-
-        if (mobileBtn && navLinks) {
-            mobileBtn.addEventListener('click', () => {
-                mobileBtn.classList.toggle('active');
-                navLinks.classList.toggle('active');
-                document.body.classList.toggle('menu-open');
-            });
-
-            // Close menu on link click
-            navLinks.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileBtn.classList.remove('active');
-                    navLinks.classList.remove('active');
-                    document.body.classList.remove('menu-open');
-                });
-            });
-        }
 
         // -- Fade-up on scroll ------------------------------
         const fadeEls = document.querySelectorAll('.ev-fade');
@@ -1142,53 +1117,7 @@
         }
     </script>
 
-    <!-- Mobile drawer styles -->
-    <style>
-        .mobile-nav-drawer {
-            display: none;
-            flex-direction: column;
-            gap: 0;
-            background: var(--color-black);
-            padding: 16px 0 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-        }
 
-        .mobile-nav-drawer a {
-            color: rgba(255, 255, 255, 0.85);
-            font-family: var(--font-heading);
-            font-weight: 600;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            padding: 13px 24px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            transition: color 0.2s, background 0.2s;
-        }
-
-        .mobile-nav-drawer a:hover,
-        .mobile-nav-drawer a.active {
-            color: var(--color-yellow);
-            background: rgba(255, 255, 255, 0.04);
-        }
-
-        @media (max-width: 768px) {
-            .mobile-menu-btn {
-                display: flex !important;
-            }
-
-            .nav-links {
-                display: none !important;
-            }
-
-            .header-actions {
-                display: none !important;
-            }
-
-            .mobile-nav-drawer.open {
-                display: flex;
-            }
-        }
-    </style>
 
     <!-- Back to Top Button -->
     <button id="back-to-top" class="back-to-top-btn" aria-label="Back to Top">
