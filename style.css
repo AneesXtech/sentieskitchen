@@ -1031,6 +1031,17 @@ header .container {
     transform: translateX(3px);
 }
 
+.service-links-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.service-links-wrap .service-link {
+    margin-top: 0;
+}
+
 /* 8. Gallery Section */
 .gallery-section {
     position: relative;
