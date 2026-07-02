@@ -49,7 +49,7 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto !important; /* Disables default smooth scrolling */
     font-size: 16px;
 }
 
@@ -483,7 +483,7 @@ header .container {
 .hero-bg-image {
     position: absolute;
     inset: 0;
-    background-image: url('bg%20image/Hero-short-home.webp');
+    background-image: url('assets/images/Hero-short-home.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -644,7 +644,7 @@ header .container {
     gap: 20px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
+    scroll-behavior: auto !important; /* Disables default smooth scrolling */
     padding: 6px 2px 12px;
     scrollbar-width: none;
     align-items: stretch;
@@ -1034,7 +1034,7 @@ header .container {
 /* 8. Gallery Section */
 .gallery-section {
     position: relative;
-    background-image: url('Gallery/sentieskitchen_1617120054_2540909641612506077_1799164955.jpg');
+    background-image: url('assets/images/gallery/sentieskitchen_1617120054_2540909641612506077_1799164955.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1864,7 +1864,7 @@ a.contact-item:hover .contact-item-icon i {
     position: relative;
     overflow: hidden;
     color: var(--color-white);
-    background: #050505 url('assets/new-picture/footer-cta.jpg') center center / cover no-repeat;
+    background: #050505 url('assets/images/gallery/gallery-new-18.jpeg') center center / cover no-repeat;
 }
 
 .page-cta::before {
@@ -4249,7 +4249,7 @@ a.contact-item:hover .contact-item-icon i {
     content: '';
     position: absolute;
     inset: 0;
-    background: url('assets/new-picture/sentieskitchen 4.webp') center center / cover no-repeat;
+    background: url('assets/images/new-picture/sentieskitchen 4.webp') center center / cover no-repeat;
     z-index: 0;
 }
 
@@ -5029,7 +5029,7 @@ a.contact-info-item:hover .contact-info-icon i {
 .menu-hero {
     position: relative;
     min-height: 360px;
-    background-image: url('assets/new-picture/sentieskitchen 4.webp');
+    background-image: url('assets/images/new-picture/sentieskitchen 4.webp');
     /* Fallback to local high-res Jerk Chicken */
     background-size: cover;
     background-position: center;
@@ -5484,10 +5484,7 @@ a.contact-info-item:hover .contact-info-icon i {
     padding: 18px;
     text-align: center;
     color: #ffffff;
-    background:
-        radial-gradient(circle at 18% 20%, hsl(var(--placeholder-hue) 82% 65% / 0.9), transparent 34%),
-        radial-gradient(circle at 82% 78%, hsl(calc(var(--placeholder-hue) + 45) 78% 50% / 0.78), transparent 38%),
-        linear-gradient(135deg, hsl(var(--placeholder-hue) 56% 28%), hsl(calc(var(--placeholder-hue) + 24) 62% 16%));
+    background: #111111 !important; /* Enforce solid black background */
     isolation: isolate;
 }
 
@@ -5497,11 +5494,15 @@ a.contact-info-item:hover .contact-info-icon i {
 
 .product-image-placeholder::before,
 .product-image-placeholder::after {
-    position: absolute;
-    content: "";
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 50%;
-    z-index: -1;
+    display: none !important; /* Hide decorative rings */
+}
+
+.placeholder-logo-img {
+    width: 68px;
+    height: 68px;
+    object-fit: contain;
+    margin-bottom: 8px;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
 }
 
 .product-image-placeholder::before {

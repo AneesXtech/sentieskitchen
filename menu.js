@@ -1,4 +1,4 @@
-﻿document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
 
     // Mobile hamburger toggle is now handled globally by script.js
 
@@ -8,27 +8,27 @@
     const defaultToastMenuUrl = "https://order.toasttab.com/online/senties-kitchen";
     // Order buttons open Toast checkout URLs when available, otherwise the main menu.
     const orderRedirectUrl = defaultToastMenuUrl;
-    const defaultFoodPlaceholder = "assets/placeholders/food-placeholder.webp";
-    const missingProductImage = "assets/Logo catring.png";
+    const defaultFoodPlaceholder = "assets/images/placeholders/food-placeholder.webp";
+    const missingProductImage = "assets/images/Logo catring.png";
 
     const productImageMap = {
-        "jerk-chicken": "assets/products/jerk-chicken.webp",
-        "fried-plantain": "assets/products/fried-plantain.webp"
+        "jerk-chicken": "assets/images/products/jerk-chicken.webp",
+        "fried-plantain": "assets/images/products/fried-plantain.webp"
     };
 
         const categoryImageMap = {
-        "Add Ons": "assets/categories/add-ons.png",
-        "Create Your Own Plate": "assets/categories/create-your-own-plate.png",
-        "Desserts": "assets/categories/desserts.png",
-        "Drinks": "assets/categories/drinks.png",
-        "Fish Fry": "assets/categories/fish-fry.png",
-        "Rice Bowls": "assets/categories/rice-bowls.png",
-        "Salads": "assets/categories/salad.png",
-        "Sauces": "assets/categories/sauces.png",
-        "Sentie's Plates": "assets/categories/senties-plates.png",
-        "Sides": "assets/categories/sides.png",
-        "Soup": "assets/categories/soups.png",
-        "Wings": "assets/categories/wings.png"
+        "Add Ons": "assets/images/categories/add-ons.png",
+        "Create Your Own Plate": "assets/images/categories/create-your-own-plate.png",
+        "Desserts": "assets/images/categories/desserts.png",
+        "Drinks": "assets/images/categories/drinks.png",
+        "Fish Fry": "assets/images/categories/fish-fry.png",
+        "Rice Bowls": "assets/images/categories/rice-bowls.png",
+        "Salads": "assets/images/categories/salad.png",
+        "Sauces": "assets/images/categories/sauces.png",
+        "Sentie's Plates": "assets/images/categories/senties-plates.png",
+        "Sides": "assets/images/categories/sides.png",
+        "Soup": "assets/images/categories/soups.png",
+        "Wings": "assets/images/categories/wings.png"
     };
 
     const categoryBanners = { ...categoryImageMap };
@@ -139,18 +139,11 @@
     function createProductPlaceholderHTML(product, isVisible) {
         const name = normalizeText(product?.["Product Name"] || product?.name) || "Menu Item";
         const category = normalizeText(product?.Category || product?.category) || "Sentie's Kitchen";
-        const initials = name
-            .split(/\s+/)
-            .filter(Boolean)
-            .slice(0, 2)
-            .map(word => word[0])
-            .join("")
-            .toUpperCase();
 
         return `
-            <div class="product-image-placeholder" style="--placeholder-hue: ${getPlaceholderHue(product)}"
+            <div class="product-image-placeholder placeholder-logo-black"
                  ${isVisible ? "" : "hidden"} aria-hidden="true">
-                <span class="product-image-placeholder-mark">${escapeHtml(initials)}</span>
+                <img class="placeholder-logo-img" src="assets/images/Logo catring.png" alt="Sentie's Kitchen Logo">
                 <span class="product-image-placeholder-name">${escapeHtml(name)}</span>
                 <span class="product-image-placeholder-category">${escapeHtml(category)}</span>
             </div>

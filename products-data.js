@@ -1,4 +1,4 @@
-﻿window.categoriesData = [
+window.categoriesData = [
     {
         "Category": "Sentie's Plates",
         "Slug": "sentie-s-plates"
@@ -69,7 +69,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/beef-patty.jpg"
+        "Local Image": "assets/images/products/toast/beef-patty.jpg"
     },
     {
         "ID / Toast GUID": "63460ff9-d01a-4e1e-b95a-40db6ffc4ad8",
@@ -90,7 +90,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/beef-samosas-2.jpg"
+        "Local Image": "assets/images/products/toast/beef-samosas-2.jpg"
     },
     {
         "ID / Toast GUID": "9d9e7ac7-0d09-4ac2-833b-5f87415fd3d1",
@@ -111,7 +111,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/big-back-rolex-bbr.jpg"
+        "Local Image": "assets/images/products/toast/big-back-rolex-bbr.jpg"
     },
     {
         "ID / Toast GUID": "be8c726b-6386-49bc-8fd6-e5a3be557c3f",
@@ -132,7 +132,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/buffalo-chicken-samosas-2.jpg"
+        "Local Image": "assets/images/products/toast/buffalo-chicken-samosas-2.jpg"
     },
     {
         "ID / Toast GUID": "9ca50395-771f-48c2-aff4-ac8c115dca65",
@@ -153,7 +153,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/chap-a-roll.png"
+        "Local Image": "assets/images/products/toast/chap-a-roll.png"
     },
     {
         "ID / Toast GUID": "41a4551c-5128-41ca-bc74-015e143cd036",
@@ -174,7 +174,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/chapati-1.jpg"
+        "Local Image": "assets/images/products/toast/chapati-1.jpg"
     },
     {
         "ID / Toast GUID": "c31db3d0-cf9d-4e19-90f7-13dbc04d288c",
@@ -195,7 +195,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/chaps.jpg"
+        "Local Image": "assets/images/products/toast/chaps.jpg"
     },
     {
         "ID / Toast GUID": "f1f16e90-ec76-4787-a43c-9e8e3aebc2fe",
@@ -216,7 +216,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/chicken-patty.jpg"
+        "Local Image": "assets/images/products/toast/chicken-patty.jpg"
     },
     {
         "ID / Toast GUID": "9e9193bd-9af5-4efe-b571-526cf8f55ec8",
@@ -237,7 +237,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/chicken-samosas-2.jpg"
+        "Local Image": "assets/images/products/toast/chicken-samosas-2.jpg"
     },
     {
         "ID / Toast GUID": "024eb3ab-7f22-409d-8778-a1928d49e7bc",
@@ -258,7 +258,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/chin-chin-daddies.jpg"
+        "Local Image": "assets/images/products/toast/chin-chin-daddies.jpg"
     },
     {
         "ID / Toast GUID": "74ea3eb4-3a10-4346-8cc1-c4584d6c4002",
@@ -279,7 +279,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/coco-bread.jpg"
+        "Local Image": "assets/images/products/toast/coco-bread.jpg"
     },
     {
         "ID / Toast GUID": "fcfb687c-f84c-4c30-b86d-734361ea1064",
@@ -300,7 +300,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/kabalagala-pancakes.jpg"
+        "Local Image": "assets/images/products/toast/kabalagala-pancakes.jpg"
     },
     {
         "ID / Toast GUID": "ea249edb-ddc2-4010-b166-8ad72194ee3d",
@@ -321,7 +321,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/mandazi.jpg"
+        "Local Image": "assets/images/products/toast/mandazi.jpg"
     },
     {
         "ID / Toast GUID": "93c63e2b-e581-4e6a-9f5f-5fba3392a5e8",
@@ -342,7 +342,7 @@ window.productsData = [
         "Customization Summary": "Pick one required: Beef, Chicken",
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/meat-pie.jpg"
+        "Local Image": "assets/images/products/toast/meat-pie.jpg"
     },
     {
         "ID / Toast GUID": "3edc3c25-47a6-4f21-84ca-fd00f4f3f504",
@@ -363,7 +363,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/nsenene-grasshoppers.jpg"
+        "Local Image": "assets/images/products/toast/nsenene-grasshoppers.jpg"
     },
     {
         "ID / Toast GUID": "1e1c8729-a410-49fd-bc7f-93e784e4e9d7",
@@ -384,7 +384,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/omelette.jpg"
+        "Local Image": "assets/images/products/toast/omelette.jpg"
     },
     {
         "ID / Toast GUID": "8849b6f1-2204-4a9c-ab1b-e6bd1c687ca2",
@@ -405,7 +405,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/puff-puff.jpg"
+        "Local Image": "assets/images/products/toast/puff-puff.jpg"
     },
     {
         "ID / Toast GUID": "7454f535-9942-4646-9e08-919364ff7744",
@@ -426,7 +426,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/rolex.jpg"
+        "Local Image": "assets/images/products/toast/rolex.jpg"
     },
     {
         "ID / Toast GUID": "27ef9053-71fb-4023-9488-aff731ab779e",
@@ -447,7 +447,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/sausage-1.png"
+        "Local Image": "assets/images/products/toast/sausage-1.png"
     },
     {
         "ID / Toast GUID": "e18d3a68-e6a6-4d67-bc23-df433e793b78",
@@ -468,7 +468,7 @@ window.productsData = [
         "Customization Summary": "Beef or Pork required: Beef, Pork",
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/sausages-2.png"
+        "Local Image": "assets/images/products/toast/sausages-2.png"
     },
     {
         "ID / Toast GUID": "bb76c074-834d-4042-b18e-31681ca401e3",
@@ -489,7 +489,7 @@ window.productsData = [
         "Customization Summary": "Pick one required: Jackfruit, Mango, Pineapple",
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/sentie-s-fruit-cup.jpg"
+        "Local Image": "assets/images/products/toast/sentie-s-fruit-cup.jpg"
     },
     {
         "ID / Toast GUID": "13bdf626-9af2-41ca-b609-ae6b85cd1402",
@@ -510,7 +510,7 @@ window.productsData = [
         "Customization Summary": "Pick one required: Beef, Chicken, Buffalo Chicken, Veggie",
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/single-samosa.jpg"
+        "Local Image": "assets/images/products/toast/single-samosa.jpg"
     },
     {
         "ID / Toast GUID": "a04003a2-b53b-43f3-8275-c1063fc0088d",
@@ -531,7 +531,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/vegetable-patty.jpg"
+        "Local Image": "assets/images/products/toast/vegetable-patty.jpg"
     },
     {
         "ID / Toast GUID": "36a209a9-b9af-4831-918b-397ed98daea4",
@@ -552,7 +552,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/veggie-samosas-2.jpg"
+        "Local Image": "assets/images/products/toast/veggie-samosas-2.jpg"
     },
     {
         "ID / Toast GUID": "f69f17c3-f51f-4e8e-aa11-cefe289cdeb0",
@@ -594,7 +594,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/cheesecake.png"
+        "Local Image": "assets/images/products/toast/cheesecake.png"
     },
     {
         "ID / Toast GUID": "35546f3d-6a96-488d-8f64-756dad549047",
@@ -615,7 +615,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/red-velvet-cake.png"
+        "Local Image": "assets/images/products/toast/red-velvet-cake.png"
     },
     {
         "ID / Toast GUID": "eff93eea-c507-4622-81bb-6112412c4bb4",
@@ -636,7 +636,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/strawberry-square.png"
+        "Local Image": "assets/images/products/toast/strawberry-square.png"
     },
     {
         "ID / Toast GUID": "debac0c8-e9fa-4ad6-85d5-eb378ded171e",
@@ -657,7 +657,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/african-black-tea.jpg"
+        "Local Image": "assets/images/products/toast/african-black-tea.jpg"
     },
     {
         "ID / Toast GUID": "8d414876-43a0-4676-a751-74ec25bc2a33",
@@ -678,7 +678,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/african-milk-tea.jpg"
+        "Local Image": "assets/images/products/toast/african-milk-tea.jpg"
     },
     {
         "ID / Toast GUID": "47d0dccb-b597-4c1f-a3da-599fef0c74b3",
@@ -699,7 +699,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/apple-juice.jpg"
+        "Local Image": "assets/images/products/toast/apple-juice.jpg"
     },
     {
         "ID / Toast GUID": "77aa0557-ced4-4560-9296-57a1ab131b9d",
@@ -720,7 +720,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/coca-cola.jpg"
+        "Local Image": "assets/images/products/toast/coca-cola.jpg"
     },
     {
         "ID / Toast GUID": "f97da108-eebe-44d9-89fb-da1433c3f5ea",
@@ -741,7 +741,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/cocktail-juice.jpg"
+        "Local Image": "assets/images/products/toast/cocktail-juice.jpg"
     },
     {
         "ID / Toast GUID": "0d574d16-8739-452b-a4e9-976ea08c2286",
@@ -762,7 +762,7 @@ window.productsData = [
         "Customization Summary": "Pick one required: Cream, Ginger Beer, Ginger Pineapple, Kola Champagne, Pineapple",
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/dandg-soda.png"
+        "Local Image": "assets/images/products/toast/dandg-soda.png"
     },
     {
         "ID / Toast GUID": "2d62a869-1aec-4535-852b-d2e7ba04ec2a",
@@ -783,7 +783,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/diet-coke.png"
+        "Local Image": "assets/images/products/toast/diet-coke.png"
     },
     {
         "ID / Toast GUID": "98aaa962-6372-4bf9-af04-4c09bb9d7b9a",
@@ -804,7 +804,7 @@ window.productsData = [
         "Customization Summary": "Pick one required: Orange, Pineapple, Strawberry",
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/fanta-cans.png"
+        "Local Image": "assets/images/products/toast/fanta-cans.png"
     },
     {
         "ID / Toast GUID": "35fcdce1-a374-4e57-b095-42a8e542cb22",
@@ -825,7 +825,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/fanta-orange.jpg"
+        "Local Image": "assets/images/products/toast/fanta-orange.jpg"
     },
     {
         "ID / Toast GUID": "fd88774e-68cb-4472-8f5e-7b90774fa816",
@@ -846,7 +846,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/ginger-ale.jpg"
+        "Local Image": "assets/images/products/toast/ginger-ale.jpg"
     },
     {
         "ID / Toast GUID": "8490cbd6-e24e-4838-b1ef-e9a2aaa44c1b",
@@ -867,7 +867,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/grace-island-mango.jpg"
+        "Local Image": "assets/images/products/toast/grace-island-mango.jpg"
     },
     {
         "ID / Toast GUID": "2c7d7279-8844-477f-b6f4-ed21cd85f6d1",
@@ -888,7 +888,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/grace-mango-carrot.jpg"
+        "Local Image": "assets/images/products/toast/grace-mango-carrot.jpg"
     },
     {
         "ID / Toast GUID": "ef861e9c-52d1-452f-95c4-9d578f47e43e",
@@ -909,7 +909,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/grace-pineapple-ginger.png"
+        "Local Image": "assets/images/products/toast/grace-pineapple-ginger.png"
     },
     {
         "ID / Toast GUID": "1de3fe17-c139-443d-b32e-921a7cfc5dc7",
@@ -930,7 +930,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/grace-reggae-medley.jpg"
+        "Local Image": "assets/images/products/toast/grace-reggae-medley.jpg"
     },
     {
         "ID / Toast GUID": "d16b5073-4fa0-4ac2-8c41-b0a40d6e9c6f",
@@ -951,7 +951,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/lemonade.jpg"
+        "Local Image": "assets/images/products/toast/lemonade.jpg"
     },
     {
         "ID / Toast GUID": "2fafeeb9-58dc-4638-83bf-c03c86860f19",
@@ -972,7 +972,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/malt.jpg"
+        "Local Image": "assets/images/products/toast/malt.jpg"
     },
     {
         "ID / Toast GUID": "48e78a97-689b-4c71-9115-17eab04ff5da",
@@ -993,7 +993,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/monster.png"
+        "Local Image": "assets/images/products/toast/monster.png"
     },
     {
         "ID / Toast GUID": "607185fd-6296-4c24-ab98-d3bc2dfc7522",
@@ -1014,7 +1014,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/passion-fruit-juice.png"
+        "Local Image": "assets/images/products/toast/passion-fruit-juice.png"
     },
     {
         "ID / Toast GUID": "4051cd04-0d2e-467a-bd5b-6eb9d62b6d6d",
@@ -1035,7 +1035,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/sprite.jpg"
+        "Local Image": "assets/images/products/toast/sprite.jpg"
     },
     {
         "ID / Toast GUID": "fc509ed0-f8fd-4710-a1e2-756639d02cf1",
@@ -1056,7 +1056,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/ting.jpg"
+        "Local Image": "assets/images/products/toast/ting.jpg"
     },
     {
         "ID / Toast GUID": "448a274f-1405-44a6-bec3-548c5b5de70e",
@@ -1077,7 +1077,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/water.jpg"
+        "Local Image": "assets/images/products/toast/water.jpg"
     },
     {
         "ID / Toast GUID": "705d3f83-1427-4e73-a1fa-93f588739d3c",
@@ -1098,7 +1098,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/fish-and-chips.jpg"
+        "Local Image": "assets/images/products/toast/fish-and-chips.jpg"
     },
     {
         "ID / Toast GUID": "71afd8a7-32fa-4bb4-bf11-2f11d17a1e5c",
@@ -1119,7 +1119,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/fried-fish-large.png"
+        "Local Image": "assets/images/products/toast/fried-fish-large.png"
     },
     {
         "ID / Toast GUID": "db8d5bcf-104f-4175-96a8-0efdc83d4960",
@@ -1161,7 +1161,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/fried-shrimp.png"
+        "Local Image": "assets/images/products/toast/fried-shrimp.png"
     },
     {
         "ID / Toast GUID": "9176282a-3fc0-4b9a-9b82-260a270011f1",
@@ -1182,7 +1182,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/wet-fried-fish.png"
+        "Local Image": "assets/images/products/toast/wet-fried-fish.png"
     },
     {
         "ID / Toast GUID": "7aff01bd-2caa-42be-9835-ec671768ad97",
@@ -1203,7 +1203,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/creole-bowl.jpg"
+        "Local Image": "assets/images/products/toast/creole-bowl.jpg"
     },
     {
         "ID / Toast GUID": "62e23fe3-95e0-47c9-bad9-8bf9c9183d6c",
@@ -1224,7 +1224,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/jerk-chicken-bowl.png"
+        "Local Image": "assets/images/products/toast/jerk-chicken-bowl.png"
     },
     {
         "ID / Toast GUID": "03cea3ef-5ab5-46f1-a854-080413ac8e3b",
@@ -1245,7 +1245,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/jerk-pork-bowl.jpg"
+        "Local Image": "assets/images/products/toast/jerk-pork-bowl.jpg"
     },
     {
         "ID / Toast GUID": "3100ba43-cb1b-4e79-88c0-14768920cd48",
@@ -1266,7 +1266,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/jollof-bowl.png"
+        "Local Image": "assets/images/products/toast/jollof-bowl.png"
     },
     {
         "ID / Toast GUID": "3dd03c18-d7f8-470b-a5bb-44f4a2d71409",
@@ -1287,7 +1287,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/oxtail-bowl.png"
+        "Local Image": "assets/images/products/toast/oxtail-bowl.png"
     },
     {
         "ID / Toast GUID": "79fa81fb-75f3-4ce7-8ded-21a7e2d53057",
@@ -1350,7 +1350,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/vegetarian-bowl.png"
+        "Local Image": "assets/images/products/toast/vegetarian-bowl.png"
     },
     {
         "ID / Toast GUID": "1ec6fd26-885f-4df3-aac1-dfc6d095e98f",
@@ -1371,7 +1371,7 @@ window.productsData = [
         "Customization Summary": "Required base, sides, protein; optional premium sides",
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/make-your-own-salad.jpg"
+        "Local Image": "assets/images/products/toast/make-your-own-salad.jpg"
     },
     {
         "ID / Toast GUID": "3ac8395c-9fb2-485f-8ae5-cb940b88aa6a",
@@ -1497,7 +1497,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/ashawo.png"
+        "Local Image": "assets/images/products/toast/ashawo.png"
     },
     {
         "ID / Toast GUID": "877014fa-38a1-413c-857f-6ce94b875941",
@@ -1518,7 +1518,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/big-nyash.png"
+        "Local Image": "assets/images/products/toast/big-nyash.png"
     },
     {
         "ID / Toast GUID": "c4479c68-a32b-4881-a2ca-c7bf1ef12d4e",
@@ -1539,7 +1539,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/chips-and-sausages.jpg"
+        "Local Image": "assets/images/products/toast/chips-and-sausages.jpg"
     },
     {
         "ID / Toast GUID": "c81573ce-1c65-4d31-931b-07b72becc325",
@@ -1560,7 +1560,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/egusi-stew.jpg"
+        "Local Image": "assets/images/products/toast/egusi-stew.jpg"
     },
     {
         "ID / Toast GUID": "04b297f2-89e1-4ee7-8c5d-0b8e1119f318",
@@ -1581,7 +1581,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/fried-chicken-bucket.png"
+        "Local Image": "assets/images/products/toast/fried-chicken-bucket.png"
     },
     {
         "ID / Toast GUID": "e2f027c8-4efc-4bd5-adf9-cfe3da59ee6b",
@@ -1602,7 +1602,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/fried-chicken-plate.jpg"
+        "Local Image": "assets/images/products/toast/fried-chicken-plate.jpg"
     },
     {
         "ID / Toast GUID": "bff07a79-a478-4405-9890-269ebb490c05",
@@ -1623,7 +1623,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/kabwa.jpg"
+        "Local Image": "assets/images/products/toast/kabwa.jpg"
     },
     {
         "ID / Toast GUID": "0f980462-9f04-4a9b-923e-5216016e23f9",
@@ -1644,7 +1644,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/kampala-fried-chicken-kfc.jpg"
+        "Local Image": "assets/images/products/toast/kampala-fried-chicken-kfc.jpg"
     },
     {
         "ID / Toast GUID": "47ce8484-e1ea-4845-aac4-c040ec40583a",
@@ -1665,7 +1665,7 @@ window.productsData = [
         "Customization Summary": "Required base, stew, side",
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/kampala-plate.jpg"
+        "Local Image": "assets/images/products/toast/kampala-plate.jpg"
     },
     {
         "ID / Toast GUID": "18f387ba-3558-4876-8dcd-37e595dd5eb2",
@@ -1686,7 +1686,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/katogo-with-byenda.png"
+        "Local Image": "assets/images/products/toast/katogo-with-byenda.png"
     },
     {
         "ID / Toast GUID": "0b35c62f-d92a-43a0-8dd4-1c501a0e98bb",
@@ -1707,7 +1707,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/katogo-with-smoked-goat.jpg"
+        "Local Image": "assets/images/products/toast/katogo-with-smoked-goat.jpg"
     },
     {
         "ID / Toast GUID": "e83aee9c-a33d-4b35-bcb6-31fe8ca09f5a",
@@ -1728,7 +1728,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/kikomando.png"
+        "Local Image": "assets/images/products/toast/kikomando.png"
     },
     {
         "ID / Toast GUID": "981aea5d-8f7c-4b04-844b-592689869aec",
@@ -1749,7 +1749,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/mac-daddy.png"
+        "Local Image": "assets/images/products/toast/mac-daddy.png"
     },
     {
         "ID / Toast GUID": "1cfa56fb-5912-4de8-ab32-7c6af5720606",
@@ -1770,7 +1770,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/munamasaka.jpg"
+        "Local Image": "assets/images/products/toast/munamasaka.jpg"
     },
     {
         "ID / Toast GUID": "375d26a9-5e45-4fba-87e6-a25f23d1c105",
@@ -1791,7 +1791,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/oxtail-mac.png"
+        "Local Image": "assets/images/products/toast/oxtail-mac.png"
     },
     {
         "ID / Toast GUID": "884345bd-869c-4f16-a978-96fd472e5961",
@@ -1812,7 +1812,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/oxtail-plate.jpg"
+        "Local Image": "assets/images/products/toast/oxtail-plate.jpg"
     },
     {
         "ID / Toast GUID": "7f194bf0-718b-40bf-a7eb-c275e77b9213",
@@ -1833,7 +1833,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/pilau-plate.jpg"
+        "Local Image": "assets/images/products/toast/pilau-plate.jpg"
     },
     {
         "ID / Toast GUID": "94e3e9bb-e85b-4a1b-9c94-5dba101d1a90",
@@ -1854,7 +1854,7 @@ window.productsData = [
         "Customization Summary": "Pick required: Jerk Chicken +$1, Jerk Shrimp +$2, both +$3, or no protein",
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/rasta-pasta.jpg"
+        "Local Image": "assets/images/products/toast/rasta-pasta.jpg"
     },
     {
         "ID / Toast GUID": "5c3d57bd-2735-4f48-a24a-54b52eb741d0",
@@ -1875,7 +1875,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/sentie-jr-kid-s-plate.jpg"
+        "Local Image": "assets/images/products/toast/sentie-jr-kid-s-plate.jpg"
     },
     {
         "ID / Toast GUID": "53a47476-bcb1-4d9d-91ec-f724d513f26e",
@@ -1896,7 +1896,7 @@ window.productsData = [
         "Customization Summary": "Size variant required; pick meats, sides, sauces",
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/sentie-s-meat-sampler.jpg"
+        "Local Image": "assets/images/products/toast/sentie-s-meat-sampler.jpg"
     },
     {
         "ID / Toast GUID": "c5729483-2459-4528-adfe-2fbc078687e8",
@@ -1917,7 +1917,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/vegetarian-plate.jpg"
+        "Local Image": "assets/images/products/toast/vegetarian-plate.jpg"
     },
     {
         "ID / Toast GUID": "02a565bd-0423-4100-b0cb-06ba9e388b39",
@@ -1938,7 +1938,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/wandegz-chicken.png"
+        "Local Image": "assets/images/products/toast/wandegz-chicken.png"
     },
     {
         "ID / Toast GUID": "c45994d1-45f1-4b04-9aa5-81487d944e6a",
@@ -1959,7 +1959,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/yah-mon.png"
+        "Local Image": "assets/images/products/toast/yah-mon.png"
     },
     {
         "ID / Toast GUID": "f722cc0e-ff57-4115-9799-fa110720d6a1",
@@ -1980,7 +1980,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/avocado.jpg"
+        "Local Image": "assets/images/products/toast/avocado.jpg"
     },
     {
         "ID / Toast GUID": "7084fff0-7325-409b-ad2d-29349119579d",
@@ -2001,7 +2001,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/beef-stew.png"
+        "Local Image": "assets/images/products/toast/beef-stew.png"
     },
     {
         "ID / Toast GUID": "17734a0d-f59a-4406-a910-91d467b84686",
@@ -2064,7 +2064,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/binyebwa-peanut-sauce-w-smoked-fish.png"
+        "Local Image": "assets/images/products/toast/binyebwa-peanut-sauce-w-smoked-fish.png"
     },
     {
         "ID / Toast GUID": "7288440f-b884-4212-a52c-451946732484",
@@ -2106,7 +2106,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/coleslaw.jpg"
+        "Local Image": "assets/images/products/toast/coleslaw.jpg"
     },
     {
         "ID / Toast GUID": "830e701d-12c7-443e-b7ec-4aa1ea8fb8d5",
@@ -2127,7 +2127,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/collard-greens.png"
+        "Local Image": "assets/images/products/toast/collard-greens.png"
     },
     {
         "ID / Toast GUID": "67f3ca32-7047-456d-973b-3a5d7d089a83",
@@ -2148,7 +2148,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/curried-potatoes.png"
+        "Local Image": "assets/images/products/toast/curried-potatoes.png"
     },
     {
         "ID / Toast GUID": "807fee6e-bdbc-4eeb-b90e-bfc9e7beb37e",
@@ -2169,7 +2169,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/curry-goat.jpg"
+        "Local Image": "assets/images/products/toast/curry-goat.jpg"
     },
     {
         "ID / Toast GUID": "26088ff2-c281-48ae-9d2e-a76043ea064c",
@@ -2190,7 +2190,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/djon-djon-black-rice.png"
+        "Local Image": "assets/images/products/toast/djon-djon-black-rice.png"
     },
     {
         "ID / Toast GUID": "29573e31-3879-4b43-9cf1-2cc4c53a3472",
@@ -2211,7 +2211,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/french-fries.jpg"
+        "Local Image": "assets/images/products/toast/french-fries.jpg"
     },
     {
         "ID / Toast GUID": "e9bc1d7b-3106-4b78-bec8-03dfca22b9c3",
@@ -2232,7 +2232,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/fried-goat.jpg"
+        "Local Image": "assets/images/products/toast/fried-goat.jpg"
     },
     {
         "ID / Toast GUID": "22242319-88f6-4210-a019-9b09753a86de",
@@ -2253,7 +2253,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/fried-plantain.png"
+        "Local Image": "assets/images/products/toast/fried-plantain.png"
     },
     {
         "ID / Toast GUID": "5e81721d-6125-4b57-86d0-c166b2cf256e",
@@ -2274,7 +2274,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/griot.png"
+        "Local Image": "assets/images/products/toast/griot.png"
     },
     {
         "ID / Toast GUID": "98df07c3-82ad-440f-9634-5b01efe8fbd1",
@@ -2295,7 +2295,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/honey-glazed-ribs.jpg"
+        "Local Image": "assets/images/products/toast/honey-glazed-ribs.jpg"
     },
     {
         "ID / Toast GUID": "57dc8d8f-3a53-4558-8116-893356ee5b17",
@@ -2316,7 +2316,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/jerk-chicken.jpg"
+        "Local Image": "assets/images/products/toast/jerk-chicken.jpg"
     },
     {
         "ID / Toast GUID": "e24a5640-26ce-4fb3-b50f-136d714f10cc",
@@ -2337,7 +2337,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/jerk-pork.png"
+        "Local Image": "assets/images/products/toast/jerk-pork.png"
     },
     {
         "ID / Toast GUID": "176e4076-5bed-4a1a-8028-00b03d514667",
@@ -2358,7 +2358,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/jollof-rice.jpg"
+        "Local Image": "assets/images/products/toast/jollof-rice.jpg"
     },
     {
         "ID / Toast GUID": "85be49c1-0af1-4583-a03a-2657d644fff9",
@@ -2379,7 +2379,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/kachumbari-pico-de-gallo.jpg"
+        "Local Image": "assets/images/products/toast/kachumbari-pico-de-gallo.jpg"
     },
     {
         "ID / Toast GUID": "28830496-ce25-48dd-a100-229e5c676019",
@@ -2400,7 +2400,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/kfc-kampala-fried-chicken.jpg"
+        "Local Image": "assets/images/products/toast/kfc-kampala-fried-chicken.jpg"
     },
     {
         "ID / Toast GUID": "161d7d3b-b9e8-459f-8495-90eb4ed9c8ce",
@@ -2442,7 +2442,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/mac-n-cheese.png"
+        "Local Image": "assets/images/products/toast/mac-n-cheese.png"
     },
     {
         "ID / Toast GUID": "5f2cdf70-f211-4d14-8bd0-22ff887c31d5",
@@ -2526,7 +2526,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/oxtail-mac-side.png"
+        "Local Image": "assets/images/products/toast/oxtail-mac-side.png"
     },
     {
         "ID / Toast GUID": "f31c4baf-7460-4227-870c-9c8259d625ba",
@@ -2610,7 +2610,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/posho.jpg"
+        "Local Image": "assets/images/products/toast/posho.jpg"
     },
     {
         "ID / Toast GUID": "c7910543-3a5f-4b63-be2c-94b4baa9687c",
@@ -2631,7 +2631,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/potato-salad.jpg"
+        "Local Image": "assets/images/products/toast/potato-salad.jpg"
     },
     {
         "ID / Toast GUID": "65f2aef9-0242-48c1-b554-b924d0befc50",
@@ -2652,7 +2652,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/pounded-yam.png"
+        "Local Image": "assets/images/products/toast/pounded-yam.png"
     },
     {
         "ID / Toast GUID": "0773ee9d-2eae-4f2b-910b-266ef751012a",
@@ -2715,7 +2715,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/white-rice.jpg"
+        "Local Image": "assets/images/products/toast/white-rice.jpg"
     },
     {
         "ID / Toast GUID": "b2bc16b9-0390-4f79-a65c-69afe66780da",
@@ -2736,7 +2736,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/yucca-fries.jpg"
+        "Local Image": "assets/images/products/toast/yucca-fries.jpg"
     },
     {
         "ID / Toast GUID": "12d972af-ad1c-4b71-86e4-7f5ab6201a42",
@@ -2757,7 +2757,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/fowl-chicken-soup-bone-in.jpg"
+        "Local Image": "assets/images/products/toast/fowl-chicken-soup-bone-in.jpg"
     },
     {
         "ID / Toast GUID": "e1ec8d90-c727-4847-8f13-346b03c07121",
@@ -2778,7 +2778,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/kigere-soup-cow-foot-mocot.jpg"
+        "Local Image": "assets/images/products/toast/kigere-soup-cow-foot-mocot.jpg"
     },
     {
         "ID / Toast GUID": "a3f210b0-8a9b-4614-a798-e2c105f445df",
@@ -2799,7 +2799,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/pepper-soup-spicy.png"
+        "Local Image": "assets/images/products/toast/pepper-soup-spicy.png"
     },
     {
         "ID / Toast GUID": "09ebd1a0-0b35-40ee-be89-6c3caaa5a28c",
@@ -2820,7 +2820,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/lemon-pepper-wings-1.jpg"
+        "Local Image": "assets/images/products/toast/lemon-pepper-wings-1.jpg"
     },
     {
         "ID / Toast GUID": "8724af92-efcc-4b14-be4c-483196620261",
@@ -2841,7 +2841,7 @@ window.productsData = [
         "Customization Summary": null,
         "Source Menu URL": "https://order.toasttab.com/online/senties-kitchen",
         "Scrape Date": "2026-06-12",
-        "Local Image": "assets/products/toast/jerk-wings-1.jpg"
+        "Local Image": "assets/images/products/toast/jerk-wings-1.jpg"
     }
 ];
 

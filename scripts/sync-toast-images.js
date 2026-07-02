@@ -6,7 +6,7 @@ const rootDir = path.resolve(__dirname, "..");
 const markdownPath = path.join(rootDir, "toast-menu-markdown.txt");
 const productsDataPath = path.join(rootDir, "products-data.js");
 const productsJsonPath = path.join(rootDir, "menu_products.json");
-const outputDir = path.join(rootDir, "assets", "products", "toast");
+const outputDir = path.join(rootDir, "assets", "images", "products", "toast");
 const concurrency = 8;
 
 function loadJavaScriptData(filePath) {
@@ -94,7 +94,7 @@ function updateProduct(product, imagesByGuid) {
     }
 
     const extension = getExtension(exactImage);
-    const relativePath = `assets/products/toast/${slug}.${extension}`;
+    const relativePath = `assets/images/products/toast/${slug}.${extension}`;
 
     product["Local Image"] = relativePath;
     product["Exact Image URL"] = exactImage;

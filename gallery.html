@@ -5,16 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Browse the Sentie's Kitchen gallery - unforgettable catering moments, signature dishes, behind-the-scenes photos, and happy clients.">
+        content="Browse the Sentie's Kitchen gallery - unforgettable catering moments, signature Ugandan dishes, wood-smoked BBQ plates, behind-the-scenes photos, and happy clients.">
     <meta name="keywords"
-        content="Sentie's Kitchen, gallery, food photos, catering events, happy clients, behind the scenes">
+        content="Sentie's Kitchen, gallery, food photos, catering events, happy clients, behind the scenes, Boston catering, Chef Sentie Kironde">
     <meta name="author" content="Sentie's Kitchen">
+
+    <!-- Open Graph / Facebook SEO -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sentieskitchen.com/gallery.html">
+    <meta property="og:title" content="Gallery | Sentie's Kitchen - Moments Made With Love">
+    <meta property="og:description" content="A visual journey of our food, catering events, and community moments. See what makes Sentie's Kitchen a Boston favorite.">
+    <meta property="og:image" content="https://sentieskitchen.com/assets/images/new-picture/sentieskitchen1.webp">
+    <meta property="og:site_name" content="Sentie's Kitchen">
+
+    <!-- Twitter SEO -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://sentieskitchen.com/gallery.html">
+    <meta name="twitter:title" content="Gallery | Sentie's Kitchen - Moments Made With Love">
+    <meta name="twitter:description" content="A visual journey of our food, catering events, and community moments. See what makes Sentie's Kitchen a Boston favorite.">
+    <meta name="twitter:image" content="https://sentieskitchen.com/assets/images/new-picture/sentieskitchen1.webp">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://sentieskitchen.com/gallery.html">
 
     <title>Gallery - Sentie's Kitchen | Moments Made With Love</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="assets/Logo%20catring.png" type="image/png">
+    <link rel="icon" href="assets/images/Logo%20catring.png" type="image/png">
 
     <style>
         /* =====================================================
@@ -39,7 +57,7 @@
         .gallery-hero-bg {
             position: absolute;
             inset: 0;
-            background: url('assets/new-picture/Catering.jpeg') center center / cover no-repeat;
+            background: url('assets/images/new-picture/Catering.jpeg') center center / cover no-repeat;
         }
 
         /* Left-heavy gradient so text stays legible */
@@ -613,7 +631,84 @@
                 row-gap: 4px;
             }
         }
+
+        /* Custom adjustments to prevent image/video cropping & implement Pinterest Masonry Layout */
+        .gallery-grid {
+            display: block !important;
+            column-count: 3;
+            column-gap: 12px;
+        }
+        .gallery-card {
+            display: inline-block;
+            width: 100% !important;
+            margin-bottom: 12px !important;
+            break-inside: avoid;
+            aspect-ratio: auto !important;
+            height: auto !important;
+        }
+        .gallery-card img {
+            height: auto !important;
+            object-fit: contain !important;
+        }
+        
+        @media (max-width: 1024px) {
+            .gallery-grid {
+                column-count: 2;
+            }
+        }
+        
+        @media (max-width: 560px) {
+            .gallery-grid {
+                column-count: 1;
+            }
+        }
+        
+        /* Video Card Styles */
+        .video-card {
+            cursor: pointer;
+            position: relative;
+        }
+        .video-thumbnail-wrap {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 8px;
+            background: #000;
+        }
+        .gallery-video-preview {
+            width: 100%;
+            height: auto !important;
+            display: block;
+            object-fit: contain !important;
+            transition: transform var(--transition-normal);
+        }
+        .video-card:hover .gallery-video-preview {
+            transform: scale(1.05);
+        }
+        .video-play-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.2);
+            color: #fff;
+            font-size: 2rem;
+            transition: background var(--transition-fast), transform var(--transition-fast);
+            pointer-events: none;
+        }
+        .video-card:hover .video-play-overlay {
+            background: rgba(0, 0, 0, 0.4);
+            font-size: 2.2rem;
+        }
+        .lightbox-video {
+            display: block;
+            margin: 0 auto;
+        }
     </style>
+    <!-- Smooth Scroll Engine -->
+    <script src="lenis.js"></script>
+    <script src="smooth-scroll.js"></script>
 </head>
 
 <body class="gallery-page">
@@ -635,7 +730,7 @@
         <div class="container">
             <!-- Brand Logo -->
             <a href="index.html" class="logo-container">
-                <img src="assets/Secties%20logo.png" alt="Sentie's Kitchen Logo" class="logo-img">
+                <img src="assets/images/Secties%20logo.png" alt="Sentie's Kitchen Logo" class="logo-img">
             </a>
 
             <!-- Navigation Links -->
@@ -693,10 +788,9 @@
         <div class="container">
             <div class="gallery-tabs-inner">
                 <a href="#gallery-all" class="gallery-tab active" data-filter="all"><i class="fa-solid fa-grid-2"></i>All Gallery</a>
-                <a href="#gallery-food" class="gallery-tab" data-filter="food"><i class="fa-solid fa-bowl-food"></i>Food</a>
-                <a href="#gallery-catering" class="gallery-tab" data-filter="catering"><i class="fa-solid fa-bell-concierge"></i>Catering &amp; Events</a>
+                <a href="#gallery-food" class="gallery-tab" data-filter="food"><i class="fa-solid fa-bowl-food"></i>Signature Food</a>
+                <a href="#gallery-catering" class="gallery-tab" data-filter="catering"><i class="fa-solid fa-bell-concierge"></i>Events &amp; Catering</a>
                 <a href="#gallery-bts" class="gallery-tab" data-filter="bts"><i class="fa-solid fa-video"></i>Behind The Scenes</a>
-                <a href="#gallery-clients" class="gallery-tab" data-filter="clients"><i class="fa-regular fa-heart"></i>Happy Clients</a>
             </div>
         </div>
     </section>
@@ -705,55 +799,281 @@
         <div class="container">
             <div class="gallery-grid">
                 <figure class="gallery-card ab-fade" data-category="food">
-                    <img src="Gallery/95441605_2697719100465711_8675034026030923776_n.jpg" alt="Signature dish served at the farmers market">
+                    <img src="assets/images/gallery/95441605_2697719100465711_8675034026030923776_n.jpg" alt="Signature dish served at the farmers market">
                 </figure>
                 <figure class="gallery-card ab-fade" data-category="food">
-                    <img src="Gallery/95629536_2697719353799019_8930391448348524544_n.jpg" alt="Catering tray and food service moment">
+                    <img src="assets/images/gallery/95629536_2697719353799019_8930391448348524544_n.jpg" alt="Catering tray and food service moment">
                 </figure>
                 <figure class="gallery-card ab-fade" data-category="catering">
-                    <img src="Gallery/151920631_2939391436298475_2405511215944385837_n.jpg" alt="Catering trays prepared for event service">
+                    <img src="assets/images/gallery/151920631_2939391436298475_2405511215944385837_n.jpg" alt="Catering trays prepared for event service">
                 </figure>
                 <figure class="gallery-card ab-fade" data-category="bts">
-                    <img src="Gallery/IMG_5753.jpeg" alt="Behind the scenes kitchen moment">
+                    <img src="assets/images/gallery/IMG_5753.jpeg" alt="Behind the scenes kitchen moment">
                 </figure>
                 <figure class="gallery-card ab-fade" data-category="bts">
-                    <img src="Gallery/IMG_2483.jpeg" alt="Award recognition moment">
-                </figure>
-                <figure class="gallery-card ab-fade" data-category="clients">
-                    <img src="Gallery/a7a30b7d-cd26-4f98-8176-c9b0dfebde5e.jpg" alt="Happy clients at a Sentie's Kitchen celebration">
+                    <img src="assets/images/gallery/IMG_2483.jpeg" alt="Award recognition moment">
                 </figure>
                 <figure class="gallery-card ab-fade" data-category="catering">
-                    <img src="Gallery/152420118_2939391439631808_208464520934793527_n.jpg" alt="Event buffet table with trays of food">
+                    <img src="assets/images/gallery/a7a30b7d-cd26-4f98-8176-c9b0dfebde5e.jpg" alt="Happy clients at a Sentie's Kitchen celebration">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="catering">
+                    <img src="assets/images/gallery/152420118_2939391439631808_208464520934793527_n.jpg" alt="Event buffet table with trays of food">
                 </figure>
                 <figure class="gallery-card ab-fade" data-category="bts">
-                    <img src="Gallery/81291857_2578698785701077_6561890312304721920_n.jpg" alt="Chef plating food in the kitchen">
+                    <img src="assets/images/gallery/81291857_2578698785701077_6561890312304721920_n.jpg" alt="Chef plating food in the kitchen">
                 </figure>
                 <figure class="gallery-card ab-fade" data-category="catering">
-                    <img src="Gallery/79855924_2578698672367755_6206151842057945088_n.jpg" alt="Celebration and catering table setup">
+                    <img src="assets/images/gallery/79855924_2578698672367755_6206151842057945088_n.jpg" alt="Celebration and catering table setup">
                 </figure>
                 <figure class="gallery-card ab-fade" data-category="food">
-                    <img src="Gallery/79841763_2578698705701085_5118435873808973824_n.jpg" alt="Close-up food presentation at an event">
+                    <img src="assets/images/gallery/79841763_2578698705701085_5118435873808973824_n.jpg" alt="Close-up food presentation at an event">
                 </figure>
                 <figure class="gallery-card ab-fade" data-category="food">
-                    <img src="Gallery/IMG_2478.jpeg" alt="Beautiful plated dish from Sentie's Kitchen">
-                </figure>
-                <figure class="gallery-card ab-fade" data-category="clients">
-                    <img src="Gallery/IMG_2462.jpeg" alt="Smiling team photo at Sentie's Kitchen">
+                    <img src="assets/images/gallery/IMG_2478.jpeg" alt="Beautiful plated dish from Sentie's Kitchen">
                 </figure>
                 <figure class="gallery-card ab-fade" data-category="catering">
-                    <img src="assets/new-picture/sentieskitchen 4.webp" alt="Sentie's Kitchen Catering and Event Presentation">
+                    <img src="assets/images/gallery/IMG_2462.jpeg" alt="Smiling team photo at Sentie's Kitchen">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="catering">
+                    <img src="assets/images/new-picture/sentieskitchen 4.webp" alt="Sentie's Kitchen Catering and Event Presentation">
                 </figure>
                 <figure class="gallery-card ab-fade" data-category="food">
-                    <img src="assets/new-picture/sentieskitchen1.webp" alt="Signature Jerk Chicken and BBQ Fusion Platter">
+                    <img src="assets/images/new-picture/sentieskitchen1.webp" alt="Signature Jerk Chicken and BBQ Fusion Platter">
                 </figure>
                 <figure class="gallery-card ab-fade" data-category="food">
-                    <img src="assets/new-picture/sentieskitchen2.webp" alt="Authentic Afro-Caribbean Special Plated Dishes">
+                    <img src="assets/images/new-picture/sentieskitchen2.webp" alt="Authentic Afro-Caribbean Special Plated Dishes">
                 </figure>
                 <figure class="gallery-card ab-fade" data-category="food">
-                    <img src="assets/new-picture/sentieskitchen5 (1).webp" alt="Delicious Afro-Caribbean BBQ Feast Spread">
+                    <img src="assets/images/new-picture/sentieskitchen5 (1).webp" alt="Delicious Afro-Caribbean BBQ Feast Spread">
                 </figure>
                 <figure class="gallery-card ab-fade" data-category="food">
-                    <img src="assets/new-picture/sentieskitchen5.webp" alt="Freshly Prepared Traditional African Inspired Recipes">
+                    <img src="assets/images/new-picture/sentieskitchen5.webp" alt="Freshly Prepared Traditional African Inspired Recipes">
+                </figure>
+            
+                <figure class="gallery-card ab-fade" data-category="food">
+                    <img src="assets/images/gallery/gallery-new-01.jpg" alt="Signature Ugandan dish prepared fresh by Chef Sentie" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="food">
+                    <img src="assets/images/gallery/gallery-new-02.jpg" alt="Signature Ugandan dish prepared fresh by Chef Sentie" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="food">
+                    <img src="assets/images/gallery/gallery-new-03.jpeg" alt="Signature Ugandan dish prepared fresh by Chef Sentie" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="food">
+                    <img src="assets/images/gallery/gallery-new-04.jpeg" alt="Signature Ugandan dish prepared fresh by Chef Sentie" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="food">
+                    <img src="assets/images/gallery/gallery-new-05.jpeg" alt="Signature Ugandan dish prepared fresh by Chef Sentie" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="food">
+                    <img src="assets/images/gallery/gallery-new-06.jpeg" alt="Signature Ugandan dish prepared fresh by Chef Sentie" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="food">
+                    <img src="assets/images/gallery/gallery-new-07.jpeg" alt="Signature Ugandan dish prepared fresh by Chef Sentie" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="food">
+                    <img src="assets/images/gallery/gallery-new-08.jpeg" alt="Signature Ugandan dish prepared fresh by Chef Sentie" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="food">
+                    <img src="assets/images/gallery/gallery-new-09.jpeg" alt="Signature Ugandan dish prepared fresh by Chef Sentie" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="food">
+                    <img src="assets/images/gallery/gallery-new-10.jpeg" alt="Signature Ugandan dish prepared fresh by Chef Sentie" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="food">
+                    <img src="assets/images/gallery/gallery-new-11.jpeg" alt="Signature Ugandan dish prepared fresh by Chef Sentie" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="food">
+                    <img src="assets/images/gallery/gallery-new-12.jpeg" alt="Signature Ugandan dish prepared fresh by Chef Sentie" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="food">
+                    <img src="assets/images/gallery/gallery-new-13.jpeg" alt="Signature Ugandan dish prepared fresh by Chef Sentie" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="food">
+                    <img src="assets/images/gallery/gallery-new-14.jpeg" alt="Signature Ugandan dish prepared fresh by Chef Sentie" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="food">
+                    <img src="assets/images/gallery/gallery-new-15.jpeg" alt="Signature Ugandan dish prepared fresh by Chef Sentie" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="catering">
+                    <img src="assets/images/gallery/gallery-new-16.jpeg" alt="Premium catering display and setup for private celebration" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="catering">
+                    <img src="assets/images/gallery/gallery-new-17.jpeg" alt="Premium catering display and setup for private celebration" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="catering">
+                    <img src="assets/images/gallery/gallery-new-18.jpeg" alt="Premium catering display and setup for private celebration" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="catering">
+                    <img src="assets/images/gallery/gallery-new-19.jpeg" alt="Premium catering display and setup for private celebration" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="catering">
+                    <img src="assets/images/gallery/gallery-new-20.jpeg" alt="Premium catering display and setup for private celebration" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="catering">
+                    <img src="assets/images/gallery/gallery-new-21.jpeg" alt="Premium catering display and setup for private celebration" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="catering">
+                    <img src="assets/images/gallery/gallery-new-22.jpeg" alt="Premium catering display and setup for private celebration" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="catering">
+                    <img src="assets/images/gallery/gallery-new-23.jpeg" alt="Premium catering display and setup for private celebration" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="catering">
+                    <img src="assets/images/gallery/gallery-new-24.jpeg" alt="Premium catering display and setup for private celebration" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="catering">
+                    <img src="assets/images/gallery/gallery-new-25.jpeg" alt="Premium catering display and setup for private celebration" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="catering">
+                    <img src="assets/images/gallery/gallery-new-26.jpeg" alt="Premium catering display and setup for private celebration" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="catering">
+                    <img src="assets/images/gallery/gallery-new-27.jpeg" alt="Premium catering display and setup for private celebration" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="catering">
+                    <img src="assets/images/gallery/gallery-new-28.jpeg" alt="Premium catering display and setup for private celebration" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="catering">
+                    <img src="assets/images/gallery/gallery-new-29.jpeg" alt="Premium catering display and setup for private celebration" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="catering">
+                    <img src="assets/images/gallery/gallery-new-30.jpeg" alt="Premium catering display and setup for private celebration" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="bts">
+                    <img src="assets/images/gallery/gallery-new-31.jpeg" alt="Behind the scenes kitchen action and food preparation" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="bts">
+                    <img src="assets/images/gallery/gallery-new-32.jpeg" alt="Behind the scenes kitchen action and food preparation" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="bts">
+                    <img src="assets/images/gallery/gallery-new-33.jpeg" alt="Behind the scenes kitchen action and food preparation" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="bts">
+                    <img src="assets/images/gallery/gallery-new-34.jpeg" alt="Behind the scenes kitchen action and food preparation" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="bts">
+                    <img src="assets/images/gallery/gallery-new-35.jpeg" alt="Behind the scenes kitchen action and food preparation" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="bts">
+                    <img src="assets/images/gallery/gallery-new-36.jpeg" alt="Behind the scenes kitchen action and food preparation" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="bts">
+                    <img src="assets/images/gallery/gallery-new-37.jpeg" alt="Behind the scenes kitchen action and food preparation" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="bts">
+                    <img src="assets/images/gallery/gallery-new-38.jpeg" alt="Behind the scenes kitchen action and food preparation" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="bts">
+                    <img src="assets/images/gallery/gallery-new-39.jpeg" alt="Behind the scenes kitchen action and food preparation" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="bts">
+                    <img src="assets/images/gallery/gallery-new-40.jpeg" alt="Behind the scenes kitchen action and food preparation" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="bts">
+                    <img src="assets/images/gallery/gallery-new-41.jpeg" alt="Behind the scenes kitchen action and food preparation" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="bts">
+                    <img src="assets/images/gallery/gallery-new-42.jpeg" alt="Behind the scenes kitchen action and food preparation" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade" data-category="bts">
+                    <img src="assets/images/gallery/gallery-new-43.jpeg" alt="Behind the scenes kitchen action and food preparation" loading="lazy">
+                </figure>
+                <figure class="gallery-card ab-fade video-card" data-category="bts" data-video="assets/videos/gallery-video-01.mp4">
+                    <div class="video-thumbnail-wrap">
+                        <video src="assets/videos/gallery-video-01.mp4" muted loop playsinline preload="none" class="gallery-video-preview"></video>
+                        <div class="video-play-overlay"><i class="fa-solid fa-play"></i></div>
+                    </div>
+                </figure>
+                <figure class="gallery-card ab-fade video-card" data-category="bts" data-video="assets/videos/gallery-video-02.mp4">
+                    <div class="video-thumbnail-wrap">
+                        <video src="assets/videos/gallery-video-02.mp4" muted loop playsinline preload="none" class="gallery-video-preview"></video>
+                        <div class="video-play-overlay"><i class="fa-solid fa-play"></i></div>
+                    </div>
+                </figure>
+                <figure class="gallery-card ab-fade video-card" data-category="bts" data-video="assets/videos/gallery-video-03.mp4">
+                    <div class="video-thumbnail-wrap">
+                        <video src="assets/videos/gallery-video-03.mp4" muted loop playsinline preload="none" class="gallery-video-preview"></video>
+                        <div class="video-play-overlay"><i class="fa-solid fa-play"></i></div>
+                    </div>
+                </figure>
+                <figure class="gallery-card ab-fade video-card" data-category="bts" data-video="assets/videos/gallery-video-04.mp4">
+                    <div class="video-thumbnail-wrap">
+                        <video src="assets/videos/gallery-video-04.mp4" muted loop playsinline preload="none" class="gallery-video-preview"></video>
+                        <div class="video-play-overlay"><i class="fa-solid fa-play"></i></div>
+                    </div>
+                </figure>
+                <figure class="gallery-card ab-fade video-card" data-category="bts" data-video="assets/videos/gallery-video-05.mp4">
+                    <div class="video-thumbnail-wrap">
+                        <video src="assets/videos/gallery-video-05.mp4" muted loop playsinline preload="none" class="gallery-video-preview"></video>
+                        <div class="video-play-overlay"><i class="fa-solid fa-play"></i></div>
+                    </div>
+                </figure>
+                <figure class="gallery-card ab-fade video-card" data-category="bts" data-video="assets/videos/gallery-video-06.mp4">
+                    <div class="video-thumbnail-wrap">
+                        <video src="assets/videos/gallery-video-06.mp4" muted loop playsinline preload="none" class="gallery-video-preview"></video>
+                        <div class="video-play-overlay"><i class="fa-solid fa-play"></i></div>
+                    </div>
+                </figure>
+                <figure class="gallery-card ab-fade video-card" data-category="bts" data-video="assets/videos/gallery-video-07.mp4">
+                    <div class="video-thumbnail-wrap">
+                        <video src="assets/videos/gallery-video-07.mp4" muted loop playsinline preload="none" class="gallery-video-preview"></video>
+                        <div class="video-play-overlay"><i class="fa-solid fa-play"></i></div>
+                    </div>
+                </figure>
+                <figure class="gallery-card ab-fade video-card" data-category="bts" data-video="assets/videos/gallery-video-08.mp4">
+                    <div class="video-thumbnail-wrap">
+                        <video src="assets/videos/gallery-video-08.mp4" muted loop playsinline preload="none" class="gallery-video-preview"></video>
+                        <div class="video-play-overlay"><i class="fa-solid fa-play"></i></div>
+                    </div>
+                </figure>
+                <figure class="gallery-card ab-fade video-card" data-category="bts" data-video="assets/videos/gallery-video-09.mp4">
+                    <div class="video-thumbnail-wrap">
+                        <video src="assets/videos/gallery-video-09.mp4" muted loop playsinline preload="none" class="gallery-video-preview"></video>
+                        <div class="video-play-overlay"><i class="fa-solid fa-play"></i></div>
+                    </div>
+                </figure>
+                <figure class="gallery-card ab-fade video-card" data-category="bts" data-video="assets/videos/gallery-video-10.mp4">
+                    <div class="video-thumbnail-wrap">
+                        <video src="assets/videos/gallery-video-10.mp4" muted loop playsinline preload="none" class="gallery-video-preview"></video>
+                        <div class="video-play-overlay"><i class="fa-solid fa-play"></i></div>
+                    </div>
+                </figure>
+                <figure class="gallery-card ab-fade video-card" data-category="bts" data-video="assets/videos/gallery-video-11.mp4">
+                    <div class="video-thumbnail-wrap">
+                        <video src="assets/videos/gallery-video-11.mp4" muted loop playsinline preload="none" class="gallery-video-preview"></video>
+                        <div class="video-play-overlay"><i class="fa-solid fa-play"></i></div>
+                    </div>
+                </figure>
+                <figure class="gallery-card ab-fade video-card" data-category="bts" data-video="assets/videos/gallery-video-12.mp4">
+                    <div class="video-thumbnail-wrap">
+                        <video src="assets/videos/gallery-video-12.mp4" muted loop playsinline preload="none" class="gallery-video-preview"></video>
+                        <div class="video-play-overlay"><i class="fa-solid fa-play"></i></div>
+                    </div>
+                </figure>
+                <figure class="gallery-card ab-fade video-card" data-category="bts" data-video="assets/videos/gallery-video-13.mp4">
+                    <div class="video-thumbnail-wrap">
+                        <video src="assets/videos/gallery-video-13.mp4" muted loop playsinline preload="none" class="gallery-video-preview"></video>
+                        <div class="video-play-overlay"><i class="fa-solid fa-play"></i></div>
+                    </div>
+                </figure>
+                <figure class="gallery-card ab-fade video-card" data-category="bts" data-video="assets/videos/gallery-video-14.mp4">
+                    <div class="video-thumbnail-wrap">
+                        <video src="assets/videos/gallery-video-14.mp4" muted loop playsinline preload="none" class="gallery-video-preview"></video>
+                        <div class="video-play-overlay"><i class="fa-solid fa-play"></i></div>
+                    </div>
+                </figure>
+                <figure class="gallery-card ab-fade video-card" data-category="bts" data-video="assets/videos/gallery-video-15.mp4">
+                    <div class="video-thumbnail-wrap">
+                        <video src="assets/videos/gallery-video-15.mp4" muted loop playsinline preload="none" class="gallery-video-preview"></video>
+                        <div class="video-play-overlay"><i class="fa-solid fa-play"></i></div>
+                    </div>
+                </figure>
+                <figure class="gallery-card ab-fade video-card" data-category="bts" data-video="assets/videos/gallery-video-16.mp4">
+                    <div class="video-thumbnail-wrap">
+                        <video src="assets/videos/gallery-video-16.mp4" muted loop playsinline preload="none" class="gallery-video-preview"></video>
+                        <div class="video-play-overlay"><i class="fa-solid fa-play"></i></div>
+                    </div>
                 </figure>
             </div>
         </div>
@@ -775,7 +1095,7 @@
 
     <footer class="footer-showcase">
     <div class="footer-showcase-bg" aria-hidden="true">
-        <img src="assets/events/hero-bg.png" alt="Sentie's Kitchen dinner table">
+        <img src="assets/images/events/hero-bg.png" alt="Sentie's Kitchen dinner table">
     </div>
     <div class="footer-showcase-overlay" aria-hidden="true"></div>
 
@@ -814,7 +1134,7 @@
 
             <a href="index.html" class="footer-showcase-brand">
                 <span class="footer-showcase-brand-badge">
-                    <img src="assets/Logo%20catring.png" alt="Sentie's Kitchen Logo">
+                    <img src="assets/images/Logo%20catring.png" alt="Sentie's Kitchen Logo">
                 </span>
             </a>
 
@@ -997,31 +1317,60 @@
                 loadImage(currentIndex);
             }
 
-            // Load Image inside Lightbox
+            // Load Image/Video inside Lightbox
             function loadImage(index) {
                 if (index < 0 || index >= activeCards.length) return;
                 
                 const card = activeCards[index];
-                const img = card.querySelector('img');
                 
                 lightboxImg.classList.remove('loaded');
                 resetProgressBar();
 
-                // Set content
-                lightboxImg.src = img.src;
-                lightboxImg.alt = img.alt || "Sentie's Kitchen Gallery";
-                lightboxCaption.innerText = img.alt || "Sentie's Kitchen";
-                lightboxCounter.innerText = `${index + 1} / ${activeCards.length}`;
+                // Clear previous video if any
+                const existingVideo = document.getElementById('lightbox-video');
+                if (existingVideo) existingVideo.remove();
+                lightboxImg.style.display = 'block';
 
-                // Smooth fade-in on load completion
-                lightboxImg.onload = () => {
-                    lightboxImg.classList.add('loaded');
-                    if (isPlaying) {
-                        startSlideshowTimer();
-                    }
-                };
+                const isVideo = card.classList.contains('video-card');
 
-                currentIndex = index;
+                if (isVideo) {
+                    lightboxImg.style.display = 'none';
+                    const videoSrc = card.getAttribute('data-video');
+                    
+                    const video = document.createElement('video');
+                    video.id = 'lightbox-video';
+                    video.src = videoSrc;
+                    video.controls = true;
+                    video.autoplay = true;
+                    video.style.width = '100%';
+                    video.style.height = '100%';
+                    video.style.maxHeight = '70vh';
+                    video.style.objectFit = 'contain';
+                    video.style.borderRadius = '8px';
+                    
+                    const imgWrapper = document.querySelector('.lightbox-img-wrapper');
+                    imgWrapper.appendChild(video);
+                    
+                    lightboxCaption.innerText = "Behind the scenes kitchen action and food preparation";
+                    lightboxCounter.innerText = `${index + 1} / ${activeCards.length}`;
+                    currentIndex = index;
+                } else {
+                    const img = card.querySelector('img');
+                    lightboxImg.src = img.src;
+                    lightboxImg.alt = img.alt || "Sentie's Kitchen Gallery";
+                    lightboxCaption.innerText = img.alt || "Sentie's Kitchen";
+                    lightboxCounter.innerText = `${index + 1} / ${activeCards.length}`;
+
+                    // Smooth fade-in on load completion
+                    lightboxImg.onload = () => {
+                        lightboxImg.classList.add('loaded');
+                        if (isPlaying) {
+                            startSlideshowTimer();
+                        }
+                    };
+
+                    currentIndex = index;
+                }
             }
 
             // Close Lightbox
@@ -1030,6 +1379,10 @@
                 document.body.style.overflow = ''; // Restore scrolling
                 stopSlideshow();
                 lightboxImg.classList.remove('loaded');
+                
+                // Remove video if present
+                const video = document.getElementById('lightbox-video');
+                if (video) video.remove();
             }
 
             // Navigation functions
@@ -1091,6 +1444,31 @@
             }
 
             // -- Event Bindings --
+
+            // Video Hover-Play effect with deferred loading after page has fully loaded
+            const videoCards = document.querySelectorAll('.video-card');
+            window.addEventListener('load', () => {
+                videoCards.forEach(card => {
+                    const video = card.querySelector('video');
+                    if (video) {
+                        video.setAttribute('preload', 'metadata');
+                    }
+                });
+            });
+
+            videoCards.forEach(card => {
+                const video = card.querySelector('video');
+                card.addEventListener('mouseenter', () => {
+                    if (video) {
+                        video.play().catch(()=>{});
+                    }
+                });
+                card.addEventListener('mouseleave', () => {
+                    if (video) {
+                        video.pause();
+                    }
+                });
+            });
 
             // Card clicks open lightbox
             cards.forEach(card => {
